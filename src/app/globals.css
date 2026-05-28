@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────────
+   MEDON DESIGN SYSTEM – Brand Color: #01395C
+   Premium · Modern · Trustworthy
+   ─────────────────────────────────────────────────── */
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a2e;
+}
+
+@theme inline {
+  /* ── Base tokens ─────────────────────────────────── */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
+
+  /* ── Brand palette ───────────────────────────────── */
+  --color-primary: #01395C;
+  --color-primary-dark: #012B47;
+  --color-primary-light: #E8F4FB;
+
+  /* ── Surface & section backgrounds ───────────────── */
+  --color-secondary: #F6F9FC;
+  --color-surface: #FAFCFE;
+
+  /* ── Accent (stars / badges) ─────────────────────── */
+  --color-accent: #F59E0B;
+
+  /* ── Muted text ──────────────────────────────────── */
+  --color-muted: #64748B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ── Global body ──────────────────────────────────── */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Smooth scroll for anchor navigation ──────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Selection colour ─────────────────────────────── */
+::selection {
+  background: #01395C;
+  color: #fff;
+}
+
+/* ── Focus ring for accessibility ─────────────────── */
+*:focus-visible {
+  outline: 2px solid #01395C;
+  outline-offset: 2px;
+}
