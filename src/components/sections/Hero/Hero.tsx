@@ -35,7 +35,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              Trusted by 5000+ Customers
+              Trusted by 5,000+ Delhi NCR Customers
             </motion.span>
 
             <motion.h1
@@ -44,9 +44,9 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Expert AC Service & Repair{" "}
+              Expert Appliance Repair{" "}
               <span className="text-primary-dark/70">
-                Powered by Medon
+                Service in Delhi NCR
               </span>
             </motion.h1>
 
@@ -56,7 +56,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Medon Company connects you with verified technicians for professional AC deep cleaning, gas refilling, and expert repairs with real-time tracking and 100% transparency.
+              Medon Company provides professional AC repair, refrigerator service, electrical work &amp; geyser repair across Delhi NCR — including Mahipalpur, Vasant Kunj &amp; South Delhi. Verified technicians, same-day service, transparent pricing.
             </motion.p>
 
             {/* CTA BUTTONS */}

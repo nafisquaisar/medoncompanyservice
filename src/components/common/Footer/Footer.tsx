@@ -1,9 +1,62 @@
 "use client";
 
-import FooterLinks from "./FooterLinks";
+import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 
+/* ── Footer link data ────────────────────────────── */
+const SERVICE_LINKS = [
+  { label: "AC Repair Service in Delhi", path: "/ac-repair-service-delhi" },
+  { label: "AC Installation in Delhi", path: "/ac-installation-delhi" },
+  { label: "AC Gas Refilling in Delhi", path: "/ac-gas-refilling-delhi" },
+  { label: "Refrigerator Repair in Delhi", path: "/refrigerator-repair-delhi" },
+  { label: "Electrical Services in Delhi", path: "/electrical-services-delhi" },
+  { label: "Geyser Repair in Delhi", path: "/geyser-repair-delhi" },
+  { label: "Microwave Repair in Delhi", path: "/microwave-repair-delhi" },
+];
+
+const LOCATION_LINKS = [
+  { label: "Appliance Repair in Mahipalpur", path: "/mahipalpur" },
+  { label: "AC Service in Vasant Kunj", path: "/vasant-kunj" },
+  { label: "Appliance Repair in South Delhi", path: "/south-delhi" },
+  { label: "Repair Services Near Delhi Airport", path: "/delhi-airport-area" },
+];
+
+const QUICK_LINKS = [
+  { label: "About Medon Company", path: "/about" },
+  { label: "Our Work Gallery", path: "/gallery" },
+  { label: "All Services", path: "/services" },
+  { label: "Contact Us", path: "/contact" },
+];
+
+/* ── Reusable footer link list ───────────────────── */
+function FooterLinkList({ title, links }: { title: string; links: { label: string; path: string }[] }) {
+  return (
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      transition={{ duration: 0.5 }}
+    >
+      <h4 className="text-sm font-semibold uppercase tracking-wider text-white/80">{title}</h4>
+      <ul className="mt-5 space-y-3">
+        {links.map((link) => (
+          <li key={link.path}>
+            <Link
+              href={link.path}
+              className="text-sm text-white/50 hover:text-white transition-colors duration-200"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
+
+/* ── Footer component ────────────────────────────── */
 const Footer = () => {
   return (
     <motion.footer
@@ -26,7 +79,8 @@ const Footer = () => {
             },
           },
         }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20
+                   grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-5"
       >
 
         {/* Brand */}
@@ -43,63 +97,18 @@ const Footer = () => {
             Top-Rated AC Installation and Repair Services in Mahipalpur & Vasant Kunj.
             Our verified professionals ensure your comfort is never compromised.
           </p>
-
-          {/* Contact info in footer */}
-          <div className="mt-6 space-y-3">
-            <div className="flex items-center gap-3 text-white/50 text-sm">
-              <Phone size={14} />
-              <span>+91 7303637086</span>
-            </div>
-            <div className="flex items-center gap-3 text-white/50 text-sm">
-              <Mail size={14} />
-              <span>Medoncompany@gmail.com</span>
-            </div>
-            <div className="flex items-start gap-3 text-white/50 text-sm">
-              <MapPin size={14} className="mt-0.5 flex-shrink-0" />
-              <span>Mahipalpur, New Delhi, 110037</span>
-            </div>
-          </div>
         </motion.div>
 
         {/* Services */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.5 }}
-        >
-          <FooterLinks
-            title="Services"
-            links={[
-              { label: "AC Repair", type: "scroll", id: "services" },
-              { label: "Refrigerator Repair", type: "scroll", id: "services" },
-              { label: "Washing Machine Repair", type: "scroll", id: "services" },
-              { label: "Electrical Services", type: "scroll", id: "services" },
-            ]}
-          />
-        </motion.div>
+        <FooterLinkList title="Services" links={SERVICE_LINKS} />
 
-        {/* Company */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.5 }}
-        >
-          <FooterLinks
-            title="Company"
-            links={[
-              { label: "About Us", type: "route", path: "/about" },
-              { label: "How It Works", type: "scroll", id: "how-it-works" },
-              { label: "Careers", type: "route", path: "/careers" },
-              { label: "Contact", type: "scroll", id: "contact" },
-            ]}
-          />
-        </motion.div>
+        {/* Locations */}
+        <FooterLinkList title="Locations" links={LOCATION_LINKS} />
 
-        {/* Support */}
+        {/* Quick Links */}
+        <FooterLinkList title="Quick Links" links={QUICK_LINKS} />
+
+        {/* Contact */}
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 30 },
@@ -107,14 +116,21 @@ const Footer = () => {
           }}
           transition={{ duration: 0.5 }}
         >
-          <FooterLinks
-            title="Support"
-            links={[
-              { label: "Help Center", type: "route", path: "/help" },
-              { label: "Privacy Policy", type: "route", path: "/privacy" },
-              { label: "Terms & Conditions", type: "route", path: "/terms" },
-            ]}
-          />
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-white/80">Contact</h4>
+          <div className="mt-5 space-y-4">
+            <a href="tel:+917303637086" className="flex items-center gap-3 text-white/50 text-sm hover:text-white transition-colors">
+              <Phone size={14} className="flex-shrink-0" />
+              <span>+91 7303637086</span>
+            </a>
+            <a href="mailto:Medoncompany@gmail.com" className="flex items-center gap-3 text-white/50 text-sm hover:text-white transition-colors">
+              <Mail size={14} className="flex-shrink-0" />
+              <span>Medoncompany@gmail.com</span>
+            </a>
+            <div className="flex items-start gap-3 text-white/50 text-sm">
+              <MapPin size={14} className="mt-0.5 flex-shrink-0" />
+              <span>Shop No L-3, Street No 1, L Block, Mahipalpur Village, New Delhi 110037</span>
+            </div>
+          </div>
         </motion.div>
 
       </motion.div>

@@ -1,16 +1,29 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { navItems } from "./NavItems";
+import ServicesDropdown from "./ServicesDropdown";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+
+const MOBILE_SERVICES = [
+  { label: "AC Repair Service in Delhi", slug: "ac-repair-service-delhi" },
+  { label: "AC Installation in Delhi", slug: "ac-installation-delhi" },
+  { label: "AC Gas Refilling in Delhi", slug: "ac-gas-refilling-delhi" },
+  { label: "Refrigerator Repair in Delhi", slug: "refrigerator-repair-delhi" },
+  { label: "Electrical Services in Delhi", slug: "electrical-services-delhi" },
+  { label: "Geyser Repair in Delhi", slug: "geyser-repair-delhi" },
+  { label: "Microwave Repair in Delhi", slug: "microwave-repair-delhi" },
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeHash, setActiveHash] = useState("#home");
   const [showAppModal, setShowAppModal] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const pathname = usePathname();
   const router = useRouter();
@@ -105,6 +118,20 @@ const Navbar = () => {
             {navItems.map((item, i) => {
               const isActive = activeHash === item.hash;
 
+              /* Render ServicesDropdown for the "Services" item */
+              if (item.label === "Services") {
+                return (
+                  <motion.li
+                    key={item.label}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                  >
+                    <ServicesDropdown />
+                  </motion.li>
+                );
+              }
+
               return (
                 <motion.li
                   key={item.label}
@@ -175,6 +202,55 @@ const Navbar = () => {
               <div className="bg-white/95 backdrop-blur-xl border-t border-gray-100 px-6 py-5 space-y-1" role="navigation" aria-label="Mobile navigation">
                 {navItems.map((item) => {
                   const isActive = activeHash === item.hash;
+
+                  /* Services accordion in mobile */
+                  if (item.label === "Services") {
+                    return (
+                      <div key={item.label}>
+                        <button
+                          onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                          className={`flex w-full items-center justify-between px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200
+                            ${
+                              isActive
+                                ? "text-primary bg-primary-light/60"
+                                : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                            }`}
+                        >
+                          Services
+                          <ChevronDown
+                            size={14}
+                            className={`transition-transform duration-300 ${mobileServicesOpen ? "rotate-180" : ""}`}
+                          />
+                        </button>
+
+                        <AnimatePresence>
+                          {mobileServicesOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="pl-4 py-1 space-y-0.5">
+                                {MOBILE_SERVICES.map((svc) => (
+                                  <Link
+                                    key={svc.slug}
+                                    href={`/${svc.slug}`}
+                                    onClick={() => setOpen(false)}
+                                    className="block px-4 py-2.5 text-sm text-gray-500 hover:text-primary
+                                               hover:bg-primary-light/40 rounded-lg transition-colors duration-200"
+                                  >
+                                    {svc.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  }
 
                   return (
                     <button

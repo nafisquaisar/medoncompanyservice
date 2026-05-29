@@ -9,6 +9,7 @@ import ServiceReviews from "@/components/service-page/ServiceReviews";
 import ServiceFAQ from "@/components/service-page/ServiceFAQ";
 import ServiceCTA from "@/components/service-page/ServiceCTA";
 import ServiceCrossLinks from "@/components/service-page/ServiceCrossLinks";
+import ServiceLocationLinks from "@/components/service-page/ServiceLocationLinks";
 
 interface ServicePageTemplateProps {
   data: ServicePageData;
@@ -42,6 +43,8 @@ export default function ServicePageTemplate({ data }: ServicePageTemplateProps) 
         <ServiceFAQ faqs={data.faqs} />
 
         <ServiceCrossLinks currentSlug={data.slug} />
+
+        <ServiceLocationLinks serviceName={data.heroTitle} />
 
         <ServiceCTA />
       </main>

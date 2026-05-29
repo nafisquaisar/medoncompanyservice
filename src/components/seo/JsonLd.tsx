@@ -1,6 +1,9 @@
-/* ── Medon Company – Local Business Structured Data (JSON-LD) ─── */
+/* ── Medon Company – Structured Data (JSON-LD) ─── */
 
-const STRUCTURED_DATA = {
+import { HOMEPAGE_FAQS } from "@/data/homepage-faqs";
+
+/* ── LocalBusiness Schema ────────────────────────────── */
+const LOCAL_BUSINESS = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Medon Company",
@@ -56,11 +59,31 @@ const STRUCTURED_DATA = {
   ],
 };
 
+/* ── FAQPage Schema (generated from HomepageFAQ data) ── */
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOMEPAGE_FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function JsonLd() {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(STRUCTURED_DATA) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+      />
+    </>
   );
 }
