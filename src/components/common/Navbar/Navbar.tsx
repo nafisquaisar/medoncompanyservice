@@ -25,7 +25,7 @@ const Navbar = () => {
   const [showAppModal, setShowAppModal] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
-  const pathname = usePathname();
+  const pathname = usePathname() || "";
   const router = useRouter();
 
   /* ---------- SCROLL DETECTION ---------- */
@@ -95,11 +95,10 @@ const Navbar = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className={`sticky top-0 z-50 transition-all duration-500
-        ${
-          scrolled
+        ${scrolled
             ? "bg-white/80 backdrop-blur-xl shadow-[0_1px_3px_rgba(0,0,0,0.06)] border-b border-gray-100"
             : "bg-white/95 backdrop-blur-sm"
-        }`}
+          }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[68px] flex items-center justify-between" aria-label="Main navigation">
 
@@ -146,10 +145,9 @@ const Navbar = () => {
                     <Link
                       href={item.href}
                       className={`relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase transition-colors duration-300
-                        ${
-                          isActive
-                            ? "text-primary"
-                            : "text-gray-500 hover:text-primary"
+                        ${isActive
+                          ? "text-primary"
+                          : "text-gray-500 hover:text-primary"
                         }`}
                     >
                       {item.label}
@@ -172,10 +170,9 @@ const Navbar = () => {
                     whileHover={{ y: -1 }}
                     onClick={() => handleNavClick(item.hash)}
                     className={`relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase transition-colors duration-300
-                      ${
-                        isActive
-                          ? "text-primary"
-                          : "text-gray-500 hover:text-primary"
+                      ${isActive
+                        ? "text-primary"
+                        : "text-gray-500 hover:text-primary"
                       }`}
                   >
                     {item.label}
@@ -239,10 +236,9 @@ const Navbar = () => {
                         <button
                           onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                           className={`flex w-full items-center justify-between px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200
-                            ${
-                              isActive
-                                ? "text-primary bg-primary-light/60"
-                                : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                            ${isActive
+                              ? "text-primary bg-primary-light/60"
+                              : "text-gray-600 hover:text-primary hover:bg-gray-50"
                             }`}
                         >
                           Services
@@ -289,10 +285,9 @@ const Navbar = () => {
                         href={item.href}
                         onClick={() => setOpen(false)}
                         className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200
-                          ${
-                            pathname.startsWith(item.href)
-                              ? "text-primary bg-primary-light/60"
-                              : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                          ${pathname.startsWith(item.href)
+                            ? "text-primary bg-primary-light/60"
+                            : "text-gray-600 hover:text-primary hover:bg-gray-50"
                           }`}
                       >
                         {item.label}
@@ -305,10 +300,9 @@ const Navbar = () => {
                       key={item.label}
                       onClick={() => handleNavClick(item.hash)}
                       className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200
-                        ${
-                          isActive
-                            ? "text-primary bg-primary-light/60"
-                            : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                        ${isActive
+                          ? "text-primary bg-primary-light/60"
+                          : "text-gray-600 hover:text-primary hover:bg-gray-50"
                         }`}
                     >
                       {item.label}
