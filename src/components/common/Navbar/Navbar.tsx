@@ -116,7 +116,9 @@ const Navbar = () => {
           {/* DESKTOP MENU */}
           <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item, i) => {
-              const isActive = activeHash === item.hash;
+              const isActive = item.href
+                ? pathname.startsWith(item.href)
+                : activeHash === item.hash;
 
               /* Render ServicesDropdown for the "Services" item */
               if (item.label === "Services") {
@@ -128,6 +130,33 @@ const Navbar = () => {
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                   >
                     <ServicesDropdown />
+                  </motion.li>
+                );
+              }
+
+              /* Direct link items (e.g. Blog) */
+              if (item.href) {
+                return (
+                  <motion.li
+                    key={item.label}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: i * 0.05 }}
+                  >
+                    <Link
+                      href={item.href}
+                      className={`relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase transition-colors duration-300
+                        ${
+                          isActive
+                            ? "text-primary"
+                            : "text-gray-500 hover:text-primary"
+                        }`}
+                    >
+                      {item.label}
+                      {isActive && (
+                        <span className="absolute left-1/2 -translate-x-1/2 -bottom-0.5 h-[2px] w-5 rounded-full bg-primary" />
+                      )}
+                    </Link>
                   </motion.li>
                 );
               }
@@ -249,6 +278,25 @@ const Navbar = () => {
                           )}
                         </AnimatePresence>
                       </div>
+                    );
+                  }
+
+                  /* Direct link items (e.g. Blog) in mobile */
+                  if (item.href) {
+                    return (
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                        className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200
+                          ${
+                            pathname.startsWith(item.href)
+                              ? "text-primary bg-primary-light/60"
+                              : "text-gray-600 hover:text-primary hover:bg-gray-50"
+                          }`}
+                      >
+                        {item.label}
+                      </Link>
                     );
                   }
 

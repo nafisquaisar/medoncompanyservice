@@ -65,3 +65,16 @@ html {
   outline: 2px solid #01395C;
   outline-offset: 2px;
 }
+
+/* ── Blog prose typography ────────────────────────── */
+.prose-medon a {
+  color: #01395C;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.prose-medon a:hover {
+  border-bottom-color: #01395C;
+}

@@ -1,6 +1,7 @@
 type NavItem = {
   label: string;
-  hash: `#${string}`;
+  hash?: `#${string}`;
+  href?: string;
 };
 
 export const navItems: NavItem[] = [
@@ -8,6 +9,7 @@ export const navItems: NavItem[] = [
   { label: "Services", hash: "#services" },
   { label: "How It Works", hash: "#how-it-works" },
   { label: "Gallery", hash: "#gallery" },
+  { label: "Blog", href: "/blog" },
   { label: "About", hash: "#about" },
   { label: "Contact", hash: "#contact" },
 ];

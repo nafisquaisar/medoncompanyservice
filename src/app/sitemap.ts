@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { ALL_SERVICES } from "@/data/services";
 import { ALL_LOCATIONS } from "@/data/locations";
+import { ALL_BLOG_POSTS } from "@/data/blog-posts";
 
 const BASE_URL = "https://medoncompany.com";
 
@@ -37,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 
   /* ── Service pages (auto-generated from data) ─── */
@@ -55,5 +62,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...corePages, ...servicePages, ...locationPages];
+  /* ── Blog posts (auto-generated from data) ────── */
+  const blogPages: MetadataRoute.Sitemap = ALL_BLOG_POSTS.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: post.updatedDate ? new Date(post.updatedDate) : new Date(post.publishDate),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...corePages, ...servicePages, ...locationPages, ...blogPages];
 }

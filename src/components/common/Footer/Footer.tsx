@@ -26,6 +26,7 @@ const QUICK_LINKS = [
   { label: "About Medon Company", path: "/about" },
   { label: "Our Work Gallery", path: "/gallery" },
   { label: "All Services", path: "/services" },
+  { label: "Blog & Guides", path: "/blog" },
   { label: "Contact Us", path: "/contact" },
 ];
 
