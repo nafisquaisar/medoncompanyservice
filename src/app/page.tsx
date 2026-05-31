@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Hero from "@/components/sections/Hero/Hero";
+import TrustBadges from "@/components/sections/TrustBadges/TrustBadges";
 import Services from "@/pages/Services/Services";
 import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import WhyChooseMedon from "@/components/sections/WhyChooseMedon/WhyChooseMedon";
@@ -53,6 +54,8 @@ export default function HomePage() {
         <section id="home" className="scroll-mt-20" aria-label="Hero">
           <Hero />
         </section>
+
+        <TrustBadges />
 
         <section id="services" className="scroll-mt-20" aria-label="Our Services">
           <Services />

@@ -13,6 +13,11 @@ export type BlogCategory =
   | "Appliance Maintenance"
   | "Home Repair Guides";
 
+export type BlogCluster =
+  | "ac-repair"
+  | "refrigerator-repair"
+  | "maintenance";
+
 export const ALL_BLOG_CATEGORIES: BlogCategory[] = [
   "AC Repair",
   "Refrigerator Repair",
@@ -59,6 +64,9 @@ export interface BlogPost {
 
   /* FAQ (optional — for FAQ schema) */
   faqs?: BlogFAQ[];
+
+  /* Topical SEO Cluster */
+  cluster?: BlogCluster;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -82,6 +90,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       "split AC not cooling",
     ],
     category: "AC Repair",
+    cluster: "ac-repair",
     publishDate: "2025-04-15",
     updatedDate: "2025-05-20",
     author: "Medon Company",
@@ -206,6 +215,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       "AC repair tips",
     ],
     category: "AC Repair",
+    cluster: "ac-repair",
     publishDate: "2025-04-28",
     author: "Medon Company",
     excerpt:
@@ -318,6 +328,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       "appliance repair Delhi",
     ],
     category: "Appliance Maintenance",
+    cluster: "maintenance",
     publishDate: "2025-03-10",
     updatedDate: "2025-05-15",
     author: "Medon Company",
@@ -431,6 +442,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       "appliance repair Delhi",
     ],
     category: "Refrigerator Repair",
+    cluster: "refrigerator-repair",
     publishDate: "2025-05-05",
     author: "Medon Company",
     excerpt:
@@ -552,6 +564,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       "appliance maintenance Delhi",
     ],
     category: "Appliance Maintenance",
+    cluster: "maintenance",
     publishDate: "2025-05-18",
     author: "Medon Company",
     excerpt:
@@ -674,4 +687,11 @@ export function getBlogBySlug(slug: string): BlogPost | undefined {
 /* ── Helper: get blogs by category ───────────────── */
 export function getBlogsByCategory(category: BlogCategory): BlogPost[] {
   return ALL_BLOG_POSTS.filter((p) => p.category === category);
+}
+
+/* ── Helper: get blogs by cluster ────────────────── */
+export function getBlogsByCluster(cluster: BlogCluster, excludeSlug?: string): BlogPost[] {
+  return ALL_BLOG_POSTS.filter(
+    (p) => p.cluster === cluster && p.slug !== excludeSlug
+  );
 }

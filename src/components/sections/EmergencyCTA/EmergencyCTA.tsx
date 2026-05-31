@@ -39,8 +39,8 @@ export default function EmergencyCTA() {
 
           {/* Description */}
           <p className="mt-4 text-white/60 max-w-xl mx-auto leading-relaxed text-sm sm:text-base">
-            Same-day service available in Mahipalpur, Vasant Kunj, South Delhi
-            &amp; Delhi Airport area. Our verified technicians can be at your
+            Same-day service available in Mahipalpur, Vasant Kunj, Aerocity,
+            Dwarka, South Delhi, Saket &amp; Hauz Khas. Our verified technicians can be at your
             doorstep within 1–2 hours.
           </p>
 

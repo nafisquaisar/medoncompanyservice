@@ -1,6 +1,7 @@
 import type { ServicePageData } from "@/data/services";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
+import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import ServiceHero from "@/components/service-page/ServiceHero";
 import ServiceDetails from "@/components/service-page/ServiceDetails";
 import ServicePricing from "@/components/service-page/ServicePricing";
@@ -18,6 +19,7 @@ interface ServicePageTemplateProps {
 export default function ServicePageTemplate({ data }: ServicePageTemplateProps) {
   return (
     <>
+      <ServiceJsonLd service={data} />
       <Navbar />
 
       <main id="main-content">

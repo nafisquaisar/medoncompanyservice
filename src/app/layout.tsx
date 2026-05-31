@@ -1,21 +1,30 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import EmergencyBanner from "@/components/common/EmergencyBanner/EmergencyBanner";
+import QuickBookingPopup from "@/components/common/QuickBookingPopup/QuickBookingPopup";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import GoogleTagManager, {
+  GTMNoScript,
+} from "@/components/analytics/GoogleTagManager";
+import WebVitals from "@/components/analytics/WebVitals";
+/* MetaPixel: uncomment the line below once NEXT_PUBLIC_META_PIXEL_ID is set */
+// import MetaPixel from "@/components/analytics/MetaPixel";
 
-/* ── Typography ──────────────────────────────────── */
+/* ── Typography ──────────────────────────────────────── */
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
-/* ── Site-wide constants ─────────────────────────── */
+/* ── Site-wide constants ─────────────────────────────── */
 const SITE_URL = "https://medoncompany.com";
 const SITE_NAME = "Medon Company";
 const SITE_DESC =
   "Medon Company provides expert AC repair, refrigerator service, electrical & geyser repair in Delhi NCR. Verified technicians, transparent pricing, real-time tracking. Book now!";
 
-/* ── Global Metadata ─────────────────────────────── */
+/* ── Global Metadata ─────────────────────────────────── */
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
@@ -54,6 +63,11 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: "/",
+  },
+
+  /* ── Google Search Console verification ─────────────── */
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
   },
 
   openGraph: {
@@ -97,14 +111,14 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── Viewport ────────────────────────────────────── */
+/* ── Viewport ────────────────────────────────────────── */
 export const viewport: Viewport = {
   themeColor: "#01395C",
   width: "device-width",
   initialScale: 1,
 };
 
-/* ── Root Layout ─────────────────────────────────── */
+/* ── Root Layout ─────────────────────────────────────── */
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -112,7 +126,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased">
+        {/* GTM noscript — must be first child of <body> per GTM spec */}
+        <GTMNoScript />
+
+        {/* Web Vitals reporter — client boundary confined to this component */}
+        <WebVitals />
+
+        <EmergencyBanner />
+        {children}
+        <QuickBookingPopup />
+
+        {/* Analytics scripts — loaded after hydration (afterInteractive) */}
+        <GoogleAnalytics />
+        <GoogleTagManager />
+
+        {/* Uncomment when NEXT_PUBLIC_META_PIXEL_ID is configured: */}
+        {/* <MetaPixel /> */}
+      </body>
     </html>
   );
 }

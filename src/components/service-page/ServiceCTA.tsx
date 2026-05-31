@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 export default function ServiceCTA() {
+  const { onCallClick, onWhatsAppClick } = useAnalytics({
+    location: "service_cta",
+  });
+
   return (
     <section
       className="py-20 sm:py-28 bg-gradient-to-br from-secondary to-primary-light/30 relative overflow-hidden"
@@ -41,6 +46,7 @@ export default function ServiceCTA() {
         >
           <a
             href="tel:+917303637086"
+            onClick={onCallClick}
             className="group inline-flex items-center justify-center gap-2 bg-primary text-white
                        px-8 py-4 rounded-full font-semibold shadow-lg shadow-primary/25
                        hover:bg-primary-dark hover:shadow-xl transition-all duration-300 text-base"
@@ -53,6 +59,7 @@ export default function ServiceCTA() {
             href="https://wa.me/917303637086?text=Hi%20Medon%2C%20I%20need%20a%20service"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={onWhatsAppClick}
             className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white
                        px-8 py-4 rounded-full font-semibold shadow-lg shadow-[#25D366]/25
                        hover:bg-[#1fb855] hover:shadow-xl transition-all duration-300 text-base"

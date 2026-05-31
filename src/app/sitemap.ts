@@ -46,6 +46,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  /* ── Trust / Legal pages ──────────────────── */
+  const trustPages: MetadataRoute.Sitemap = [
+    {
+      url: `${BASE_URL}/privacy-policy`,
+      lastModified: new Date("2025-05-01"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/terms-and-conditions`,
+      lastModified: new Date("2025-05-01"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/refund-policy`,
+      lastModified: new Date("2025-05-01"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${BASE_URL}/cancellation-policy`,
+      lastModified: new Date("2025-05-01"),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+  ];
+
   /* ── Service pages (auto-generated from data) ─── */
   const servicePages: MetadataRoute.Sitemap = ALL_SERVICES.map((service) => ({
     url: `${BASE_URL}/${service.slug}`,
@@ -70,5 +98,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...corePages, ...servicePages, ...locationPages, ...blogPages];
+  return [...corePages, ...trustPages, ...servicePages, ...locationPages, ...blogPages];
 }

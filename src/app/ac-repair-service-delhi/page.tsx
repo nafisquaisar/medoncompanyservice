@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     description: SERVICE.metaDescription,
     url: `/${SERVICE.slug}`,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: SERVICE.title + " | Medon Company",
+    description: SERVICE.metaDescription,
+    images: ["/img/webbanner.png"],
+  },
 };
 
 export default function Page() {

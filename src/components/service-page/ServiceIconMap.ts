@@ -9,10 +9,11 @@ import {
   Wind,
   Thermometer,
 } from "lucide-react";
+
 import type { LucideIcon } from "lucide-react";
 import type { ServiceIconName } from "@/data/services";
 
-const ICON_MAP: Record<ServiceIconName, LucideIcon> = {
+export const ICON_MAP: Record<ServiceIconName, LucideIcon> = {
   Snowflake,
   Refrigerator,
   Zap,
@@ -23,7 +24,3 @@ const ICON_MAP: Record<ServiceIconName, LucideIcon> = {
   Wind,
   Thermometer,
 };
-
-export function resolveIcon(name: ServiceIconName): LucideIcon {
-  return ICON_MAP[name] ?? Wrench;
-}

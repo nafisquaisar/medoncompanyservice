@@ -2,30 +2,8 @@
 
 import ReviewCard from "./ReviewCard";
 import { motion } from "framer-motion";
-
-const reviews = [
-  {
-    name: "Rahul Sharma",
-    role: "AC Service Customer",
-    review:
-      "Medon made booking and tracking service super easy. Technician was professional and on time.",
-    rating: 5,
-  },
-  {
-    name: "Anita Verma",
-    role: "Washing Machine Repair",
-    review:
-      "Very smooth experience. Support team kept me updated at every step.",
-    rating: 4,
-  },
-  {
-    name: "Vikas Kumar",
-    role: "Refrigerator Repair",
-    review:
-      "Transparent pricing and skilled technician. Highly recommended!",
-    rating: 5,
-  },
-];
+import { Star } from "lucide-react";
+import { ALL_REVIEWS, AGGREGATE_RATING } from "@/data/reviews";
 
 const Reviews = () => {
   return (
@@ -45,13 +23,41 @@ const Reviews = () => {
             What Our Customers Say
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Real feedback from customers who trust Medon for their service needs.
+            Real feedback from customers who trust Medon for their appliance repair needs
+            across Mahipalpur, Vasant Kunj, Aerocity, and South Delhi.
           </p>
+
+          {/* Aggregate Rating Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-6 inline-flex items-center gap-3 bg-amber-50 border border-amber-100 rounded-full px-5 py-2.5"
+          >
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  size={16}
+                  className={i < Math.floor(AGGREGATE_RATING.ratingValue)
+                    ? "text-amber-400 fill-amber-400"
+                    : "text-amber-200 fill-amber-200"}
+                />
+              ))}
+            </div>
+            <span className="text-sm font-bold text-amber-700">
+              {AGGREGATE_RATING.ratingValue}/5
+            </span>
+            <span className="text-xs text-amber-600">
+              from {AGGREGATE_RATING.reviewCount}+ verified reviews
+            </span>
+          </motion.div>
         </motion.div>
 
         {/* Cards */}
         <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {reviews.map((item, index) => (
+          {ALL_REVIEWS.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40 }}

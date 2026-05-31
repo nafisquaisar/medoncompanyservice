@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { getCrossLinks } from "@/data/services";
-import { resolveIcon } from "./ServiceIconMap";
+import { ICON_MAP } from "./ServiceIconMap";
 
 interface ServiceCrossLinksProps {
   currentSlug: string;
@@ -32,7 +32,7 @@ export default function ServiceCrossLinks({ currentSlug }: ServiceCrossLinksProp
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {links.map((link, i) => {
-            const LinkIcon = resolveIcon(link.icon);
+            const LinkIcon = ICON_MAP[link.icon];
             return (
             <motion.div
               key={link.slug}

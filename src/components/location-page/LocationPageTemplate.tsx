@@ -1,6 +1,8 @@
 import type { LocationPageData } from "@/data/locations";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
+import LocationJsonLd from "@/components/seo/LocationJsonLd";
+import GoogleMap from "@/components/common/GoogleMap/GoogleMap";
 import LocationHero from "./LocationHero";
 import LocationAbout from "./LocationAbout";
 import LocationServices from "./LocationServices";
@@ -15,10 +17,9 @@ interface LocationPageTemplateProps {
 }
 
 export default function LocationPageTemplate({ data }: LocationPageTemplateProps) {
-  const locationName = `${data.heroTitle.split(" ").pop()} ${data.heroHighlight}`.trim();
-
   return (
     <>
+      <LocationJsonLd location={data} />
       <Navbar />
 
       <main id="main-content">
@@ -49,6 +50,16 @@ export default function LocationPageTemplate({ data }: LocationPageTemplateProps
         <LocationTestimonials testimonials={data.testimonials} />
 
         <ServiceFAQ faqs={data.faqs} />
+
+        {/* Google Maps embed for local SEO */}
+        <section className="py-12 sm:py-16 bg-secondary" aria-label="Our location on map">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-primary text-center mb-6">
+              Find Us on the Map
+            </h2>
+            <GoogleMap height={350} />
+          </div>
+        </section>
 
         <LocationCrossLinks currentSlug={data.slug} />
 

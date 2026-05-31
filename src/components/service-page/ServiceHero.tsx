@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
 import type { ServiceIconName } from "@/data/services";
-import { resolveIcon } from "./ServiceIconMap";
+import { ICON_MAP } from "./ServiceIconMap";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 interface ServiceHeroProps {
   title: string;
@@ -18,7 +19,11 @@ export default function ServiceHero({
   description,
   iconName,
 }: ServiceHeroProps) {
-  const Icon = resolveIcon(iconName);
+  const Icon = ICON_MAP[iconName];
+  const { onCallClick, onWhatsAppClick, onBookingClick } = useAnalytics({
+    location: "service_hero",
+  });
+
   return (
     <section
       className="relative bg-gradient-to-br from-secondary via-white to-primary-light/30 py-16 sm:py-24 overflow-hidden"
@@ -62,6 +67,7 @@ export default function ServiceHero({
           >
             <a
               href="tel:+917303637086"
+              onClick={onCallClick}
               className="group inline-flex items-center justify-center gap-2 bg-primary text-white
                          px-7 py-3.5 rounded-full font-semibold shadow-lg shadow-primary/25
                          hover:bg-primary-dark hover:shadow-xl transition-all duration-300"
@@ -74,6 +80,7 @@ export default function ServiceHero({
               href="https://wa.me/917303637086?text=Hi%20Medon%2C%20I%20need%20a%20service"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={onWhatsAppClick}
               className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white
                          px-7 py-3.5 rounded-full font-semibold shadow-lg shadow-[#25D366]/25
                          hover:bg-[#1fb855] hover:shadow-xl transition-all duration-300"
@@ -83,9 +90,12 @@ export default function ServiceHero({
             </a>
 
             <button
-              onClick={() =>
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => {
+                onBookingClick();
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="inline-flex items-center justify-center gap-2 border-2 border-primary/20
                          text-primary px-7 py-3.5 rounded-full font-semibold bg-white
                          hover:border-primary hover:bg-primary-light/40 transition-all duration-300"

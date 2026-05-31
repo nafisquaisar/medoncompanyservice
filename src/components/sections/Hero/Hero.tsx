@@ -56,7 +56,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Medon Company provides professional AC repair, refrigerator service, electrical work &amp; geyser repair across Delhi NCR — including Mahipalpur, Vasant Kunj &amp; South Delhi. Verified technicians, same-day service, transparent pricing.
+              Medon Company provides professional AC repair, refrigerator service, electrical work &amp; geyser repair across Delhi NCR — serving Mahipalpur, Vasant Kunj, Aerocity, Dwarka, Saket, Hauz Khas &amp; South Delhi. Verified technicians, same-day service, transparent pricing.
             </motion.p>
 
             {/* CTA BUTTONS */}

@@ -1,40 +1,16 @@
 "use client";
 
-declare global {
-  interface Window {
-    gtag?: (
-      command: "event",
-      action: "conversion",
-      params: {
-        send_to: string;
-        event_callback?: () => void;
-      }
-    ) => void;
-  }
-}
+import { trackFormSubmit } from "@/utils/analytics";
 
 const ContactForm = () => {
-  const gtagReportConversion = (callback?: () => void) => {
-    if (window.gtag) {
-      window.gtag("event", "conversion", {
-        send_to: "AW-11430002689/WdNCCI-Jm6ocEIGAoMoq",
-        event_callback: () => {
-          if (callback) callback();
-        },
-      });
-    } else {
-      if (callback) callback();
-    }
-
-    return false;
-  };
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    gtagReportConversion(() => {
-      alert("Message sent successfully!");
-    });
+    /* Track form submission via GA4 + Google Ads conversion */
+    trackFormSubmit("contact_form");
+
+    /* TODO: replace with real form submission (API route / email service) */
+    alert("Message sent successfully!");
   };
 
   const inputClasses = `

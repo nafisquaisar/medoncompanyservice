@@ -3,12 +3,16 @@
 import { useEffect, useState } from "react";
 import { Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const WHATSAPP_URL =
   "https://wa.me/917303637086?text=Hi%20Medon%2C%20I%20need%20appliance%20repair%20service";
 
 export default function StickyContactCTA() {
   const [visible, setVisible] = useState(false);
+  const { onCallClick, onWhatsAppClick } = useAnalytics({
+    location: "sticky_bar",
+  });
 
   useEffect(() => {
     const onScroll = () => {
@@ -39,6 +43,7 @@ export default function StickyContactCTA() {
               <a
                 href="tel:+917303637086"
                 aria-label="Call Medon for appliance repair"
+                onClick={onCallClick}
                 className="flex-1 inline-flex items-center justify-center gap-2
                            bg-primary text-white py-3 rounded-full font-semibold text-sm
                            shadow-md shadow-primary/20 active:scale-95
@@ -53,6 +58,7 @@ export default function StickyContactCTA() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp Medon for appliance repair"
+                onClick={onWhatsAppClick}
                 className="flex-1 inline-flex items-center justify-center gap-2
                            bg-[#25D366] text-white py-3 rounded-full font-semibold text-sm
                            shadow-md shadow-[#25D366]/20 active:scale-95
@@ -70,6 +76,7 @@ export default function StickyContactCTA() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with Medon on WhatsApp"
+            onClick={onWhatsAppClick}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.5, opacity: 0 }}
