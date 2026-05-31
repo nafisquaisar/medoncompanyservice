@@ -3,10 +3,15 @@ import { ALL_SERVICES } from "@/data/services";
 import { ALL_LOCATIONS } from "@/data/locations";
 import { ALL_BLOG_POSTS } from "@/data/blog-posts";
 
-const BASE_URL = "https://medoncompany.com";
+/* =========================================================
+   Centralized Site URL
+========================================================= */
+const BASE_URL = "https://www.medoncompany.in";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  /* ── Core pages ─────────────────────────── */
+  /* =========================================================
+     Core Pages
+  ========================================================= */
   const corePages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
@@ -35,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${BASE_URL}/contact`,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
@@ -46,7 +51,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  /* ── Trust / Legal pages ──────────────────── */
+  /* =========================================================
+     Trust / Legal Pages
+  ========================================================= */
   const trustPages: MetadataRoute.Sitemap = [
     {
       url: `${BASE_URL}/privacy-policy`,
@@ -74,29 +81,50 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  /* ── Service pages (auto-generated from data) ─── */
-  const servicePages: MetadataRoute.Sitemap = ALL_SERVICES.map((service) => ({
-    url: `${BASE_URL}/${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.85,
-  }));
+  /* =========================================================
+     Service Pages
+  ========================================================= */
+  const servicePages: MetadataRoute.Sitemap = ALL_SERVICES.map(
+    (service) => ({
+      url: `${BASE_URL}/${service.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    })
+  );
 
-  /* ── Location pages (auto-generated from data) ── */
-  const locationPages: MetadataRoute.Sitemap = ALL_LOCATIONS.map((location) => ({
-    url: `${BASE_URL}/${location.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }));
+  /* =========================================================
+     Location Pages
+  ========================================================= */
+  const locationPages: MetadataRoute.Sitemap = ALL_LOCATIONS.map(
+    (location) => ({
+      url: `${BASE_URL}/${location.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    })
+  );
 
-  /* ── Blog posts (auto-generated from data) ────── */
+  /* =========================================================
+     Blog Pages
+  ========================================================= */
   const blogPages: MetadataRoute.Sitemap = ALL_BLOG_POSTS.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: post.updatedDate ? new Date(post.updatedDate) : new Date(post.publishDate),
-    changeFrequency: "monthly" as const,
+    lastModified: post.updatedDate
+      ? new Date(post.updatedDate)
+      : new Date(post.publishDate),
+    changeFrequency: "monthly",
     priority: 0.7,
   }));
 
-  return [...corePages, ...trustPages, ...servicePages, ...locationPages, ...blogPages];
+  /* =========================================================
+     Final Sitemap
+  ========================================================= */
+  return [
+    ...corePages,
+    ...trustPages,
+    ...servicePages,
+    ...locationPages,
+    ...blogPages,
+  ];
 }
