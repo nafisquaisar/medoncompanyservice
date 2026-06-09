@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary-light/40 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          
+
           {/* LEFT CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -46,7 +46,7 @@ const Hero = () => {
             >
               Expert Appliance Repair{" "}
               <span className="text-primary-dark/70">
-                Service in Delhi NCR
+                Service in Mahipalpur and Delhi NCR
               </span>
             </motion.h1>
 

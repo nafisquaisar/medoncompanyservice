@@ -96,12 +96,12 @@ export const ALL_SERVICES: ServicePageData[] = [
       { title: "Drainage & Leak Fix", description: "Water leakage repair including drain pipe cleaning, tray alignment, and insulation fixes." },
     ],
     pricing: [
-      { service: "AC General Inspection", price: "₹199", note: "All brands" },
+      { service: "AC General Inspection", price: "₹299", note: "All brands" },
       { service: "AC Gas Refilling (Split)", price: "₹1,499–₹2,999", note: "Depends on gas type" },
-      { service: "AC Gas Refilling (Window)", price: "₹999–₹1,999" },
+      { service: "AC Gas Refilling (Window)", price: "₹1499–₹2,999" },
       { service: "Compressor Repair", price: "₹2,500+", note: "After diagnosis" },
-      { service: "PCB Repair / Replacement", price: "₹1,200+", note: "Brand dependent" },
-      { service: "Fan Motor Replacement", price: "₹800–₹1,800" },
+      { service: "PCB Repair / Replacement", price: "₹2000+", note: "Brand dependent" },
+      { service: "Fan Motor Replacement", price: "₹3000–₹4000" },
     ],
     benefits: [
       "Same-day service in most Delhi NCR areas",
