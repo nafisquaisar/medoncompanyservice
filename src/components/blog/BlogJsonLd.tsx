@@ -1,14 +1,21 @@
 /* ── Blog Post Structured Data (JSON-LD) ──────────── */
+/* Outputs: Article + FAQPage (optional) + BreadcrumbList */
 
 import type { BlogPost } from "@/data/blog-posts";
 import { calculateReadingTime } from "@/utils/blog-utils";
+import {
+  SITE_URL,
+  SITE_NAME,
+  OG_IMAGE,
+  SITE_LOGO,
+} from "@/config/site";
 
 interface BlogJsonLdProps {
   post: BlogPost;
 }
 
 export default function BlogJsonLd({ post }: BlogJsonLdProps) {
-  const url = `https://medoncompany.com/blog/${post.slug}`;
+  const url = `${SITE_URL}/blog/${post.slug}`;
   const readingTime = calculateReadingTime(post);
 
   /* ── Article Schema ────────────────────── */
@@ -20,15 +27,23 @@ export default function BlogJsonLd({ post }: BlogJsonLdProps) {
     author: {
       "@type": "Organization",
       name: post.author,
-      url: "https://medoncompany.com",
+      /*
+       * author.url should be a URL, not just a name string.
+       * Pointing to the About page is the correct practice.
+       */
+      url: `${SITE_URL}/about`,
     },
     publisher: {
       "@type": "Organization",
-      name: "Medon Company",
-      url: "https://medoncompany.com",
+      name: SITE_NAME,
+      url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: "https://medoncompany.com/img/webbanner.png",
+        /*
+         * Publisher logo must be a rectangular image ≤600px wide, ≤60px tall
+         * for Google News eligibility. Use the site logo, not the OG banner.
+         */
+        url: SITE_LOGO,
       },
     },
     datePublished: post.publishDate,
@@ -38,9 +53,16 @@ export default function BlogJsonLd({ post }: BlogJsonLdProps) {
       "@id": url,
     },
     url,
+    image: {
+      "@type": "ImageObject",
+      url: OG_IMAGE,
+      width: 1200,
+      height: 630,
+    },
     wordCount: readingTime * 200,
     articleSection: post.category,
     keywords: post.keywords.join(", "),
+    inLanguage: "en-IN",
   };
 
   /* ── FAQ Schema (if FAQs exist) ────────── */
@@ -68,13 +90,13 @@ export default function BlogJsonLd({ post }: BlogJsonLdProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://medoncompany.com",
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://medoncompany.com/blog",
+        item: `${SITE_URL}/blog`,
       },
       {
         "@type": "ListItem",

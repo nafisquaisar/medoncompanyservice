@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import {
   Download,
@@ -15,7 +15,7 @@ const steps = [
     step: 1,
     title: "Download the App",
     description:
-      "Download the Medon app from the Play Store to get started with reliable electronic services.",
+      "Download the Medon Company app from the Play Store to get started with reliable electronic services.",
     icon: Download,
   },
   {

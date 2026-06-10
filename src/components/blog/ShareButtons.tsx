@@ -1,16 +1,15 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
+import { SITE_URL } from "@/config/site";
 
 interface ShareButtonsProps {
   title: string;
   slug: string;
 }
 
-const BASE_URL = "https://medoncompany.com";
-
 export default function ShareButtons({ title, slug }: ShareButtonsProps) {
-  const url = encodeURIComponent(`${BASE_URL}/blog/${slug}`);
+  const url = encodeURIComponent(`${SITE_URL}/blog/${slug}`);
   const text = encodeURIComponent(title);
 
   const shareLinks = [

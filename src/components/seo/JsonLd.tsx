@@ -1,38 +1,50 @@
 /* ── Medon Company – Advanced Structured Data (JSON-LD) ─── */
+/* Homepage: LocalBusiness + HVACBusiness + Electrician + FAQPage + Organization */
 
 import { HOMEPAGE_FAQS } from "@/data/homepage-faqs";
 import { ALL_REVIEWS, AGGREGATE_RATING } from "@/data/reviews";
-
-const BASE_URL = "https://medoncompany.com";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_DESCRIPTION,
+  SITE_PHONE_SCHEMA,
+  SITE_EMAIL,
+  SITE_ADDRESS,
+  OG_IMAGE,
+  SITE_LOGO,
+} from "@/config/site";
 
 /* ── Multi-type LocalBusiness + HVACBusiness Schema ───────── */
 const LOCAL_BUSINESS = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "HVACBusiness"],
-  "@id": `${BASE_URL}/#business`,
-  name: "Medon Company",
-  description:
-    "Expert AC repair, refrigerator service, electrical & geyser repair in Delhi NCR. Verified technicians, transparent pricing, real-time tracking. Serving Mahipalpur, Vasant Kunj, Aerocity, Dwarka, South Delhi, Saket & Hauz Khas.",
-  url: BASE_URL,
-  telephone: "+917303637086",
-  email: "Medoncompany@gmail.com",
-  image: `${BASE_URL}/img/webbanner.png`,
-  logo: `${BASE_URL}/img/webbanner.png`,
+  /*
+   * @id is the canonical entity identifier Google uses for Knowledge Graph.
+   * It MUST match the canonical domain (www.medoncompany.in).
+   */
+  "@id": `${SITE_URL}/#business`,
+  name: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  url: SITE_URL,
+  telephone: SITE_PHONE_SCHEMA,
+  email: SITE_EMAIL,
+  image: OG_IMAGE,
+  /*
+   * logo must be a square/near-square image (112×112px minimum).
+   * Using the 1200×630 banner as logo will fail Google's validation.
+   * Create /public/img/logo.png (square) and reference SITE_LOGO.
+   */
+  logo: SITE_LOGO,
   address: {
     "@type": "PostalAddress",
-    streetAddress:
-      "Shop No, L-3, Street Number 1, L block, Mahipalpur Village",
-    addressLocality: "Mahipalpur",
-    addressRegion: "Delhi",
-    postalCode: "110037",
-    addressCountry: "IN",
+    ...SITE_ADDRESS,
   },
   geo: {
     "@type": "GeoCoordinates",
     latitude: 28.5494,
     longitude: 77.1171,
   },
-  hasMap: "https://maps.google.com/?q=Medon+Company+Mahipalpur+Delhi",
+  hasMap: "https://maps.google.com/?q=Medon Company+Company+Mahipalpur+Delhi",
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
@@ -50,14 +62,19 @@ const LOCAL_BUSINESS = {
   priceRange: "₹199 – ₹5000",
   currenciesAccepted: "INR",
   paymentAccepted: "Cash, UPI, Card",
+  /*
+   * areaServed order matters for local SEO relevance signals.
+   * Mahipalpur (HQ location) listed first — highest service priority.
+   * Remaining areas listed by proximity / service volume.
+   */
   areaServed: [
-    { "@type": "City", name: "New Delhi" },
     { "@type": "Place", name: "Mahipalpur" },
     { "@type": "Place", name: "Vasant Kunj" },
-    { "@type": "Place", name: "Delhi NCR" },
     { "@type": "Place", name: "Aerocity" },
     { "@type": "Place", name: "Dwarka" },
     { "@type": "Place", name: "South Delhi" },
+    { "@type": "City", name: "New Delhi" },
+    { "@type": "Place", name: "Delhi NCR" },
     { "@type": "Place", name: "Saket" },
     { "@type": "Place", name: "Hauz Khas" },
   ],
@@ -102,10 +119,11 @@ const LOCAL_BUSINESS = {
     ],
   },
   sameAs: [
-    // Add social profile URLs when available:
+    "https://maps.google.com/?q=Medon Company+Company+Mahipalpur+Delhi",
+    // Add your verified profiles when available:
     // "https://www.facebook.com/medoncompany",
     // "https://www.instagram.com/medoncompany",
-    // "https://g.co/kgs/medoncompany",
+    // "https://g.page/medoncompany",
   ],
 
   /* ── Aggregate Rating ─────────────────────────────── */
@@ -138,27 +156,23 @@ const LOCAL_BUSINESS = {
 const ELECTRICIAN_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Electrician",
-  "@id": `${BASE_URL}/#electrician`,
-  name: "Medon Company – Electrical Services",
+  "@id": `${SITE_URL}/#electrician`,
+  name: `${SITE_NAME} – Electrical Services`,
   description:
     "Professional electrical services in Delhi NCR – wiring, switchboard repair, MCB installation, short circuit fix. Licensed electricians with safety-first approach.",
-  url: `${BASE_URL}/electrical-services-delhi`,
-  telephone: "+917303637086",
+  url: `${SITE_URL}/electrical-services-delhi`,
+  telephone: SITE_PHONE_SCHEMA,
   address: {
     "@type": "PostalAddress",
-    streetAddress:
-      "Shop No, L-3, Street Number 1, L block, Mahipalpur Village",
-    addressLocality: "Mahipalpur",
-    addressRegion: "Delhi",
-    postalCode: "110037",
-    addressCountry: "IN",
+    ...SITE_ADDRESS,
   },
   areaServed: [
     { "@type": "City", name: "New Delhi" },
     { "@type": "Place", name: "Delhi NCR" },
   ],
   parentOrganization: {
-    "@id": `${BASE_URL}/#business`,
+    /* Cross-reference to the primary entity — @id must match LOCAL_BUSINESS @id */
+    "@id": `${SITE_URL}/#business`,
   },
 };
 
@@ -180,18 +194,35 @@ const FAQ_SCHEMA = {
 const ORGANIZATION_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": `${BASE_URL}/#organization`,
-  name: "Medon Company",
-  url: BASE_URL,
-  logo: `${BASE_URL}/img/webbanner.png`,
+  "@id": `${SITE_URL}/#organization`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: SITE_LOGO,
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+917303637086",
+    telephone: SITE_PHONE_SCHEMA,
     contactType: "customer service",
     areaServed: "IN",
     availableLanguage: ["English", "Hindi"],
   },
-  sameAs: [],
+  sameAs: [
+    "https://maps.google.com/?q=Medon Company+Company+Mahipalpur+Delhi",
+    // "https://www.facebook.com/medoncompany",
+    // "https://www.instagram.com/medoncompany",
+  ],
+};
+
+/* ── WebSite Schema (enables Sitelinks Searchbox) ──────── */
+const WEBSITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  name: SITE_NAME,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  publisher: {
+    "@id": `${SITE_URL}/#organization`,
+  },
 };
 
 export default function JsonLd() {
@@ -214,6 +245,10 @@ export default function JsonLd() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(ORGANIZATION_SCHEMA),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }}
       />
     </>
   );

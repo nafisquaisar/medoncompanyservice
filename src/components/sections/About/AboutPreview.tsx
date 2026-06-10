@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import {
   Zap,
@@ -54,10 +54,10 @@ const AboutPreview = () => {
         >
           <span className="text-xs font-semibold tracking-widest uppercase text-primary/60">Why Choose Us</span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary tracking-tight">
-            About Medon
+            About Medon Company
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Medon is a technology-driven platform built to simplify electronic
+            Medon Company is a technology-driven platform built to simplify electronic
             services through transparency, reliability, and smart management.
           </p>
         </motion.div>
@@ -140,7 +140,7 @@ const AboutPreview = () => {
                        rounded-full font-semibold shadow-lg shadow-primary/20
                        hover:bg-primary-dark hover:shadow-xl transition-all duration-300"
           >
-            Know More About Medon
+            Know More About Medon Company
             <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
           </motion.button>
         </motion.div>

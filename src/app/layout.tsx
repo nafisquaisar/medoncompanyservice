@@ -1,6 +1,13 @@
+// src/app/layout.tsx
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_DESCRIPTION,
+  OG_IMAGE,
+} from "@/config/site";
 import EmergencyBanner from "@/components/common/EmergencyBanner/EmergencyBanner";
 import QuickBookingPopup from "@/components/common/QuickBookingPopup/QuickBookingPopup";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
@@ -8,7 +15,7 @@ import GoogleTagManager, {
   GTMNoScript,
 } from "@/components/analytics/GoogleTagManager";
 import WebVitals from "@/components/analytics/WebVitals";
-/* MetaPixel: uncomment the line below once NEXT_PUBLIC_META_PIXEL_ID is set */
+/* MetaPixel: uncomment once NEXT_PUBLIC_META_PIXEL_ID is set */
 // import MetaPixel from "@/components/analytics/MetaPixel";
 
 /* ── Typography ──────────────────────────────────────── */
@@ -18,22 +25,21 @@ const inter = Inter({
   display: "swap",
 });
 
-/* ── Site-wide constants ─────────────────────────────── */
-const SITE_URL = "https://medoncompany.com";
-const SITE_NAME = "Medon Company";
-const SITE_DESC =
-  "Medon Company provides expert AC repair, refrigerator service, electrical & geyser repair in Delhi NCR. Verified technicians, transparent pricing, real-time tracking. Book now!";
-
 /* ── Global Metadata ─────────────────────────────────── */
 export const metadata: Metadata = {
+  /*
+   * metadataBase resolves ALL relative canonical/OG/alternate URLs.
+   * This MUST match the canonical www domain exactly.
+   * Import from @/config/site — never hardcode here.
+   */
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Medon Company – Expert AC & Appliance Repair Services in Delhi NCR",
-    template: "%s | Medon Company",
+    default: `${SITE_NAME} – Expert AC & Appliance Repair Services in Delhi NCR`,
+    template: `%s | ${SITE_NAME}`,
   },
 
-  description: SITE_DESC,
+  description: SITE_DESCRIPTION,
 
   keywords: [
     "AC repair Delhi",
@@ -51,9 +57,9 @@ export const metadata: Metadata = {
     "verified technicians",
   ],
 
-  authors: [{ name: "Medon Company", url: SITE_URL }],
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: "NF Nexa Tech",
-  publisher: "Medon Company",
+  publisher: SITE_NAME,
 
   formatDetection: {
     email: false,
@@ -61,9 +67,12 @@ export const metadata: Metadata = {
     telephone: false,
   },
 
-  alternates: {
-    canonical: "/",
-  },
+  /*
+   * DO NOT set alternates.canonical here in the root layout.
+   * Root-level alternates get inherited by child pages that don't
+   * define their own, causing every such page to claim the homepage
+   * as its canonical. Set explicit canonicals in every page.tsx only.
+   */
 
   /* ── Google Search Console verification ─────────────── */
   verification: {
@@ -75,23 +84,23 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "Medon Company – Expert AC & Appliance Repair Services",
-    description: SITE_DESC,
+    title: `${SITE_NAME} – Expert AC & Appliance Repair Services`,
+    description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/img/webbanner.png",
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Medon Company – Professional Appliance Repair Services",
+        alt: `${SITE_NAME} – Professional Appliance Repair Services`,
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Medon Company – Expert AC & Appliance Repair Services",
-    description: SITE_DESC,
-    images: ["/img/webbanner.png"],
+    title: `${SITE_NAME} – Expert AC & Appliance Repair Services`,
+    description: SITE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 
   robots: {

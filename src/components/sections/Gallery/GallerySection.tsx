@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  { src: "/img/galleryphoto/img1.png", alt: "Medon technician servicing a split AC unit" },
-  { src: "/img/galleryphoto/img2.png", alt: "Professional refrigerator repair by Medon" },
+  { src: "/img/galleryphoto/img1.png", alt: "Medon Company technician servicing a split AC unit" },
+  { src: "/img/galleryphoto/img2.png", alt: "Professional refrigerator repair by Medon Company" },
   { src: "/img/galleryphoto/img3.png", alt: "Electrical wiring installation service" },
   { src: "/img/galleryphoto/img4.png", alt: "AC deep cleaning and gas refilling" },
   { src: "/img/galleryphoto/img5.png", alt: "Geyser installation and safety check" },

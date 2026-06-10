@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Shield, Clock, BadgeCheck, IndianRupee, Headphones, Star } from "lucide-react";
@@ -58,7 +58,7 @@ export default function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 sm:py-24 bg-secondary" aria-label="Why choose Medon">
+      <section className="py-20 sm:py-24 bg-secondary" aria-label="Why choose Medon Company">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-14"
@@ -68,10 +68,10 @@ export default function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
             viewport={{ once: true }}
           >
             <span className="text-xs font-semibold tracking-widest uppercase text-primary/60">
-              The Medon Advantage
+              The Medon Company Advantage
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary tracking-tight">
-              Why Choose Medon?
+              Why Choose Medon Company?
             </h2>
           </motion.div>
 

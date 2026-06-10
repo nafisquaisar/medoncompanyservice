@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Services from "@/pages/Services/Services";
 import Footer from "@/components/common/Footer/Footer";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "/services",
   },
   openGraph: {
-    title: "Medon Services – Professional Appliance Repair",
+    title: "Medon Company Services – Professional Appliance Repair",
     description:
       "AC repair, refrigerator service, electrical work, geyser & microwave repair with transparent pricing and verified technicians.",
     url: "/services",

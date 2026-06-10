@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/common/Navbar/Navbar";
 import GallerySection from "@/components/sections/Gallery/GallerySection";
 import Footer from "@/components/common/Footer/Footer";
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     canonical: "/gallery",
   },
   openGraph: {
-    title: "Medon Work Gallery – Service Portfolio",
+    title: "Medon Company Work Gallery – Service Portfolio",
     description:
-      "Browse real photos of professional appliance repair and service work by Medon's verified technicians.",
+      "Browse real photos of professional appliance repair and service work by Medon Company's verified technicians.",
     url: "/gallery",
   },
 };

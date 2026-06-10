@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -28,7 +28,7 @@ const AboutPage = () => {
       </h1>
 
       <p className="mt-8 text-gray-700 text-lg leading-relaxed text-justify">
-        Medon was founded to introduce structure, accountability,
+        Medon Company was founded to introduce structure, accountability,
         and operational transparency into an industry traditionally
         marked by inconsistency. We identified the critical gap between
         customers and service professionals and built a centralized,
@@ -148,7 +148,7 @@ const AboutPage = () => {
         viewport={{ once: true }}
       >
         <p className="text-gray-700 leading-relaxed text-lg">
-          Medon exists to eliminate inconsistency, opacity, and operational 
+          Medon Company exists to eliminate inconsistency, opacity, and operational 
           fragmentation within the electronic services ecosystem. 
           Our platform introduces accountability, workflow supervision, 
           and measurable service standards at every level.
@@ -233,7 +233,7 @@ const AboutPage = () => {
       viewport={{ once: true }}
     >
       <h3 className="text-2xl font-semibold text-primary">
-        The Medon Solution
+        The Medon Company Solution
       </h3>
 
       <ul className="mt-6 space-y-4 text-gray-600 list-disc list-inside">
@@ -413,7 +413,7 @@ const AboutPage = () => {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      Get Started With Medon
+      Get Started With Medon Company
     </motion.span>
 
     <motion.h2
@@ -435,7 +435,7 @@ const AboutPage = () => {
     >
       Experience technology-driven electronic service operations designed
       for accountability, verified technicians, and consistent delivery standards.
-      Medon ensures clarity at every step — from booking to completion.
+      Medon Company ensures clarity at every step — from booking to completion.
     </motion.p>
 
     <motion.div

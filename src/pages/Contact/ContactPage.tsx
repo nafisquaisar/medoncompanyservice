@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Phone, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
@@ -23,7 +23,7 @@ const Contact = () => {
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
             Have a question, need assistance, or want to know more about
-            Medon&apos;s services? Our team is ready to help.
+            Medon Company&apos;s services? Our team is ready to help.
           </p>
         </motion.div>
 

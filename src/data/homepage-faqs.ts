@@ -1,4 +1,4 @@
-/* ── Homepage FAQ data (shared between component and JSON-LD schema) ── */
+﻿/* ── Homepage FAQ data (shared between component and JSON-LD schema) ── */
 
 export const HOMEPAGE_FAQS = [
   {
@@ -12,14 +12,14 @@ export const HOMEPAGE_FAQS = [
       "Yes! Since Medon Company is headquartered in Mahipalpur, we offer same-hour technician dispatch for AC repair, installation, and deep cleaning. Our average response time in Mahipalpur is under 1 hour.",
   },
   {
-    question: "Which areas of Delhi NCR does Medon serve?",
+    question: "Which areas of Delhi NCR does Medon Company serve?",
     answer:
       "We serve Mahipalpur, Vasant Kunj (all sectors A–F), South Delhi (Saket, Hauz Khas, GK, Vasant Vihar), Delhi Airport area (Aerocity, Dwarka), and surrounding localities. Our coverage extends across the entire Delhi NCR region.",
   },
   {
     question: "Are your technicians verified and trained?",
     answer:
-      "Absolutely. Every Medon technician is identity-verified, background-checked, and skill-tested before being assigned to any job. They carry proper tools, follow structured service protocols, and are trained on all major appliance brands.",
+      "Absolutely. Every Medon Company technician is identity-verified, background-checked, and skill-tested before being assigned to any job. They carry proper tools, follow structured service protocols, and are trained on all major appliance brands.",
   },
   {
     question: "Do you offer warranty on repairs?",
@@ -29,7 +29,7 @@ export const HOMEPAGE_FAQS = [
   {
     question: "How can I book an appliance repair service?",
     answer:
-      "You can book a service by calling us at +91 7303637086, sending a WhatsApp message, or using the contact form on our website. We also offer booking through the Medon app (coming soon on Play Store).",
+      "You can book a service by calling us at +91 7303637086, sending a WhatsApp message, or using the contact form on our website. We also offer booking through the Medon Company app (coming soon on Play Store).",
   },
   {
     question: "What AC brands do you repair in Delhi?",

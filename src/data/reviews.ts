@@ -1,4 +1,4 @@
-/* ─────────────────────────────────────────────────────
+﻿/* ─────────────────────────────────────────────────────
    CENTRALIZED REVIEW DATA — Medon Company
    Used by: JSON-LD schema, Reviews section, AggregateRating
    ───────────────────────────────────────────────────── */
@@ -25,7 +25,7 @@ export const ALL_REVIEWS: MedonReview[] = [
     name: "Rahul Sharma",
     role: "AC Repair Customer",
     review:
-      "Medon made booking and tracking AC repair super easy. The technician was professional, arrived within an hour in Mahipalpur, and fixed my split AC cooling issue on the spot. Transparent pricing with no hidden charges.",
+      "Medon Company made booking and tracking AC repair super easy. The technician was professional, arrived within an hour in Mahipalpur, and fixed my split AC cooling issue on the spot. Transparent pricing with no hidden charges.",
     rating: 5,
     datePublished: "2025-04-10",
   },
@@ -41,7 +41,7 @@ export const ALL_REVIEWS: MedonReview[] = [
     name: "Vikas Kumar",
     role: "Refrigerator Repair",
     review:
-      "Transparent pricing and skilled technician. My Samsung fridge had a gas leak — Medon's technician detected and fixed it in under 2 hours. Highly recommended for fridge repair in South Delhi!",
+      "Transparent pricing and skilled technician. My Samsung fridge had a gas leak — Medon Company's technician detected and fixed it in under 2 hours. Highly recommended for fridge repair in South Delhi!",
     rating: 5,
     datePublished: "2025-05-02",
   },
@@ -57,7 +57,7 @@ export const ALL_REVIEWS: MedonReview[] = [
     name: "Dr. Anil Gupta",
     role: "AC Deep Cleaning",
     review:
-      "Medon cleaned all 4 of our split ACs in Vasant Kunj Sector D in one visit. They showed us the dirt removed from each unit. Cooling improved dramatically. 90-day warranty gives peace of mind.",
+      "Medon Company cleaned all 4 of our split ACs in Vasant Kunj Sector D in one visit. They showed us the dirt removed from each unit. Cooling improved dramatically. 90-day warranty gives peace of mind.",
     rating: 5,
     datePublished: "2025-04-28",
   },
@@ -65,7 +65,7 @@ export const ALL_REVIEWS: MedonReview[] = [
     name: "Sunita Verma",
     role: "AC Installation",
     review:
-      "Professional AC installation by Medon's team near Saket. Copper pipe fitting was neat, electrical wiring was properly done with a dedicated MCB. Same-day service and very reasonable charges.",
+      "Professional AC installation by Medon Company's team near Saket. Copper pipe fitting was neat, electrical wiring was properly done with a dedicated MCB. Same-day service and very reasonable charges.",
     rating: 4,
     datePublished: "2025-01-18",
   },

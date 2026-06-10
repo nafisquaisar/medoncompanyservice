@@ -1,4 +1,4 @@
-/* Icon names resolved client-side via ServiceIconMap */
+﻿/* Icon names resolved client-side via ServiceIconMap */
 export type ServiceIconName =
   | "Snowflake"
   | "Refrigerator"
@@ -82,7 +82,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     heroTitle: "Expert AC Repair Service",
     heroHighlight: "in Delhi NCR",
     heroDescription:
-      "Get your AC fixed by Medon's verified technicians. We handle all brands and models — split, window, and cassette ACs. Fast response, transparent pricing, and guaranteed satisfaction.",
+      "Get your AC fixed by Medon Company's verified technicians. We handle all brands and models — split, window, and cassette ACs. Fast response, transparent pricing, and guaranteed satisfaction.",
     heroIcon: "Snowflake",
     detailsHeading: "Complete AC Repair Solutions",
     detailsDescription:
@@ -168,7 +168,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       "Post-service follow-up and support",
     ],
     faqs: [
-      { question: "Is Medon based in Mahipalpur?", answer: "Yes, Medon Company's office is located in Mahipalpur at Shop No L-3, Street Number 1, L block, Mahipalpur Village, New Delhi 110037. This means we can offer the fastest response times in the area." },
+      { question: "Is Medon Company based in Mahipalpur?", answer: "Yes, Medon Company's office is located in Mahipalpur at Shop No L-3, Street Number 1, L block, Mahipalpur Village, New Delhi 110037. This means we can offer the fastest response times in the area." },
       { question: "How fast can you reach for an emergency AC repair in Mahipalpur?", answer: "For Mahipalpur, our average response time is under 1 hour for emergency calls. We prioritize local service requests." },
       { question: "Do you offer discounted rates for Mahipalpur residents?", answer: "Yes, we offer special inspection rates (₹149 instead of ₹199) and priority scheduling for residents of Mahipalpur and nearby areas." },
       { question: "Which areas near Mahipalpur do you cover?", answer: "We cover Mahipalpur Village, Mahipalpur Extension, Vasant Kunj, Rangpuri, Kishangarh, Munirka, and all surrounding localities." },
@@ -181,7 +181,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     slug: "ac-service-vasant-kunj",
     title: "AC Service & Repair in Vasant Kunj",
     metaDescription:
-      "Reliable AC service & repair in Vasant Kunj, Delhi. Medon provides split AC repair, deep cleaning, gas refilling, and installation. Call +91 7303637086.",
+      "Reliable AC service & repair in Vasant Kunj, Delhi. Medon Company provides split AC repair, deep cleaning, gas refilling, and installation. Call +91 7303637086.",
     keywords: [
       "AC service Vasant Kunj",
       "AC repair Vasant Kunj",
@@ -194,7 +194,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     heroTitle: "AC Service & Repair",
     heroHighlight: "in Vasant Kunj",
     heroDescription:
-      "Professional AC service across all Vasant Kunj sectors. From deep cleaning to major repairs, Medon's verified technicians deliver reliable service with transparent pricing.",
+      "Professional AC service across all Vasant Kunj sectors. From deep cleaning to major repairs, Medon Company's verified technicians deliver reliable service with transparent pricing.",
     heroIcon: "MapPin",
     detailsHeading: "AC Services in Vasant Kunj",
     detailsDescription:
@@ -237,7 +237,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     slug: "ac-installation-delhi",
     title: "AC Installation Service in Delhi NCR",
     metaDescription:
-      "Professional AC installation service in Delhi NCR. Split AC mounting, copper pipe fitting, and electrical setup by Medon's verified technicians. Call +91 7303637086.",
+      "Professional AC installation service in Delhi NCR. Split AC mounting, copper pipe fitting, and electrical setup by Medon Company's verified technicians. Call +91 7303637086.",
     keywords: [
       "AC installation Delhi",
       "split AC installation near me",
@@ -250,7 +250,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     heroTitle: "Professional AC Installation",
     heroHighlight: "in Delhi NCR",
     heroDescription:
-      "Get your new AC installed perfectly by Medon's certified technicians. We handle wall mounting, copper pipe fitting, electrical wiring, and testing — all in a single visit.",
+      "Get your new AC installed perfectly by Medon Company's certified technicians. We handle wall mounting, copper pipe fitting, electrical wiring, and testing — all in a single visit.",
     heroIcon: "Wrench",
     detailsHeading: "AC Installation Services",
     detailsDescription:
@@ -293,7 +293,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     slug: "ac-gas-refilling-delhi",
     title: "AC Gas Refilling Service in Delhi NCR",
     metaDescription:
-      "AC gas refilling service in Delhi NCR by Medon. R22, R32, R410A refrigerant refilling for split & window ACs. Leak detection included. Call +91 7303637086.",
+      "AC gas refilling service in Delhi NCR by Medon Company. R22, R32, R410A refrigerant refilling for split & window ACs. Leak detection included. Call +91 7303637086.",
     keywords: [
       "AC gas refilling Delhi",
       "AC gas refill near me",
@@ -306,7 +306,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     heroTitle: "AC Gas Refilling Service",
     heroHighlight: "in Delhi NCR",
     heroDescription:
-      "Low cooling from your AC? It might need gas refilling. Medon provides professional refrigerant refilling with leak detection for all AC types and brands.",
+      "Low cooling from your AC? It might need gas refilling. Medon Company provides professional refrigerant refilling with leak detection for all AC types and brands.",
     heroIcon: "Wind",
     detailsHeading: "AC Gas Refilling Solutions",
     detailsDescription:
@@ -362,7 +362,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     heroTitle: "Refrigerator Repair Service",
     heroHighlight: "in Delhi NCR",
     heroDescription:
-      "Fridge not cooling? Medon's verified technicians repair all refrigerator types — single door, double door, side-by-side, and mini fridges. All brands supported.",
+      "Fridge not cooling? Medon Company's verified technicians repair all refrigerator types — single door, double door, side-by-side, and mini fridges. All brands supported.",
     heroIcon: "Refrigerator",
     detailsHeading: "Refrigerator Repair Solutions",
     detailsDescription:
@@ -405,7 +405,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     slug: "electrical-services-delhi",
     title: "Electrical Services in Delhi NCR",
     metaDescription:
-      "Professional electrical services in Delhi NCR by Medon. Wiring, switchboard repair, MCB installation, short circuit fix, fan & light installation. Call +91 7303637086.",
+      "Professional electrical services in Delhi NCR by Medon Company. Wiring, switchboard repair, MCB installation, short circuit fix, fan & light installation. Call +91 7303637086.",
     keywords: [
       "electrical services Delhi",
       "electrician near me Delhi",
@@ -418,7 +418,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     heroTitle: "Professional Electrical Services",
     heroHighlight: "in Delhi NCR",
     heroDescription:
-      "Medon provides safe and reliable electrical services for homes and offices. Wiring, switchboard repair, fan installation, MCB setup, and emergency fault resolution.",
+      "Medon Company provides safe and reliable electrical services for homes and offices. Wiring, switchboard repair, fan installation, MCB setup, and emergency fault resolution.",
     heroIcon: "Zap",
     detailsHeading: "Electrical Service Solutions",
     detailsDescription:
@@ -461,7 +461,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     slug: "geyser-repair-delhi",
     title: "Geyser Repair & Installation in Delhi NCR",
     metaDescription:
-      "Professional geyser repair & installation in Delhi NCR. Fix heating issues, leakage, thermostat problems. New geyser installation. Call Medon at +91 7303637086.",
+      "Professional geyser repair & installation in Delhi NCR. Fix heating issues, leakage, thermostat problems. New geyser installation. Call Medon Company at +91 7303637086.",
     keywords: [
       "geyser repair Delhi",
       "geyser installation near me",
@@ -474,7 +474,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     heroTitle: "Geyser Repair & Installation",
     heroHighlight: "in Delhi NCR",
     heroDescription:
-      "Get your geyser repaired or installed by Medon's verified technicians. We handle all types — storage, instant, and gas geysers. Safety-first approach guaranteed.",
+      "Get your geyser repaired or installed by Medon Company's verified technicians. We handle all types — storage, instant, and gas geysers. Safety-first approach guaranteed.",
     heroIcon: "Thermometer",
     detailsHeading: "Geyser Service Solutions",
     detailsDescription:
@@ -517,7 +517,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     slug: "microwave-repair-delhi",
     title: "Microwave Repair Service in Delhi NCR",
     metaDescription:
-      "Expert microwave oven repair in Delhi NCR by Medon. Fix heating issues, turntable problems, control panel repair. All brands. Call +91 7303637086.",
+      "Expert microwave oven repair in Delhi NCR by Medon Company. Fix heating issues, turntable problems, control panel repair. All brands. Call +91 7303637086.",
     keywords: [
       "microwave repair Delhi",
       "microwave oven repair near me",
@@ -530,7 +530,7 @@ export const ALL_SERVICES: ServicePageData[] = [
     heroTitle: "Microwave Repair Service",
     heroHighlight: "in Delhi NCR",
     heroDescription:
-      "Microwave not working? Medon's certified technicians repair all types — solo, grill, and convection microwaves. All brands supported with genuine parts.",
+      "Microwave not working? Medon Company's certified technicians repair all types — solo, grill, and convection microwaves. All brands supported with genuine parts.",
     heroIcon: "Microwave",
     detailsHeading: "Microwave Repair Solutions",
     detailsDescription:

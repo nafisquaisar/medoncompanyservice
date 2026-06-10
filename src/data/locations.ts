@@ -1,4 +1,4 @@
-/* ─────────────────────────────────────────────────────
+﻿/* ─────────────────────────────────────────────────────
    LOCAL SEO LANDING PAGE DATA
    ───────────────────────────────────────────────────── */
 
@@ -85,7 +85,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
       { value: "2,000+", label: "Mahipalpur services done" },
       { value: "4.8★", label: "Average customer rating" },
     ],
-    aboutHeading: "Why Mahipalpur Trusts Medon",
+    aboutHeading: "Why Mahipalpur Trusts Medon Company",
     aboutParagraphs: [
       "Mahipalpur is home — it's where Medon Company was founded and where our operations center is located. Being a local business, we understand the unique challenges Mahipalpur residents face — from older building wiring to the specific AC brands popular in the area's residential complexes and hotels.",
       "Our technicians know every lane in Mahipalpur Village, Mahipalpur Extension, and the surrounding hotel district. That means zero time wasted on navigation and more time fixing your appliances. We've built our reputation one satisfied neighbor at a time.",
@@ -112,9 +112,9 @@ export const ALL_LOCATIONS: LocationPageData[] = [
       { name: "Rajokri", distance: "3.5 km" },
     ],
     testimonials: [
-      { name: "Suresh Yadav", area: "Mahipalpur Village", service: "AC Repair", rating: 5, review: "Medon's technician reached my house in 30 minutes. My AC wasn't cooling — turned out to be a gas leak. Fixed and refilled in under an hour. Best service in the area!" },
+      { name: "Suresh Yadav", area: "Mahipalpur Village", service: "AC Repair", rating: 5, review: "Medon Company's technician reached my house in 30 minutes. My AC wasn't cooling — turned out to be a gas leak. Fixed and refilled in under an hour. Best service in the area!" },
       { name: "Priya Mehta", area: "Mahipalpur Extension", service: "Electrical Work", rating: 5, review: "Got my entire flat rewired with modular switchboards. Clean work, fair pricing, and they even cleaned up after. Highly recommend for Mahipalpur residents." },
-      { name: "Hotel Raj Manager", area: "Mahipalpur Hotel Zone", service: "AC Maintenance", rating: 5, review: "We have an AMC with Medon for our 40-room hotel. Their response time and professionalism is unmatched. They understand the hospitality industry's urgency." },
+      { name: "Hotel Raj Manager", area: "Mahipalpur Hotel Zone", service: "AC Maintenance", rating: 5, review: "We have an AMC with Medon Company for our 40-room hotel. Their response time and professionalism is unmatched. They understand the hospitality industry's urgency." },
     ],
     faqs: [
       { question: "Where is Medon Company located in Mahipalpur?", answer: "Our office is at Shop No L-3, Street Number 1, L Block, Mahipalpur Village, New Delhi 110037. We're easily accessible from the main Mahipalpur road." },
@@ -130,7 +130,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     slug: "vasant-kunj",
     title: "Appliance Repair Services in Vasant Kunj, Delhi",
     metaDescription:
-      "Professional AC repair, fridge service & electrical work in Vasant Kunj, Delhi. Medon serves all sectors A–F. 2-hour response. Call +91 7303637086.",
+      "Professional AC repair, fridge service & electrical work in Vasant Kunj, Delhi. Medon Company serves all sectors A–F. 2-hour response. Call +91 7303637086.",
     keywords: [
       "appliance repair Vasant Kunj",
       "AC repair Vasant Kunj",
@@ -144,7 +144,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     heroTitle: "Trusted Appliance Repair",
     heroHighlight: "in Vasant Kunj",
     heroDescription:
-      "From Sector A to Sector F, Medon provides fast and reliable appliance repair services across all of Vasant Kunj. Our technicians are experienced with high-rise apartments and premium residential complexes.",
+      "From Sector A to Sector F, Medon Company provides fast and reliable appliance repair services across all of Vasant Kunj. Our technicians are experienced with high-rise apartments and premium residential complexes.",
     heroStats: [
       { value: "2 hrs", label: "Average response time" },
       { value: "All Sectors", label: "A, B, C, D, E, F covered" },
@@ -153,7 +153,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     ],
     aboutHeading: "Serving Every Sector of Vasant Kunj",
     aboutParagraphs: [
-      "Vasant Kunj is one of South Delhi's most prominent residential hubs — with its high-rise apartments, premium societies, and diverse community. Medon has been serving Vasant Kunj residents since our founding, building deep expertise in the unique requirements of the area's residential complexes.",
+      "Vasant Kunj is one of South Delhi's most prominent residential hubs — with its high-rise apartments, premium societies, and diverse community. Medon Company has been serving Vasant Kunj residents since our founding, building deep expertise in the unique requirements of the area's residential complexes.",
       "Our technicians are specifically experienced with high-rise AC installations, apartment electrical systems, and the premium appliance brands favored by Vasant Kunj residents. Whether you're in a DDA flat or a luxury apartment in Sector D, we deliver the same professional, transparent service.",
       "Located just 2 km from our Mahipalpur headquarters, Vasant Kunj is one of our fastest-served areas. Most service requests receive a technician within 2 hours — often faster.",
     ],
@@ -178,8 +178,8 @@ export const ALL_LOCATIONS: LocationPageData[] = [
       { name: "Nelson Mandela Marg", distance: "1.5 km" },
     ],
     testimonials: [
-      { name: "Dr. Anil Gupta", area: "Vasant Kunj Sector D", service: "AC Deep Cleaning", rating: 5, review: "Medon cleaned all 4 of our split ACs in one visit. Thorough service — they even showed us the dirt removed from each unit. Cooling improved dramatically." },
-      { name: "Neha Sharma", area: "Vasant Kunj Sector A", service: "Refrigerator Repair", rating: 5, review: "Our Samsung double-door fridge stopped cooling. Medon technician diagnosed a gas leak, fixed it on the spot. Very professional and transparent about pricing." },
+      { name: "Dr. Anil Gupta", area: "Vasant Kunj Sector D", service: "AC Deep Cleaning", rating: 5, review: "Medon Company cleaned all 4 of our split ACs in one visit. Thorough service — they even showed us the dirt removed from each unit. Cooling improved dramatically." },
+      { name: "Neha Sharma", area: "Vasant Kunj Sector A", service: "Refrigerator Repair", rating: 5, review: "Our Samsung double-door fridge stopped cooling. Medon Company technician diagnosed a gas leak, fixed it on the spot. Very professional and transparent about pricing." },
       { name: "Rajiv Malhotra", area: "Vasant Kunj Sector B", service: "Electrical Work", rating: 5, review: "Complete rewiring of our 3BHK with modular switchboards. The team was neat, efficient, and completed everything in one day. Great value for money." },
     ],
     faqs: [
@@ -210,7 +210,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     heroTitle: "Premier Appliance Repair",
     heroHighlight: "Across South Delhi",
     heroDescription:
-      "From Saket to Hauz Khas, Vasant Vihar to Greater Kailash — Medon provides fast, reliable, and professional appliance repair services across all of South Delhi. Verified technicians. Transparent pricing. Guaranteed satisfaction.",
+      "From Saket to Hauz Khas, Vasant Vihar to Greater Kailash — Medon Company provides fast, reliable, and professional appliance repair services across all of South Delhi. Verified technicians. Transparent pricing. Guaranteed satisfaction.",
     heroStats: [
       { value: "2–4 hrs", label: "Average response time" },
       { value: "15+", label: "South Delhi areas covered" },
@@ -219,8 +219,8 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     ],
     aboutHeading: "South Delhi's Trusted Service Partner",
     aboutParagraphs: [
-      "South Delhi is home to some of the city's most premium residential areas — from the leafy lanes of Vasant Vihar and Chanakyapuri to the bustling markets of Saket and Malviya Nagar. Medon has built a strong presence across the region, serving both modern apartments and established bungalows.",
-      "Our team understands that South Delhi homeowners expect premium service quality. That's why every Medon technician arriving at a South Delhi home is background-verified, carries a complete toolkit, and follows our structured service protocol — from initial diagnosis to post-repair testing.",
+      "South Delhi is home to some of the city's most premium residential areas — from the leafy lanes of Vasant Vihar and Chanakyapuri to the bustling markets of Saket and Malviya Nagar. Medon Company has built a strong presence across the region, serving both modern apartments and established bungalows.",
+      "Our team understands that South Delhi homeowners expect premium service quality. That's why every Medon Company technician arriving at a South Delhi home is background-verified, carries a complete toolkit, and follows our structured service protocol — from initial diagnosis to post-repair testing.",
       "With our headquarters in Mahipalpur, we're strategically positioned to serve all of South Delhi. Our dispatch system ensures technicians are routed efficiently to minimize wait times across this expansive region.",
     ],
     responseTime: "2–4 hours",
@@ -244,9 +244,9 @@ export const ALL_LOCATIONS: LocationPageData[] = [
       { name: "Lajpat Nagar", distance: "10 km" },
     ],
     testimonials: [
-      { name: "Amit Kapoor", area: "Vasant Vihar", service: "AC Repair", rating: 5, review: "Called Medon for a Daikin AC that was making unusual noise. Technician diagnosed a faulty compressor bearing and fixed it the same day. Very knowledgeable team." },
-      { name: "Sunita Verma", area: "Saket", service: "Refrigerator Repair", rating: 5, review: "Medon repaired our Bosch fridge that other service centers had given up on. The technician was patient, thorough, and the fridge has been running perfectly since." },
-      { name: "Col. R. Singh (Retd.)", area: "Greater Kailash", service: "Electrical Rewiring", rating: 5, review: "Had our 30-year-old bungalow completely rewired by Medon. Professional team, zero disruption, and they managed the complexity of old wiring perfectly." },
+      { name: "Amit Kapoor", area: "Vasant Vihar", service: "AC Repair", rating: 5, review: "Called Medon Company for a Daikin AC that was making unusual noise. Technician diagnosed a faulty compressor bearing and fixed it the same day. Very knowledgeable team." },
+      { name: "Sunita Verma", area: "Saket", service: "Refrigerator Repair", rating: 5, review: "Medon Company repaired our Bosch fridge that other service centers had given up on. The technician was patient, thorough, and the fridge has been running perfectly since." },
+      { name: "Col. R. Singh (Retd.)", area: "Greater Kailash", service: "Electrical Rewiring", rating: 5, review: "Had our 30-year-old bungalow completely rewired by Medon Company. Professional team, zero disruption, and they managed the complexity of old wiring perfectly." },
     ],
     faqs: [
       { question: "Which areas of South Delhi do you cover?", answer: "We cover Vasant Vihar, Saket, Hauz Khas, Greater Kailash, Malviya Nagar, Chanakyapuri, Green Park, Lajpat Nagar, Defence Colony, Safdarjung, and many more areas." },
@@ -262,7 +262,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     slug: "delhi-airport-area",
     title: "Appliance Repair Services Near Delhi Airport (IGI)",
     metaDescription:
-      "Fast appliance repair near Delhi Airport (IGI). Medon serves Aerocity, Mahipalpur, Dwarka Sector 1-7, and the airport hospitality zone. Call +91 7303637086.",
+      "Fast appliance repair near Delhi Airport (IGI). Medon Company serves Aerocity, Mahipalpur, Dwarka Sector 1-7, and the airport hospitality zone. Call +91 7303637086.",
     keywords: [
       "appliance repair near Delhi Airport",
       "AC repair Aerocity",
@@ -277,7 +277,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     heroTitle: "Fast Appliance Repair",
     heroHighlight: "Near Delhi Airport",
     heroDescription:
-      "Located minutes from IGI Airport, Medon provides rapid appliance repair services for the entire airport zone — Aerocity, Mahipalpur, Dwarka, and the hospitality corridor. Hotels, hostels, PGs, and residential customers all served.",
+      "Located minutes from IGI Airport, Medon Company provides rapid appliance repair services for the entire airport zone — Aerocity, Mahipalpur, Dwarka, and the hospitality corridor. Hotels, hostels, PGs, and residential customers all served.",
     heroStats: [
       { value: "< 1 hr", label: "Response for airport zone" },
       { value: "50+", label: "Hotels served" },
@@ -286,7 +286,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     ],
     aboutHeading: "The Airport Zone's Go-To Service Partner",
     aboutParagraphs: [
-      "The Delhi Airport area is a unique ecosystem — a mix of world-class hotels, budget accommodations, residential neighborhoods, and commercial spaces. Medon understands this diversity and has tailored its services to meet the needs of every customer in the zone.",
+      "The Delhi Airport area is a unique ecosystem — a mix of world-class hotels, budget accommodations, residential neighborhoods, and commercial spaces. Medon Company understands this diversity and has tailored its services to meet the needs of every customer in the zone.",
       "For hotels and hospitality businesses in Aerocity and Mahipalpur, we offer dedicated AMC contracts with emergency response guarantees. A non-functional AC in a hotel room isn't just an inconvenience — it's a revenue loss. That's why we prioritize hospitality clients with sub-1-hour response times.",
       "For Dwarka residents near the airport, we bring the same professional, structured service that has made us Mahipalpur's most trusted repair company. Our proximity means you get the fastest service in the Dwarka Sector 1–7 area.",
     ],
@@ -311,9 +311,9 @@ export const ALL_LOCATIONS: LocationPageData[] = [
       { name: "Kapashera", distance: "5 km" },
     ],
     testimonials: [
-      { name: "Vikram Singh", area: "Aerocity Hotel", service: "AC Emergency Repair", rating: 5, review: "Guest complaint at 11 PM — AC not cooling. Medon had a technician at our hotel within 40 minutes. Fixed the issue without disturbing other guests. Outstanding emergency service." },
-      { name: "Pooja Rawat", area: "Dwarka Sector 1", service: "AC Installation", rating: 5, review: "Got 3 ACs installed in our new flat. Medon's team was professional, did clean pipe routing, and tested everything thoroughly. Very fair pricing too." },
-      { name: "Airport Hotel Group", area: "Mahipalpur Hotel Zone", service: "Annual Maintenance", rating: 5, review: "Medon manages AC maintenance for our 3 hotel properties. Their structured approach, regular reporting, and emergency support has reduced our downtime by 80%." },
+      { name: "Vikram Singh", area: "Aerocity Hotel", service: "AC Emergency Repair", rating: 5, review: "Guest complaint at 11 PM — AC not cooling. Medon Company had a technician at our hotel within 40 minutes. Fixed the issue without disturbing other guests. Outstanding emergency service." },
+      { name: "Pooja Rawat", area: "Dwarka Sector 1", service: "AC Installation", rating: 5, review: "Got 3 ACs installed in our new flat. Medon Company's team was professional, did clean pipe routing, and tested everything thoroughly. Very fair pricing too." },
+      { name: "Airport Hotel Group", area: "Mahipalpur Hotel Zone", service: "Annual Maintenance", rating: 5, review: "Medon Company manages AC maintenance for our 3 hotel properties. Their structured approach, regular reporting, and emergency support has reduced our downtime by 80%." },
     ],
     faqs: [
       { question: "Do you provide 24/7 service near Delhi Airport?", answer: "Yes, we offer 24/7 emergency AC repair for hotels and hospitality businesses in the airport zone. Residential customers can book emergency service during extended hours (8 AM – 10 PM)." },

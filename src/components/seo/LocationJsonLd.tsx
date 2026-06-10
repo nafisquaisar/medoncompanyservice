@@ -1,21 +1,35 @@
 /* ── Location Page Structured Data (JSON-LD) ─────── */
-/* Outputs: BreadcrumbList + FAQPage schemas */
+/* Outputs: BreadcrumbList + LocalBusiness + FAQPage  */
 
 import type { LocationPageData } from "@/data/locations";
-
-const BASE_URL = "https://medoncompany.com";
+import {
+  SITE_URL,
+  SITE_PHONE_SCHEMA,
+  SITE_ADDRESS,
+} from "@/config/site";
 
 interface LocationJsonLdProps {
   location: LocationPageData;
 }
 
 export default function LocationJsonLd({ location }: LocationJsonLdProps) {
-  const url = `${BASE_URL}/${location.slug}`;
+  const url = `${SITE_URL}/${location.slug}`;
+
+  /*
+   * Strip leading prepositions from heroHighlight to get a clean area name.
+   * e.g. "in Mahipalpur" → "Mahipalpur" | "Near Delhi Airport" → "Delhi Airport"
+   */
   const locationName = location.heroHighlight
-    .replace(/^in\s+|^Near\s+|^Across\s+/i, "")
+    .replace(/^(in|near|across)\s+/i, "")
     .trim();
 
   /* ── Breadcrumb Schema ──────────────────── */
+  /*
+   * Only 2 levels: Home → Location page.
+   * Reason: there is no /locations index page in this project.
+   * Adding a fake "Locations" middle item pointing to the homepage
+   * creates a duplicate breadcrumb entry, which Google flags as invalid.
+   */
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -24,21 +38,43 @@ export default function LocationJsonLd({ location }: LocationJsonLdProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: BASE_URL,
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
-        name: "Locations",
-        item: BASE_URL,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
         name: `Appliance Repair in ${locationName}`,
         item: url,
       },
     ],
+  };
+
+  /* ── Location-specific LocalBusiness Schema ── */
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: `Medon Company – ${locationName}`,
+    description: location.metaDescription,
+    url,
+    telephone: SITE_PHONE_SCHEMA,
+    address: {
+      "@type": "PostalAddress",
+      ...SITE_ADDRESS,
+    },
+    areaServed: [
+      { "@type": "Place", name: locationName },
+      ...location.nearbyAreas.map((area) => ({
+        "@type": "Place",
+        name: area.name,
+      })),
+    ],
+    /*
+     * Cross-reference to the primary entity declared in JsonLd.tsx.
+     * @id must match LOCAL_BUSINESS["@id"] exactly: ${SITE_URL}/#business
+     */
+    parentOrganization: {
+      "@id": `${SITE_URL}/#business`,
+    },
   };
 
   /* ── FAQ Schema ─────────────────────────── */
@@ -57,35 +93,6 @@ export default function LocationJsonLd({ location }: LocationJsonLdProps) {
           })),
         }
       : null;
-
-  /* ── LocalBusiness (location-specific) ──── */
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: `Medon Company – ${locationName}`,
-    description: location.metaDescription,
-    url,
-    telephone: "+917303637086",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "Shop No, L-3, Street Number 1, L block, Mahipalpur Village",
-      addressLocality: "Mahipalpur",
-      addressRegion: "Delhi",
-      postalCode: "110037",
-      addressCountry: "IN",
-    },
-    areaServed: [
-      { "@type": "Place", name: locationName },
-      ...location.nearbyAreas.map((area) => ({
-        "@type": "Place",
-        name: area.name,
-      })),
-    ],
-    parentOrganization: {
-      "@id": `${BASE_URL}/#business`,
-    },
-  };
 
   return (
     <>

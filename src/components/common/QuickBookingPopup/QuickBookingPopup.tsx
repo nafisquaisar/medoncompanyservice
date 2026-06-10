@@ -5,7 +5,7 @@ import { X, Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const WHATSAPP_URL =
-  "https://wa.me/917303637086?text=Hi%20Medon%2C%20I%20want%20to%20book%20a%20service";
+  "https://wa.me/917303637086?text=Hi%20Medon%20Company%2C%20I%20want%20to%20book%20a%20service";
 
 const POPUP_DELAY_MS = 15_000; // 15 seconds
 const DISMISS_KEY = "medon_popup_dismissed";

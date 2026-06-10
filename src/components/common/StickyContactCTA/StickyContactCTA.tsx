@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useAnalytics } from "@/hooks/useAnalytics";
 
 const WHATSAPP_URL =
-  "https://wa.me/917303637086?text=Hi%20Medon%2C%20I%20need%20appliance%20repair%20service";
+  "https://wa.me/917303637086?text=Hi%20Medon%20Company%2C%20I%20need%20appliance%20repair%20service";
 
 export default function StickyContactCTA() {
   const [visible, setVisible] = useState(false);
@@ -42,7 +42,7 @@ export default function StickyContactCTA() {
             <div className="flex gap-2.5 max-w-md mx-auto">
               <a
                 href="tel:+917303637086"
-                aria-label="Call Medon for appliance repair"
+                aria-label="Call Medon Company for appliance repair"
                 onClick={onCallClick}
                 className="flex-1 inline-flex items-center justify-center gap-2
                            bg-primary text-white py-3 rounded-full font-semibold text-sm
@@ -57,7 +57,7 @@ export default function StickyContactCTA() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp Medon for appliance repair"
+                aria-label="WhatsApp Medon Company for appliance repair"
                 onClick={onWhatsAppClick}
                 className="flex-1 inline-flex items-center justify-center gap-2
                            bg-[#25D366] text-white py-3 rounded-full font-semibold text-sm
@@ -75,7 +75,7 @@ export default function StickyContactCTA() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Chat with Medon on WhatsApp"
+            aria-label="Chat with Medon Company on WhatsApp"
             onClick={onWhatsAppClick}
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}

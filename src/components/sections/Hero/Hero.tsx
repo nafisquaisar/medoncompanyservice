@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Phone, Mail, ArrowRight } from "lucide-react";
@@ -35,7 +35,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              Trusted by 5,000+ Delhi NCR Customers
+              Based in Mahipalpur — Trusted by 5,000+ Delhi NCR Customers
             </motion.span>
 
             <motion.h1
@@ -44,9 +44,9 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              Expert Appliance Repair{" "}
+              Expert AC & Appliance Repair{" "}
               <span className="text-primary-dark/70">
-                Service in Mahipalpur and Delhi NCR
+                in Mahipalpur &amp; Delhi NCR
               </span>
             </motion.h1>
 
@@ -134,7 +134,7 @@ const Hero = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <h4 className="text-xl font-bold text-primary">
-                Contact Medon
+                Contact Medon Company
               </h4>
 
               <p className="mt-2 text-gray-500">

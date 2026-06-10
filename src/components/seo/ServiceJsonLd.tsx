@@ -1,16 +1,32 @@
 /* ── Service Page Structured Data (JSON-LD) ────────── */
-/* Outputs: BreadcrumbList + Service + FAQPage schemas */
+/* Outputs: BreadcrumbList + Service + FAQPage schemas  */
 
 import type { ServicePageData } from "@/data/services";
-
-const BASE_URL = "https://medoncompany.com";
+import {
+  SITE_URL,
+  SITE_PHONE_SCHEMA,
+  SITE_ADDRESS,
+} from "@/config/site";
 
 interface ServiceJsonLdProps {
   service: ServicePageData;
 }
 
+/**
+ * Extracts the minimum numeric price from a price string like:
+ *   "₹1,499–₹2,999"  → "1499"
+ *   "₹2,500+"        → "2500"
+ *   "₹299"           → "299"
+ * Returns "199" as a fallback if no digits are found.
+ */
+function extractMinPrice(priceStr: string): string {
+  const match = priceStr.match(/[\d,]+/);
+  if (!match) return "199";
+  return match[0].replace(/,/g, "");
+}
+
 export default function ServiceJsonLd({ service }: ServiceJsonLdProps) {
-  const url = `${BASE_URL}/${service.slug}`;
+  const url = `${SITE_URL}/${service.slug}`;
 
   /* ── Breadcrumb Schema ──────────────────── */
   const breadcrumbSchema = {
@@ -21,13 +37,13 @@ export default function ServiceJsonLd({ service }: ServiceJsonLdProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: BASE_URL,
+        item: SITE_URL,
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Services",
-        item: `${BASE_URL}/services`,
+        item: `${SITE_URL}/services`,
       },
       {
         "@type": "ListItem",
@@ -47,17 +63,16 @@ export default function ServiceJsonLd({ service }: ServiceJsonLdProps) {
     url,
     provider: {
       "@type": "LocalBusiness",
-      "@id": `${BASE_URL}/#business`,
+      /*
+       * @id cross-references the primary entity declared in JsonLd.tsx.
+       * Must match LOCAL_BUSINESS["@id"] exactly: ${SITE_URL}/#business
+       */
+      "@id": `${SITE_URL}/#business`,
       name: "Medon Company",
-      telephone: "+917303637086",
+      telephone: SITE_PHONE_SCHEMA,
       address: {
         "@type": "PostalAddress",
-        streetAddress:
-          "Shop No, L-3, Street Number 1, L block, Mahipalpur Village",
-        addressLocality: "Mahipalpur",
-        addressRegion: "Delhi",
-        postalCode: "110037",
-        addressCountry: "IN",
+        ...SITE_ADDRESS,
       },
     },
     areaServed: {
@@ -67,9 +82,13 @@ export default function ServiceJsonLd({ service }: ServiceJsonLdProps) {
     offers: service.pricing.map((p) => ({
       "@type": "Offer",
       name: p.service,
-      price: p.price.replace(/[^\d]/g, "").slice(0, -1) || "199",
+      /*
+       * Extract the minimum price value from strings like "₹1,499–₹2,999".
+       * The full range is preserved in the description field.
+       */
+      price: extractMinPrice(p.price),
       priceCurrency: "INR",
-      description: p.note || p.service,
+      description: p.note ? `${p.price} — ${p.note}` : p.price,
     })),
   };
 

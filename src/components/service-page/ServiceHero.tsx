@@ -44,7 +44,7 @@ export default function ServiceHero({
             <div className="inline-flex items-center gap-2 mb-5 px-4 py-2 bg-primary/10 rounded-full">
               <Icon size={18} className="text-primary" />
               <span className="text-xs font-semibold tracking-wider uppercase text-primary">
-                Medon Service
+                Medon Company Service
               </span>
             </div>
 
@@ -77,7 +77,7 @@ export default function ServiceHero({
             </a>
 
             <a
-              href="https://wa.me/917303637086?text=Hi%20Medon%2C%20I%20need%20a%20service"
+              href="https://wa.me/917303637086?text=Hi%20Medon%20Company%2C%20I%20need%20a%20service"
               target="_blank"
               rel="noopener noreferrer"
               onClick={onWhatsAppClick}

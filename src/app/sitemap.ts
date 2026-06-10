@@ -1,130 +1,146 @@
+// src/app/sitemap.ts
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/config/site";
 import { ALL_SERVICES } from "@/data/services";
 import { ALL_LOCATIONS } from "@/data/locations";
 import { ALL_BLOG_POSTS } from "@/data/blog-posts";
 
-/* =========================================================
-   Centralized Site URL
-========================================================= */
-const BASE_URL = "https://www.medoncompany.in";
+/* ─────────────────────────────────────────────────────────────────
+   Static last-modified dates.
+   ❌ DO NOT use new Date() for static/data-driven pages —
+      it reports every page as modified RIGHT NOW on every sitemap
+      fetch, wasting crawl budget and making the signal meaningless.
+   ✅ Update these dates only when you actually change the content.
+───────────────────────────────────────────────────────────────── */
+const DATE_SITE_LAUNCH   = new Date("2025-03-01"); // When the site went live
+const DATE_CORE_UPDATED  = new Date("2025-12-15"); // Last major core page change
+const DATE_DATA_UPDATED  = new Date("2026-01-15"); // Last services/locations data update
+const DATE_LEGAL         = new Date("2025-05-01"); // Legal page effective date
+
+/* ─────────────────────────────────────────────────────────────────
+   Derive the blog index last-modified date from actual post dates
+   so it stays accurate without manual updates.
+───────────────────────────────────────────────────────────────── */
+function getLatestBlogDate(): Date {
+  const timestamps = ALL_BLOG_POSTS.map((p) => {
+    const raw = p.updatedDate ?? p.publishDate;
+    const d = new Date(raw);
+    return isNaN(d.getTime()) ? 0 : d.getTime();
+  });
+  const latest = Math.max(...timestamps);
+  return latest > 0 ? new Date(latest) : DATE_SITE_LAUNCH;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  /* =========================================================
-     Core Pages
-  ========================================================= */
+
+  /* ── Core Pages ───────────────────────────────────────────────── */
   const corePages: MetadataRoute.Sitemap = [
     {
-      url: BASE_URL,
-      lastModified: new Date(),
+      url: SITE_URL,
+      lastModified: DATE_CORE_UPDATED,
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
     },
     {
-      url: `${BASE_URL}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/services`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/services`,
+      lastModified: DATE_DATA_UPDATED,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/gallery`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/about`,
+      lastModified: DATE_SITE_LAUNCH,
       changeFrequency: "monthly",
-      priority: 0.6,
+      priority: 0.8,
     },
     {
-      url: `${BASE_URL}/contact`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/blog`,
+      lastModified: getLatestBlogDate(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/contact`,
+      lastModified: DATE_SITE_LAUNCH,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
+      url: `${SITE_URL}/gallery`,
+      lastModified: DATE_CORE_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
   ];
 
-  /* =========================================================
-     Trust / Legal Pages
-  ========================================================= */
-  const trustPages: MetadataRoute.Sitemap = [
-    {
-      url: `${BASE_URL}/privacy-policy`,
-      lastModified: new Date("2025-05-01"),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/terms-and-conditions`,
-      lastModified: new Date("2025-05-01"),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/refund-policy`,
-      lastModified: new Date("2025-05-01"),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${BASE_URL}/cancellation-policy`,
-      lastModified: new Date("2025-05-01"),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-  ];
-
-  /* =========================================================
-     Service Pages
-  ========================================================= */
-  const servicePages: MetadataRoute.Sitemap = ALL_SERVICES.map(
-    (service) => ({
-      url: `${BASE_URL}/${service.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.85,
-    })
-  );
-
-  /* =========================================================
-     Location Pages
-  ========================================================= */
-  const locationPages: MetadataRoute.Sitemap = ALL_LOCATIONS.map(
-    (location) => ({
-      url: `${BASE_URL}/${location.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    })
-  );
-
-  /* =========================================================
-     Blog Pages
-  ========================================================= */
-  const blogPages: MetadataRoute.Sitemap = ALL_BLOG_POSTS.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: post.updatedDate
-      ? new Date(post.updatedDate)
-      : new Date(post.publishDate),
-    changeFrequency: "monthly",
-    priority: 0.7,
+  /* ── Service Pages ────────────────────────────────────────────── */
+  const servicePages: MetadataRoute.Sitemap = ALL_SERVICES.map((service) => ({
+    url: `${SITE_URL}/${service.slug}`,
+    lastModified: DATE_DATA_UPDATED,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
   }));
 
-  /* =========================================================
-     Final Sitemap
-  ========================================================= */
+  /* ── Location Pages ───────────────────────────────────────────── */
+  const locationPages: MetadataRoute.Sitemap = ALL_LOCATIONS.map((location) => ({
+    url: `${SITE_URL}/${location.slug}`,
+    lastModified: DATE_DATA_UPDATED,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  /* ── Blog Posts ───────────────────────────────────────────────── */
+  const blogPages: MetadataRoute.Sitemap = ALL_BLOG_POSTS.map((post) => {
+    const raw = post.updatedDate ?? post.publishDate;
+    const parsed = new Date(raw);
+    // Guard: fall back if the date string is malformed or in the future
+    const lastModified =
+      isNaN(parsed.getTime()) || parsed > new Date()
+        ? DATE_SITE_LAUNCH
+        : parsed;
+
+    return {
+      url: `${SITE_URL}/blog/${post.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    };
+  });
+
+  /* ── Legal / Trust Pages ──────────────────────────────────────── */
+  const legalPages: MetadataRoute.Sitemap = [
+    {
+      url: `${SITE_URL}/privacy-policy`,
+      lastModified: DATE_LEGAL,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/terms-and-conditions`,
+      lastModified: DATE_LEGAL,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/refund-policy`,
+      lastModified: DATE_LEGAL,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: `${SITE_URL}/cancellation-policy`,
+      lastModified: DATE_LEGAL,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+  ];
+
+  /* ── Combined — highest priority first ───────────────────────── */
   return [
     ...corePages,
-    ...trustPages,
     ...servicePages,
     ...locationPages,
     ...blogPages,
+    ...legalPages,
   ];
 }

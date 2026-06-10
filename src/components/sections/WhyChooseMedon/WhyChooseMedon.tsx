@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -15,7 +15,7 @@ const TRUST_SIGNALS = [
     Icon: UserCheck,
     title: "Verified & Background-Checked Technicians",
     description:
-      "Every Medon technician is identity-verified, skill-tested, and background-checked before being assigned to your home in Delhi NCR.",
+      "Every Medon Company technician is identity-verified, skill-tested, and background-checked before being assigned to your home in Delhi NCR.",
   },
   {
     Icon: Zap,
@@ -53,7 +53,7 @@ export default function WhyChooseMedon() {
   return (
     <section
       className="py-20 sm:py-28 bg-secondary"
-      aria-label="Why choose Medon for appliance repair in Delhi"
+      aria-label="Why choose Medon Company for appliance repair in Delhi"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
@@ -68,7 +68,7 @@ export default function WhyChooseMedon() {
             Why Customers Trust Us
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary tracking-tight">
-            Why Choose Medon for Appliance Repair in Delhi
+            Why Choose Medon Company for Appliance Repair in Delhi
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
             From AC repair in Mahipalpur to electrical services in South Delhi —

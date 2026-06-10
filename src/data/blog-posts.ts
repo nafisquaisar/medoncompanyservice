@@ -1,4 +1,4 @@
-/* ─────────────────────────────────────────────────────
+﻿/* ─────────────────────────────────────────────────────
    BLOG POST DATA — Medon Company
    Central data source for all blog posts.
    Pattern: mirrors services.ts (data-driven architecture)
@@ -504,7 +504,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       {
         heading: "Quick Troubleshooting Steps",
         content:
-          "Try these before calling a technician: (1) Check and adjust the temperature setting. (2) Ensure the fridge isn't overstocked. (3) Clean the condenser coils. (4) Check the door seal. (5) Verify the power supply is stable. (6) Listen for unusual sounds. If basic troubleshooting doesn't help, Medon's verified technicians in Delhi can diagnose the exact issue starting from just ₹199.",
+          "Try these before calling a technician: (1) Check and adjust the temperature setting. (2) Ensure the fridge isn't overstocked. (3) Clean the condenser coils. (4) Check the door seal. (5) Verify the power supply is stable. (6) Listen for unusual sounds. If basic troubleshooting doesn't help, Medon Company's verified technicians in Delhi can diagnose the exact issue starting from just ₹199.",
       },
       {
         heading: "When to Repair vs. Replace Your Refrigerator",
@@ -543,7 +543,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       {
         question: "Can a refrigerator be repaired at home?",
         answer:
-          "Yes, most refrigerator repairs are done at home by a visiting technician. Medon's technicians carry common replacement parts and tools for on-the-spot repair. Complex repairs like compressor replacement may require a follow-up visit.",
+          "Yes, most refrigerator repairs are done at home by a visiting technician. Medon Company's technicians carry common replacement parts and tools for on-the-spot repair. Complex repairs like compressor replacement may require a follow-up visit.",
       },
     ],
   },

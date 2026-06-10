@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -54,7 +54,7 @@ const GalleryPreview = () => {
                 <div className="relative h-56 sm:h-64 w-full">
                   <Image
                     src={img}
-                    alt={`Professional appliance repair work by Medon – photo ${index + 1}`}
+                    alt={`Professional appliance repair work by Medon Company – photo ${index + 1}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"

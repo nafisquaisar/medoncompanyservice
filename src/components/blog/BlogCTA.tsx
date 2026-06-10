@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL =
-  "https://wa.me/917303637086?text=Hi%20Medon%2C%20I%20need%20appliance%20repair%20service";
+  "https://wa.me/917303637086?text=Hi%20Medon%20Company%2C%20I%20need%20appliance%20repair%20service";
 
 export default function BlogCTA() {
   return (

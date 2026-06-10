@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Navbar from "@/components/common/Navbar/Navbar";
 import AboutPage from "@/pages/About/AboutPage";
 import Footer from "@/components/common/Footer/Footer";
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Medon Company – Our Mission & Story",
     description:
-      "Medon is building India's most structured electronic service platform with verified technicians, transparent pricing, and real-time monitoring.",
+      "Medon Company is building India's most structured electronic service platform with verified technicians, transparent pricing, and real-time monitoring.",
     url: "/about",
   },
 };

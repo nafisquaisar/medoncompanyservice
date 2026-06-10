@@ -24,7 +24,7 @@ const SECTIONS = [
   {
     heading: "1. Acceptance of Terms",
     content:
-      "By booking a service with Medon Company or using our website (medoncompany.com), you agree to these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.",
+      "By booking a service with Medon Company or using our website (www.medoncompany.in), you agree to these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.",
   },
   {
     heading: "2. Services Offered",
@@ -80,7 +80,7 @@ const SECTIONS = [
   {
     heading: "9. Intellectual Property",
     content:
-      "All content on medoncompany.com — including text, images, logos, and design — is the property of Medon Company and protected by copyright laws. You may not reproduce, distribute, or use any content without prior written permission.",
+      "All content on www.medoncompany.in — including text, images, logos, and design — is the property of Medon Company and protected by copyright laws. You may not reproduce, distribute, or use any content without prior written permission.",
   },
   {
     heading: "10. Governing Law",

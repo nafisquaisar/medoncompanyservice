@@ -56,7 +56,7 @@ export default function ServiceCTA() {
           </a>
 
           <a
-            href="https://wa.me/917303637086?text=Hi%20Medon%2C%20I%20need%20a%20service"
+            href="https://wa.me/917303637086?text=Hi%20Medon%20Company%2C%20I%20need%20a%20service"
             target="_blank"
             rel="noopener noreferrer"
             onClick={onWhatsAppClick}

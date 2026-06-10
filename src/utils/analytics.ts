@@ -1,4 +1,4 @@
-/* ── Medon Analytics Utility ──────────────────────────────────────────────────
+﻿/* ── Medon Company Analytics Utility ──────────────────────────────────────────────────
    Central place for all GA4 event calls.
    • All functions are server-safe (typeof window guard).
    • Use the useAnalytics() hook in components — don't call these directly.

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
@@ -7,7 +7,7 @@ const REVIEWS = [
   {
     name: "Rahul Sharma",
     role: "AC Repair Customer – Mahipalpur",
-    review: "Medon made booking and tracking service super easy. Technician was professional and on time. Transparent pricing — no surprises.",
+    review: "Medon Company made booking and tracking service super easy. Technician was professional and on time. Transparent pricing — no surprises.",
     rating: 5,
   },
   {
