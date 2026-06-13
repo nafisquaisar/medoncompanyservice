@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import {
   SITE_URL,
   SITE_NAME,
@@ -139,18 +140,35 @@ export default function RootLayout({
         {/* GTM noscript — must be first child of <body> per GTM spec */}
         <GTMNoScript />
 
-        {/* Web Vitals reporter — client boundary confined to this component */}
+        {/* Web Vitals reporter */}
         <WebVitals />
 
         <EmergencyBanner />
+
         {children}
+
         <QuickBookingPopup />
 
-        {/* Analytics scripts — loaded after hydration (afterInteractive) */}
+        {/* Analytics scripts */}
         <GoogleAnalytics />
         <GoogleTagManager />
 
-        {/* Uncomment when NEXT_PUBLIC_META_PIXEL_ID is configured: */}
+        {/* Google Ads Global Site Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11430002689"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-11430002689');
+        `}
+        </Script>
+
+        {/* Uncomment when NEXT_PUBLIC_META_PIXEL_ID is configured */}
         {/* <MetaPixel /> */}
       </body>
     </html>
