@@ -1,6 +1,6 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Navbar from "@/components/common/Navbar/Navbar";
-import Contact from "@/pages/Contact/ContactPage";
+import Contact from "@/page-components/Contact/ContactPage";
 import Footer from "@/components/common/Footer/Footer";
 
 export const metadata: Metadata = {

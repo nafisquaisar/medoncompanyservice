@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     description:
       "Privacy Policy for Medon Company — appliance repair services in Delhi NCR.",
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 const SECTIONS = [

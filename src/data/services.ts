@@ -1,4 +1,4 @@
-﻿/* Icon names resolved client-side via ServiceIconMap */
+/* Icon names resolved client-side via ServiceIconMap */
 export type ServiceIconName =
   | "Snowflake"
   | "Refrigerator"
@@ -565,6 +565,62 @@ export const ALL_SERVICES: ServicePageData[] = [
       { question: "Is it worth repairing an old microwave?", answer: "If your microwave is less than 7 years old and the repair cost is under 50% of a new one, repair is usually worth it. We'll give you an honest assessment." },
       { question: "Do you repair convection microwaves?", answer: "Yes, we repair all microwave types including solo, grill, convection, and OTG ovens. Our technicians are trained for convection-specific issues." },
       { question: "How long does microwave repair take?", answer: "Most microwave repairs are completed within 1–2 hours. If parts need to be ordered, we'll schedule a follow-up visit." },
+    ],
+  },
+
+  /* ─────── Washing Machine Repair Delhi ─────── */
+  {
+    slug: "washing-machine-repair-delhi",
+    title: "Washing Machine Repair Service in Delhi NCR",
+    metaDescription:
+      "Expert washing machine repair in Delhi NCR by Medon Company. Fix spinning, draining, heating issues for front-load & top-load models. All brands. Call +91 7303637086.",
+    keywords: [
+      "washing machine repair Delhi",
+      "washing machine repair near me",
+      "washing machine service Delhi NCR",
+      "front load washing machine repair",
+      "top load washing machine repair",
+      "washing machine not spinning",
+      "washing machine repair Mahipalpur",
+    ],
+    heroTitle: "Washing Machine Repair Service",
+    heroHighlight: "in Delhi NCR",
+    heroDescription:
+      "Washing machine acting up? Medon Company's certified technicians repair all washing machine types — front-load, top-load, and semi-automatic. All major brands supported with genuine parts and a 90-day warranty.",
+    heroIcon: "Wrench",
+    detailsHeading: "Complete Washing Machine Repair Solutions",
+    detailsDescription:
+      "From drum bearing failures to PCB faults, our technicians diagnose and fix all washing machine problems with precision, using manufacturer-grade replacement parts.",
+    details: [
+      { title: "Not Spinning / Not Starting", description: "Motor diagnosis, carbon brush replacement, and PCB fault fixing for washing machines that won't start or spin." },
+      { title: "Water Not Draining", description: "Drain pump cleaning or replacement, blocked filter clearing, and drain hose inspection to restore proper drainage." },
+      { title: "Water Leakage Repair", description: "Door seal (gasket) replacement, hose connection repair, and pump seal fixing for front-load and top-load machines." },
+      { title: "Noisy / Vibrating Machine", description: "Drum bearing replacement, shock absorber fix, and levelling correction for unusually loud or vibrating washing machines." },
+      { title: "Heating Element Repair", description: "Heating element and thermostat replacement for washing machines that won't heat water during wash cycles." },
+      { title: "Control Panel / PCB Repair", description: "Electronic board diagnostics and repair for error codes, unresponsive controls, and display malfunctions." },
+    ],
+    pricing: [
+      { service: "Inspection Visit", price: "\u20b9199" },
+      { service: "Door Seal (Gasket) Replacement", price: "\u20b9699\u2013\u20b91,299", note: "Brand dependent" },
+      { service: "Drain Pump Replacement", price: "\u20b9799\u2013\u20b91,499" },
+      { service: "Drum Bearing Replacement", price: "\u20b91,499\u2013\u20b92,499" },
+      { service: "PCB / Control Board Repair", price: "\u20b9999\u2013\u20b92,000", note: "After diagnosis" },
+      { service: "Motor Repair", price: "\u20b91,000\u2013\u20b92,500" },
+    ],
+    benefits: [
+      "All types: front-load, top-load, semi-automatic",
+      "All brands: Samsung, LG, Whirlpool, Bosch, IFB, Haier, Godrej",
+      "Genuine OEM replacement parts",
+      "Same-day repair in most Delhi NCR areas",
+      "90-day warranty on all repairs",
+      "Transparent pricing with no hidden charges",
+    ],
+    faqs: [
+      { question: "My washing machine is not spinning. What could be the cause?", answer: "Common causes include a faulty lid switch (top-load), a worn carbon brush in the motor, a defective PCB, or an unbalanced load. Our technician will diagnose the exact issue before any repair." },
+      { question: "How much does washing machine repair cost in Delhi?", answer: "Inspection starts at \u20b9199. Common repairs: door seal replacement \u20b9699\u2013\u20b91,299, drain pump \u20b9799\u2013\u20b91,499, drum bearing \u20b91,499\u2013\u20b92,499. We provide a transparent quote before starting work." },
+      { question: "Do you repair front-load and top-load washing machines both?", answer: "Yes, we repair all types \u2014 front-load, top-load, and semi-automatic washing machines. Our technicians are trained on all major brands and models." },
+      { question: "My washing machine is leaking water. Is it repairable?", answer: "Yes, water leakage is one of the most common and repairable issues. It's usually caused by a worn door gasket (front-load), a damaged hose, or a faulty pump seal. Our technician will identify the source and fix it." },
+      { question: "How long does washing machine repair take?", answer: "Most repairs are completed within 1\u20132 hours. If parts need to be ordered (like a specific PCB or bearing), we'll schedule a follow-up visit, usually within 24\u201348 hours." },
     ],
   },
 ];

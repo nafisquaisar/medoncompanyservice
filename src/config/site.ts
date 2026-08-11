@@ -6,8 +6,8 @@
  * ─────────────────────────────────────────────────────────────────
  */
 
-/** Canonical production domain — includes protocol and www prefix */
-export const SITE_URL = "https://www.medoncompany.in";
+/** Canonical production domain — non-www, HTTPS only */
+export const SITE_URL = "https://medoncompany.in";
 
 /** Human-readable brand name */
 export const SITE_NAME = "Medon Company";

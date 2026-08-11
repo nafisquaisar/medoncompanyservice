@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
           "/_next/",    // Next.js build internals — always block
           "/private/",  // Any private/authenticated routes
         ],
-      },
+  },        
       {
         // Image crawler — allow access to actual public image paths.
         // NOTE: In Next.js, /public/ files are served at the URL root (/),

@@ -88,7 +88,7 @@ export const metadata: Metadata = {
 ],
 
   authors: [{ name: SITE_NAME, url: SITE_URL }],
-  creator: "NF Nexa Tech",
+  creator: SITE_NAME,
   publisher: SITE_NAME,
 
   formatDetection: {

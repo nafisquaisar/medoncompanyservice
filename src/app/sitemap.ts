@@ -13,9 +13,8 @@ import { ALL_BLOG_POSTS } from "@/data/blog-posts";
    ✅ Update these dates only when you actually change the content.
 ───────────────────────────────────────────────────────────────── */
 const DATE_SITE_LAUNCH   = new Date("2025-03-01"); // When the site went live
-const DATE_CORE_UPDATED  = new Date("2025-12-15"); // Last major core page change
-const DATE_DATA_UPDATED  = new Date("2026-01-15"); // Last services/locations data update
-const DATE_LEGAL         = new Date("2025-05-01"); // Legal page effective date
+const DATE_CORE_UPDATED  = new Date("2026-08-09"); // Last major core page change
+const DATE_DATA_UPDATED  = new Date("2026-08-09"); // Last services/locations data update (added washing machine repair)
 
 /* ─────────────────────────────────────────────────────────────────
    Derive the blog index last-modified date from actual post dates
@@ -107,40 +106,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  /* ── Legal / Trust Pages ──────────────────────────────────────── */
-  const legalPages: MetadataRoute.Sitemap = [
-    {
-      url: `${SITE_URL}/privacy-policy`,
-      lastModified: DATE_LEGAL,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${SITE_URL}/terms-and-conditions`,
-      lastModified: DATE_LEGAL,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${SITE_URL}/refund-policy`,
-      lastModified: DATE_LEGAL,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${SITE_URL}/cancellation-policy`,
-      lastModified: DATE_LEGAL,
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-  ];
-
-  /* ── Combined — highest priority first ───────────────────────── */
+  /* ── Combined — highest priority first ───────────── */
   return [
     ...corePages,
     ...servicePages,
     ...locationPages,
     ...blogPages,
-    ...legalPages,
+    /*
+     * Legal pages (privacy-policy, terms-and-conditions, refund-policy,
+     * cancellation-policy) are intentionally excluded from the sitemap.
+     * They are thin utility pages that waste crawl budget. They remain
+     * accessible via footer links but should not compete for index slots.
+     */
   ];
 }

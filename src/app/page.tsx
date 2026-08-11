@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Hero from "@/components/sections/Hero/Hero";
 import TrustBadges from "@/components/sections/TrustBadges/TrustBadges";
-import Services from "@/pages/Services/Services";
+import Services from "@/page-components/Services/Services";
 import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import WhyChooseMedon from "@/components/sections/WhyChooseMedon/WhyChooseMedon";
 import PopularServices from "@/components/sections/PopularServices/PopularServices";
@@ -11,7 +11,7 @@ import GalleryPreview from "@/components/sections/Gallery/GalleryPreview";
 import Reviews from "@/components/sections/Reviews/Reviews";
 import HomepageFAQ from "@/components/sections/HomepageFAQ/HomepageFAQ";
 import EmergencyCTA from "@/components/sections/EmergencyCTA/EmergencyCTA";
-import Contact from "@/pages/Contact/ContactPage";
+import Contact from "@/page-components/Contact/ContactPage";
 import StickyContactCTA from "@/components/common/StickyContactCTA/StickyContactCTA";
 import Footer from "@/components/common/Footer/Footer";
 import JsonLd from "@/components/seo/JsonLd";
@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     "AC repair near me",
     "appliance repair Delhi NCR",
     "refrigerator repair Delhi",
+    "washing machine repair Delhi",
+    "washing machine repair near me",
     "electrical services Delhi",
     "geyser repair Delhi",
     "AC installation Delhi",

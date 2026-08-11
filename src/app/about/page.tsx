@@ -1,20 +1,26 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Navbar from "@/components/common/Navbar/Navbar";
-import AboutPage from "@/pages/About/AboutPage";
+import AboutPage from "@/page-components/About/AboutPage";
 import Footer from "@/components/common/Footer/Footer";
 
 export const metadata: Metadata = {
-  title: "About Us – Our Mission & Story",
+  title: "About Us – Medon Company | Appliance Repair Experts in Delhi NCR",
   description:
-    "Learn about Medon Company — our mission to bring structured, transparent, and technology-driven electronic repair services to Delhi NCR. Verified technicians, real-time tracking, and quality accountability.",
+    "Medon Company is Mahipalpur's trusted home appliance repair service. Expert AC repair, refrigerator service, geyser repair, and electrical work across Delhi NCR. Verified technicians, transparent pricing, same-day service.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Medon Company – Our Mission & Story",
+    title: "About Medon Company – Appliance Repair Experts in Delhi NCR",
     description:
-      "Medon Company is building India's most structured electronic service platform with verified technicians, transparent pricing, and real-time monitoring.",
+      "Medon Company is headquartered in Mahipalpur, Delhi — providing AC repair, refrigerator service, geyser repair, and electrical work across Delhi NCR since 2020.",
     url: "/about",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Medon Company – Appliance Repair Experts in Delhi NCR",
+    description:
+      "Trusted appliance repair service in Mahipalpur, Delhi. AC repair, fridge service, electrical work & more across Delhi NCR.",
   },
 };
 

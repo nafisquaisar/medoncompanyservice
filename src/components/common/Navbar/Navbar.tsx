@@ -107,10 +107,17 @@ const Navbar = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => handleNavClick("#home")}
-            className="text-xl sm:text-2xl font-bold text-primary tracking-tight"
+            className="flex items-center"
           >
-            Medon Company
+            <img
+              src="/medoncompanyhomelogo.png"
+              alt="Medon Company"
+              className="h-7 w-auto object-contain"
+            />
           </motion.button>
+
+
+
 
           {/* DESKTOP MENU */}
           <ul className="hidden lg:flex items-center gap-1">

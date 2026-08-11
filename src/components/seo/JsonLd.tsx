@@ -17,10 +17,10 @@ import {
 /* ── Multi-type LocalBusiness + HVACBusiness Schema ───────── */
 const LOCAL_BUSINESS = {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "HVACBusiness"],
+  "@type": ["LocalBusiness", "HVACBusiness", "HomeAndConstructionBusiness"],
   /*
    * @id is the canonical entity identifier Google uses for Knowledge Graph.
-   * It MUST match the canonical domain (www.medoncompany.in).
+   * It MUST match the canonical domain (medoncompany.in — non-www).
    */
   "@id": `${SITE_URL}/#business`,
   name: SITE_NAME,
@@ -44,7 +44,7 @@ const LOCAL_BUSINESS = {
     latitude: 28.5494,
     longitude: 77.1171,
   },
-  hasMap: "https://maps.google.com/?q=Medon Company+Company+Mahipalpur+Delhi",
+  hasMap: "https://maps.google.com/?q=Medon+Company+Mahipalpur+Delhi",
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
@@ -84,6 +84,7 @@ const LOCAL_BUSINESS = {
     "AC Gas Refilling",
     "AC Deep Cleaning",
     "Refrigerator Repair",
+    "Washing Machine Repair",
     "Electrical Services",
     "Geyser Repair",
     "Microwave Repair",
@@ -119,7 +120,7 @@ const LOCAL_BUSINESS = {
     ],
   },
   sameAs: [
-    "https://maps.google.com/?q=Medon Company+Company+Mahipalpur+Delhi",
+    "https://maps.google.com/?q=Medon+Company+Mahipalpur+Delhi",
     // Add your verified profiles when available:
     // "https://www.facebook.com/medoncompany",
     // "https://www.instagram.com/medoncompany",
@@ -206,7 +207,7 @@ const ORGANIZATION_SCHEMA = {
     availableLanguage: ["English", "Hindi"],
   },
   sameAs: [
-    "https://maps.google.com/?q=Medon Company+Company+Mahipalpur+Delhi",
+    "https://maps.google.com/?q=Medon+Company+Mahipalpur+Delhi",
     // "https://www.facebook.com/medoncompany",
     // "https://www.instagram.com/medoncompany",
   ],

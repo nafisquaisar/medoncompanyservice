@@ -1,8 +1,8 @@
 import Hero from "@/components/sections/Hero/Hero";
-import Services from "@/pages/Services/Services";
+import Services from "@/page-components/Services/Services";
 import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import Reviews from "@/components/sections/Reviews/Reviews";
-import Contact from "@/pages/Contact/ContactPage";
+import Contact from "@/page-components/Contact/ContactPage";
 import GalleryPreview from "@/components/sections/Gallery/GalleryPreview";
 import AboutPreview from "@/components/sections/About/AboutPreview";
 
