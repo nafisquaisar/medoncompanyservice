@@ -23,7 +23,7 @@ export default function BlogCTA() {
           <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-tight">
             Need Professional AC Service
             <br />
-            <span className="text-white/80">in Delhi NCR?</span>
+            <span className="text-white/80">in Mahipalpur & Nearby Areas?</span>
           </h2>
 
           <p className="mt-3 text-white/60 text-sm max-w-md mx-auto leading-relaxed">

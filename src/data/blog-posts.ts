@@ -1,4 +1,4 @@
-﻿/* ─────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────────────
    BLOG POST DATA — Medon Company
    Central data source for all blog posts.
    Pattern: mirrors services.ts (data-driven architecture)
@@ -101,12 +101,12 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       {
         heading: "Why Is Your AC Not Cooling? Understanding the Problem",
         content:
-          "When your air conditioner runs but doesn't cool the room, it can be frustrating — especially during Delhi's scorching summers. The problem could range from a simple filter issue to a major compressor failure. Before you panic, let's walk through the most common causes and their solutions. At <a href='/ac-repair-service-delhi'>Medon Company</a>, we handle hundreds of AC cooling complaints every month across <a href='/mahipalpur'>Mahipalpur</a>, <a href='/vasant-kunj'>Vasant Kunj</a>, and <a href='/south-delhi'>South Delhi</a>.",
+          "When your air conditioner runs but doesn't cool the room, it can be frustrating — especially during Delhi's scorching summers. The problem could range from a simple filter issue to a major compressor failure. Before you panic, let's walk through the most common causes and their solutions. At <a href='/ac-repair-service-delhi'>Medon Company</a>, we handle hundreds of AC cooling complaints every month across <a href='/mahipalpur'>Mahipalpur</a>, <a href='/vasant-kunj'>Vasant Kunj</a>, and <a href='/aerocity'>Aerocity</a>.",
       },
       {
         heading: "Top 8 Reasons Your AC Is Not Cooling Properly",
         content:
-          "Here are the most frequent causes our technicians encounter during AC repair visits in Delhi NCR:",
+          "Here are the most frequent causes our technicians encounter during AC repair visits across our service areas:",
         subSections: [
           {
             heading: "1. Dirty or Clogged Air Filters",
@@ -126,7 +126,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
           {
             heading: "4. Dirty Condenser Coils (Outdoor Unit)",
             content:
-              "The outdoor unit's condenser coils release heat from inside your home. When coated with dust and debris, they can't dissipate heat effectively. This is especially common in dusty areas of Delhi like Mahipalpur and Dwarka. Annual professional deep cleaning solves this problem.",
+              "The outdoor unit's condenser coils release heat from inside your home. When coated with dust and debris, they can't dissipate heat effectively. This is especially common in dusty areas of Delhi like Mahipalpur and Vasant Vihar. Annual professional deep cleaning solves this problem.",
           },
           {
             heading: "5. Faulty Thermostat",
@@ -158,7 +158,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       {
         heading: "When to Call a Professional AC Technician",
         content:
-          "Call a professional if your AC shows ice formation, makes unusual noises, leaks water, or doesn't cool even after cleaning filters. At Medon Company, our verified technicians in <a href='/south-delhi'>South Delhi</a> and <a href='/vasant-kunj'>Vasant Kunj</a> can diagnose and fix any AC problem — usually within the same day. Our inspection starts at just ₹199 with transparent pricing and a 90-day warranty on all repairs.",
+          "Call a professional if your AC shows ice formation, makes unusual noises, leaks water, or doesn't cool even after cleaning filters. At Medon Company, our verified technicians in <a href='/vasant-vihar'>Vasant Vihar</a> and <a href='/vasant-kunj'>Vasant Kunj</a> can diagnose and fix any AC problem — usually within the same day. Our inspection starts at just ₹199 with transparent pricing and a 90-day warranty on all repairs.",
       },
     ],
 
@@ -167,7 +167,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       "ac-gas-refilling-delhi",
       "ac-installation-delhi",
     ],
-    relatedLocationSlugs: ["mahipalpur", "vasant-kunj", "south-delhi"],
+    relatedLocationSlugs: ["mahipalpur", "vasant-kunj", "vasant-vihar"],
     relatedBlogSlugs: [
       "signs-of-ac-gas-leakage",
       "how-often-should-you-service-your-ac",
@@ -281,7 +281,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       "ac-repair-service-delhi",
       "ac-installation-delhi",
     ],
-    relatedLocationSlugs: ["mahipalpur", "vasant-kunj", "south-delhi"],
+    relatedLocationSlugs: ["mahipalpur", "vasant-kunj", "aerocity"],
     relatedBlogSlugs: [
       "why-ac-is-not-cooling-properly",
       "how-often-should-you-service-your-ac",
@@ -344,7 +344,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       {
         heading: "The Ideal AC Servicing Schedule for Delhi",
         content:
-          "Based on our experience serving thousands of customers across <a href='/mahipalpur'>Mahipalpur</a>, <a href='/vasant-kunj'>Vasant Kunj</a>, and <a href='/south-delhi'>South Delhi</a>, here's the optimal AC service schedule:",
+          "Based on our experience serving thousands of customers across <a href='/mahipalpur'>Mahipalpur</a>, <a href='/vasant-kunj'>Vasant Kunj</a>, and <a href='/aerocity'>Aerocity</a>, here's the optimal AC service schedule:",
         subSections: [
           {
             heading: "Pre-Summer Service (February–March) — Most Important",
@@ -354,7 +354,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
           {
             heading: "Mid-Summer Check (May–June)",
             content:
-              "If your AC runs 12+ hours daily, a mid-summer filter cleaning and performance check is recommended. This is especially important for ACs in dusty areas like Mahipalpur, Dwarka, and Delhi Airport zone. A quick filter wash and basic inspection takes 30 minutes and extends peak-season performance.",
+              "If your AC runs 12+ hours daily, a mid-summer filter cleaning and performance check is recommended. This is especially important for ACs in dusty areas like Mahipalpur, Vasant Vihar, and the airport zone. A quick filter wash and basic inspection takes 30 minutes and extends peak-season performance.",
           },
           {
             heading: "Post-Monsoon Service (October–November)",

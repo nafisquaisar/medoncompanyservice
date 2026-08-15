@@ -13,12 +13,12 @@ const FAQ_LINKS: Record<number, { text: string; href: string }[]> = {
   2: [
     { text: "Mahipalpur", href: "/mahipalpur" },
     { text: "Vasant Kunj", href: "/vasant-kunj" },
-    { text: "South Delhi", href: "/south-delhi" },
-    { text: "Delhi Airport area", href: "/delhi-airport-area" },
+    { text: "Aerocity", href: "/aerocity" },
+    { text: "Vasant Vihar", href: "/vasant-vihar" },
   ],
   6: [{ text: "AC repair service", href: "/ac-repair-service-delhi" }],
   7: [
-    { text: "emergency AC repair near Delhi Airport", href: "/delhi-airport-area" },
+    { text: "emergency AC repair near IGI Airport", href: "/igi-airport" },
   ],
 };
 
@@ -122,7 +122,7 @@ export default function HomepageFAQ() {
           </h2>
           <p className="mt-4 text-gray-500 max-w-xl mx-auto leading-relaxed">
             Answers to the most common questions about our AC repair,
-            refrigerator service, and electrical work in Delhi NCR.
+            refrigerator service, and electrical work across Mahipalpur and our service areas.
           </p>
         </motion.div>
 

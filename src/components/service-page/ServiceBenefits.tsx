@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Shield, Clock, BadgeCheck, IndianRupee, Headphones, Star } from "lucide-react";
@@ -6,7 +6,7 @@ import { Shield, Clock, BadgeCheck, IndianRupee, Headphones, Star } from "lucide
 const WHY_CHOOSE_US = [
   { icon: BadgeCheck, title: "Verified Technicians", description: "Every technician is background-verified and managed by our admin team." },
   { icon: IndianRupee, title: "Transparent Pricing", description: "No hidden charges. Know the cost before any work begins." },
-  { icon: Clock, title: "Fast Response", description: "2–4 hour technician dispatch in most Delhi NCR areas." },
+  { icon: Clock, title: "Fast Response", description: "2–4 hour technician dispatch across our service areas." },
   { icon: Shield, title: "Service Warranty", description: "90-day warranty on all repairs and replacements." },
   { icon: Star, title: "Quality Parts", description: "Genuine OEM parts and manufacturer-grade components." },
   { icon: Headphones, title: "Post-Service Support", description: "Follow-up calls and dedicated support after every service." },

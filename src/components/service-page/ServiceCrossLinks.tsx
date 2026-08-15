@@ -9,6 +9,18 @@ interface ServiceCrossLinksProps {
   currentSlug: string;
 }
 
+/* Map old -delhi data slugs to their canonical -mahipalpur URLs */
+const CANONICAL_PATH: Record<string, string> = {
+  "ac-repair-service-delhi": "/ac-repair-service-mahipalpur",
+  "ac-installation-delhi": "/ac-installation-mahipalpur",
+  "ac-gas-refilling-delhi": "/ac-gas-refilling-mahipalpur",
+  "refrigerator-repair-delhi": "/refrigerator-repair-mahipalpur",
+  "washing-machine-repair-delhi": "/washing-machine-repair-mahipalpur",
+  "electrical-services-delhi": "/electrical-services-mahipalpur",
+  "geyser-repair-delhi": "/geyser-repair-mahipalpur",
+  "microwave-repair-delhi": "/microwave-repair-mahipalpur",
+};
+
 export default function ServiceCrossLinks({ currentSlug }: ServiceCrossLinksProps) {
   const links = getCrossLinks(currentSlug);
 
@@ -33,6 +45,7 @@ export default function ServiceCrossLinks({ currentSlug }: ServiceCrossLinksProp
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {links.map((link, i) => {
             const LinkIcon = ICON_MAP[link.icon];
+            const href = CANONICAL_PATH[link.slug] ?? `/${link.slug}`;
             return (
             <motion.div
               key={link.slug}
@@ -42,7 +55,7 @@ export default function ServiceCrossLinks({ currentSlug }: ServiceCrossLinksProp
               viewport={{ once: true }}
             >
               <Link
-                href={`/${link.slug}`}
+                href={href}
                 className="group flex items-center gap-3 rounded-2xl border border-gray-100 bg-white
                            p-4 sm:p-5 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/5
                            hover:border-primary/10 transition-all duration-300"

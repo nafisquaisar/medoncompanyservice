@@ -39,7 +39,7 @@ const POPULAR_SERVICES = [
 
 export default function PopularServices() {
   return (
-    <section className="py-20 sm:py-28 bg-white" aria-label="Popular services in Delhi NCR">
+    <section className="py-20 sm:py-28 bg-white" aria-label="Popular appliance repair services in Mahipalpur">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"
@@ -52,10 +52,10 @@ export default function PopularServices() {
             Top Rated
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary tracking-tight">
-            Popular Services in Delhi NCR
+            Popular Services in Mahipalpur & Nearby Areas
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Trusted by thousands across Delhi NCR. Book a verified technician for
+            Trusted by thousands across Mahipalpur and our service areas. Book a verified technician for
             any appliance repair or installation service.
           </p>
         </motion.div>

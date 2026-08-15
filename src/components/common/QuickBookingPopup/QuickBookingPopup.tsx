@@ -71,7 +71,7 @@ export default function QuickBookingPopup() {
                 Need Appliance Repair?
               </h3>
               <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-                Get same-day service in Mahipalpur, Vasant Kunj &amp; South Delhi.
+                Get same-day service in Mahipalpur, Vasant Kunj &amp; Aerocity.
                 Call or WhatsApp us to book instantly!
               </p>
             </div>

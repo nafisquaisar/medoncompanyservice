@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import ReviewCard from "./ReviewCard";
 import { motion } from "framer-motion";
@@ -24,7 +24,7 @@ const Reviews = () => {
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
             Real feedback from customers who trust Medon Company for their appliance repair needs
-            across Mahipalpur, Vasant Kunj, Aerocity, and South Delhi.
+            across Mahipalpur, Vasant Kunj, Aerocity, and Vasant Vihar.
           </p>
 
           {/* Aggregate Rating Badge */}

@@ -4,19 +4,19 @@ import LegalPageTemplate from "@/components/common/LegalPageTemplate/LegalPageTe
 export const metadata: Metadata = {
   title: "Terms & Conditions",
   description:
-    "Terms and Conditions for Medon Company appliance repair services in Delhi NCR. Read our service terms, warranty policy, and customer responsibilities.",
+      "Terms and Conditions for Medon Company appliance repair services in Mahipalpur & nearby areas. Read our service terms, warranty policy, and customer responsibilities.",
   alternates: { canonical: "/terms-and-conditions" },
   openGraph: {
     title: "Terms & Conditions | Medon Company",
     description:
-      "Terms and Conditions for Medon Company appliance repair services in Delhi NCR.",
+      "Terms and Conditions for Medon Company appliance repair services in Mahipalpur and nearby areas.",
     url: "/terms-and-conditions",
   },
   twitter: {
     card: "summary",
     title: "Terms & Conditions | Medon Company",
     description:
-      "Terms and Conditions for Medon Company appliance repair services in Delhi NCR.",
+      "Terms and Conditions for Medon Company appliance repair services in Mahipalpur & nearby areas.",
   },
   robots: {
     index: false,
@@ -38,7 +38,7 @@ const SECTIONS = [
       "Electrical Services — Wiring, Switchboard, MCB Installation",
       "Geyser Repair & Installation",
       "Microwave Oven Repair",
-      "All services are available across Delhi NCR including Mahipalpur, Vasant Kunj, Aerocity, Dwarka, South Delhi, Saket, and Hauz Khas.",
+      "All services are available across Mahipalpur, Aerocity, Vasant Kunj, Rangpuri, IGI Airport, Mahipalpur Extension, Vasant Vihar, Shanti Niketan, Nangal Dewat, Kishangarh, JNU, Munirka, and R.K. Puram.",
     ],
   },
   {

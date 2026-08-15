@@ -2,7 +2,7 @@ import type { LocationPageData } from "@/data/locations";
 import Navbar from "@/components/common/Navbar/Navbar";
 import Footer from "@/components/common/Footer/Footer";
 import LocationJsonLd from "@/components/seo/LocationJsonLd";
-import GoogleMap from "@/components/common/GoogleMap/GoogleMap";
+import GoogleMap, { MAPS_DIRECTIONS_URL } from "@/components/common/GoogleMap/GoogleMap";
 import LocationHero from "./LocationHero";
 import LocationAbout from "./LocationAbout";
 import LocationServices from "./LocationServices";
@@ -58,6 +58,17 @@ export default function LocationPageTemplate({ data }: LocationPageTemplateProps
               Find Us on the Map
             </h2>
             <GoogleMap height={350} />
+            <div className="text-center mt-4">
+              <a
+                href={MAPS_DIRECTIONS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary
+                           hover:text-primary-dark underline underline-offset-4 transition-colors"
+              >
+                📍 Open in Google Maps
+              </a>
+            </div>
           </div>
         </section>
 

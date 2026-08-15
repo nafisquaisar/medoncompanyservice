@@ -4,19 +4,19 @@ import LegalPageTemplate from "@/components/common/LegalPageTemplate/LegalPageTe
 export const metadata: Metadata = {
   title: "Cancellation Policy",
   description:
-    "Cancellation Policy for Medon Company appliance repair services. Learn how to cancel a booked service, cancellation charges, and rescheduling options in Delhi NCR.",
+    "Cancellation Policy for Medon Company appliance repair services. Learn how to cancel a booked service, cancellation charges, and rescheduling options in Mahipalpur & nearby areas.",
   alternates: { canonical: "/cancellation-policy" },
   openGraph: {
     title: "Cancellation Policy | Medon Company",
     description:
-      "Cancellation Policy for Medon Company appliance repair services in Delhi NCR.",
+      "Cancellation Policy for Medon Company appliance repair services in Mahipalpur & nearby areas.",
     url: "/cancellation-policy",
   },
   twitter: {
     card: "summary",
     title: "Cancellation Policy | Medon Company",
     description:
-      "Cancellation Policy for Medon Company appliance repair services in Delhi NCR.",
+      "Cancellation Policy for Medon Company appliance repair services in Mahipalpur & nearby areas.",
   },
   robots: {
     index: false,

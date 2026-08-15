@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -15,13 +15,13 @@ const TRUST_SIGNALS = [
     Icon: UserCheck,
     title: "Verified & Background-Checked Technicians",
     description:
-      "Every Medon Company technician is identity-verified, skill-tested, and background-checked before being assigned to your home in Delhi NCR.",
+      "Every Medon Company technician is identity-verified, skill-tested, and background-checked before being assigned to your home in Mahipalpur or any of our 13 service areas.",
   },
   {
     Icon: Zap,
-    title: "Same-Day Service Across Delhi NCR",
+    title: "Same-Day Service Across Our Service Areas",
     description:
-      "Book today, get served today. We offer same-day appliance repair in Mahipalpur, Vasant Kunj, South Delhi, and the Delhi Airport area.",
+      "Book today, get served today. We offer same-day appliance repair in Mahipalpur, Vasant Kunj, Aerocity, Vasant Vihar, and all 13 of our service areas.",
   },
   {
     Icon: ShieldCheck,
@@ -39,13 +39,13 @@ const TRUST_SIGNALS = [
     Icon: MapPin,
     title: "Headquartered in Mahipalpur, Delhi",
     description:
-      "Our operations center is in Mahipalpur, giving us the fastest response times across South Delhi, Vasant Kunj, Aerocity, and Dwarka.",
+      "Our operations center is in Mahipalpur, giving us the fastest response times across Aerocity, Vasant Kunj, Vasant Vihar, Rangpuri, and all 13 of our service areas.",
   },
   {
     Icon: Star,
     title: "4.8★ Rating from 5,000+ Customers",
     description:
-      "Trusted by thousands of homeowners and hotels across Delhi NCR for AC repair, refrigerator service, electrical work, and geyser repair.",
+      "Trusted by thousands of homeowners and hotels across Mahipalpur and our 13 service areas for AC repair, refrigerator service, electrical work, and geyser repair.",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function WhyChooseMedon() {
             Why Choose Medon Company for Appliance Repair in Delhi
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            From AC repair in Mahipalpur to electrical services in South Delhi —
+            From AC repair in Mahipalpur to electrical services across all 13 service areas —
             here&apos;s why 5,000+ customers trust Medon Company for their home
             repair needs.
           </p>

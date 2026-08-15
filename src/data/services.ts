@@ -66,12 +66,12 @@ export const ALL_SERVICES: ServicePageData[] = [
   /* ─────── AC Repair Service Delhi ─────── */
   {
     slug: "ac-repair-service-delhi",
-    title: "AC Repair Service in Delhi NCR",
+    title: "AC Repair Service in Mahipalpur & Nearby Areas",
     metaDescription:
-      "Professional AC repair service in Delhi NCR by Medon Company. Expert split & window AC repair, gas refilling, compressor fix. Verified technicians, transparent pricing. Call +91 7303637086.",
+      "Professional AC repair service in Mahipalpur & nearby areas by Medon Company. Expert split & window AC repair, gas refilling, compressor fix. Verified technicians, transparent pricing. Call +91 7303637086.",
     keywords: [
       "AC repair Delhi",
-      "AC repair service Delhi NCR",
+      "AC repair service Mahipalpur",
       "split AC repair near me",
       "window AC repair Delhi",
       "AC not cooling fix",
@@ -80,7 +80,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       "emergency AC repair Delhi",
     ],
     heroTitle: "Expert AC Repair Service",
-    heroHighlight: "in Delhi NCR",
+    heroHighlight: "in Mahipalpur & Nearby Areas",
     heroDescription:
       "Get your AC fixed by Medon Company's verified technicians. We handle all brands and models — split, window, and cassette ACs. Fast response, transparent pricing, and guaranteed satisfaction.",
     heroIcon: "Snowflake",
@@ -104,7 +104,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       { service: "Fan Motor Replacement", price: "₹3000–₹4000" },
     ],
     benefits: [
-      "Same-day service in most Delhi NCR areas",
+      "Same-day service in Mahipalpur and nearby service areas",
       "Verified and background-checked technicians",
       "90-day warranty on all repairs",
       "Transparent pricing — no hidden charges",
@@ -112,7 +112,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       "Real-time tracking of your service request",
     ],
     faqs: [
-      { question: "How quickly can you send a technician for AC repair in Delhi?", answer: "We typically dispatch a verified technician within 2–4 hours for most areas in Delhi NCR. For Mahipalpur and Vasant Kunj, same-hour service is often available." },
+      { question: "How quickly can you send a technician for AC repair?", answer: "We typically dispatch a verified technician within 2–4 hours across our 13 service areas. For Mahipalpur and nearby locations, same-hour service is often available." },
       { question: "Do you repair all AC brands?", answer: "Yes, our technicians are trained to repair all major brands including Daikin, LG, Samsung, Voltas, Blue Star, Hitachi, Carrier, and more." },
       { question: "What is the cost of AC gas refilling?", answer: "AC gas refilling starts from ₹999 for window ACs and ₹1,499 for split ACs. The exact cost depends on the refrigerant type (R22, R32, or R410A) and quantity needed." },
       { question: "Do you provide a warranty on AC repairs?", answer: "Yes, we provide a 90-day warranty on all repair work. Parts replacements carry the manufacturer's warranty." },
@@ -235,20 +235,20 @@ export const ALL_SERVICES: ServicePageData[] = [
   /* ─────── AC Installation Delhi ─────── */
   {
     slug: "ac-installation-delhi",
-    title: "AC Installation Service in Delhi NCR",
+    title: "AC Installation Service in Mahipalpur & Nearby Areas",
     metaDescription:
-      "Professional AC installation service in Delhi NCR. Split AC mounting, copper pipe fitting, and electrical setup by Medon Company's verified technicians. Call +91 7303637086.",
+      "Professional AC installation service in Mahipalpur & nearby areas. Split AC mounting, copper pipe fitting, and electrical setup by Medon Company's verified technicians. Call +91 7303637086.",
     keywords: [
       "AC installation Delhi",
       "split AC installation near me",
-      "AC installation service Delhi NCR",
+      "AC installation service Mahipalpur",
       "AC mounting service",
       "AC installation charges Delhi",
       "window AC installation",
       "AC copper pipe fitting",
     ],
     heroTitle: "Professional AC Installation",
-    heroHighlight: "in Delhi NCR",
+    heroHighlight: "in Mahipalpur & Nearby Areas",
     heroDescription:
       "Get your new AC installed perfectly by Medon Company's certified technicians. We handle wall mounting, copper pipe fitting, electrical wiring, and testing — all in a single visit.",
     heroIcon: "Wrench",
@@ -291,9 +291,9 @@ export const ALL_SERVICES: ServicePageData[] = [
   /* ─────── AC Gas Refilling Delhi ─────── */
   {
     slug: "ac-gas-refilling-delhi",
-    title: "AC Gas Refilling Service in Delhi NCR",
+    title: "AC Gas Refilling Service in Mahipalpur & Nearby Areas",
     metaDescription:
-      "AC gas refilling service in Delhi NCR by Medon Company. R22, R32, R410A refrigerant refilling for split & window ACs. Leak detection included. Call +91 7303637086.",
+      "AC gas refilling service in Mahipalpur & nearby areas by Medon Company. R22, R32, R410A refrigerant refilling for split & window ACs. Leak detection included. Call +91 7303637086.",
     keywords: [
       "AC gas refilling Delhi",
       "AC gas refill near me",
@@ -304,7 +304,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       "split AC gas refilling cost",
     ],
     heroTitle: "AC Gas Refilling Service",
-    heroHighlight: "in Delhi NCR",
+    heroHighlight: "in Mahipalpur & Nearby Areas",
     heroDescription:
       "Low cooling from your AC? It might need gas refilling. Medon Company provides professional refrigerant refilling with leak detection for all AC types and brands.",
     heroIcon: "Wind",
@@ -347,20 +347,20 @@ export const ALL_SERVICES: ServicePageData[] = [
   /* ─────── Refrigerator Repair Delhi ─────── */
   {
     slug: "refrigerator-repair-delhi",
-    title: "Refrigerator Repair Service in Delhi NCR",
+    title: "Refrigerator Repair Service in Mahipalpur & Nearby Areas",
     metaDescription:
-      "Expert refrigerator repair in Delhi NCR by Medon Company. Fix cooling issues, compressor problems, gas leaks for all fridge models. Call +91 7303637086.",
+      "Expert refrigerator repair in Mahipalpur & nearby areas by Medon Company. Fix cooling issues, compressor problems, gas leaks for all fridge models. Call +91 7303637086.",
     keywords: [
       "refrigerator repair Delhi",
       "fridge repair near me",
-      "refrigerator repair service Delhi NCR",
+      "refrigerator repair Mahipalpur",
       "fridge not cooling repair",
       "Samsung fridge repair Delhi",
       "LG refrigerator repair",
       "double door fridge repair",
     ],
     heroTitle: "Refrigerator Repair Service",
-    heroHighlight: "in Delhi NCR",
+    heroHighlight: "in Mahipalpur & Nearby Areas",
     heroDescription:
       "Fridge not cooling? Medon Company's verified technicians repair all refrigerator types — single door, double door, side-by-side, and mini fridges. All brands supported.",
     heroIcon: "Refrigerator",
@@ -403,20 +403,20 @@ export const ALL_SERVICES: ServicePageData[] = [
   /* ─────── Electrical Services Delhi ─────── */
   {
     slug: "electrical-services-delhi",
-    title: "Electrical Services in Delhi NCR",
+    title: "Electrical Services in Mahipalpur & Nearby Areas",
     metaDescription:
-      "Professional electrical services in Delhi NCR by Medon Company. Wiring, switchboard repair, MCB installation, short circuit fix, fan & light installation. Call +91 7303637086.",
+      "Professional electrical services in Mahipalpur & nearby areas by Medon Company. Wiring, switchboard repair, MCB installation, short circuit fix, fan & light installation. Call +91 7303637086.",
     keywords: [
       "electrical services Delhi",
       "electrician near me Delhi",
-      "electrical wiring service Delhi NCR",
+      "electrical wiring service Mahipalpur",
       "switchboard repair Delhi",
       "MCB installation",
       "short circuit repair Delhi",
       "home electrician Delhi",
     ],
     heroTitle: "Professional Electrical Services",
-    heroHighlight: "in Delhi NCR",
+    heroHighlight: "in Mahipalpur & Nearby Areas",
     heroDescription:
       "Medon Company provides safe and reliable electrical services for homes and offices. Wiring, switchboard repair, fan installation, MCB setup, and emergency fault resolution.",
     heroIcon: "Zap",
@@ -459,20 +459,20 @@ export const ALL_SERVICES: ServicePageData[] = [
   /* ─────── Geyser Repair Delhi ─────── */
   {
     slug: "geyser-repair-delhi",
-    title: "Geyser Repair & Installation in Delhi NCR",
+    title: "Geyser Repair & Installation in Mahipalpur & Nearby Areas",
     metaDescription:
-      "Professional geyser repair & installation in Delhi NCR. Fix heating issues, leakage, thermostat problems. New geyser installation. Call Medon Company at +91 7303637086.",
+      "Professional geyser repair & installation in Mahipalpur & nearby areas. Fix heating issues, leakage, thermostat problems. New geyser installation. Call Medon Company at +91 7303637086.",
     keywords: [
       "geyser repair Delhi",
       "geyser installation near me",
       "geyser not heating repair",
-      "geyser leakage repair Delhi",
-      "water heater repair Delhi NCR",
+      "geyser leakage repair Mahipalpur",
+      "water heater repair Delhi",
       "geyser thermostat repair",
       "instant geyser installation",
     ],
     heroTitle: "Geyser Repair & Installation",
-    heroHighlight: "in Delhi NCR",
+    heroHighlight: "in Mahipalpur & Nearby Areas",
     heroDescription:
       "Get your geyser repaired or installed by Medon Company's verified technicians. We handle all types — storage, instant, and gas geysers. Safety-first approach guaranteed.",
     heroIcon: "Thermometer",
@@ -515,20 +515,20 @@ export const ALL_SERVICES: ServicePageData[] = [
   /* ─────── Microwave Repair Delhi ─────── */
   {
     slug: "microwave-repair-delhi",
-    title: "Microwave Repair Service in Delhi NCR",
+    title: "Microwave Repair Service in Mahipalpur & Nearby Areas",
     metaDescription:
-      "Expert microwave oven repair in Delhi NCR by Medon Company. Fix heating issues, turntable problems, control panel repair. All brands. Call +91 7303637086.",
+      "Expert microwave oven repair in Mahipalpur & nearby areas by Medon Company. Fix heating issues, turntable problems, control panel repair. All brands. Call +91 7303637086.",
     keywords: [
       "microwave repair Delhi",
       "microwave oven repair near me",
       "microwave not heating repair",
       "Samsung microwave repair Delhi",
       "LG microwave repair",
-      "microwave repair service Delhi NCR",
+      "microwave repair service Mahipalpur",
       "convection microwave repair",
     ],
     heroTitle: "Microwave Repair Service",
-    heroHighlight: "in Delhi NCR",
+    heroHighlight: "in Mahipalpur & Nearby Areas",
     heroDescription:
       "Microwave not working? Medon Company's certified technicians repair all types — solo, grill, and convection microwaves. All brands supported with genuine parts.",
     heroIcon: "Microwave",
@@ -571,20 +571,20 @@ export const ALL_SERVICES: ServicePageData[] = [
   /* ─────── Washing Machine Repair Delhi ─────── */
   {
     slug: "washing-machine-repair-delhi",
-    title: "Washing Machine Repair Service in Delhi NCR",
+    title: "Washing Machine Repair Service in Mahipalpur & Nearby Areas",
     metaDescription:
-      "Expert washing machine repair in Delhi NCR by Medon Company. Fix spinning, draining, heating issues for front-load & top-load models. All brands. Call +91 7303637086.",
+      "Expert washing machine repair in Mahipalpur & nearby areas by Medon Company. Fix spinning, draining, heating issues for front-load & top-load models. All brands. Call +91 7303637086.",
     keywords: [
       "washing machine repair Delhi",
       "washing machine repair near me",
-      "washing machine service Delhi NCR",
+      "washing machine service Mahipalpur",
       "front load washing machine repair",
       "top load washing machine repair",
       "washing machine not spinning",
       "washing machine repair Mahipalpur",
     ],
     heroTitle: "Washing Machine Repair Service",
-    heroHighlight: "in Delhi NCR",
+    heroHighlight: "in Mahipalpur & Nearby Areas",
     heroDescription:
       "Washing machine acting up? Medon Company's certified technicians repair all washing machine types — front-load, top-load, and semi-automatic. All major brands supported with genuine parts and a 90-day warranty.",
     heroIcon: "Wrench",
@@ -611,7 +611,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       "All types: front-load, top-load, semi-automatic",
       "All brands: Samsung, LG, Whirlpool, Bosch, IFB, Haier, Godrej",
       "Genuine OEM replacement parts",
-      "Same-day repair in most Delhi NCR areas",
+      "Same-day repair in Mahipalpur and nearby service areas",
       "90-day warranty on all repairs",
       "Transparent pricing with no hidden charges",
     ],

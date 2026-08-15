@@ -4,19 +4,19 @@ import LegalPageTemplate from "@/components/common/LegalPageTemplate/LegalPageTe
 export const metadata: Metadata = {
   title: "Refund Policy",
   description:
-    "Refund Policy for Medon Company appliance repair services. Learn about our fair refund process, eligibility criteria, and how to request a refund in Delhi NCR.",
+    "Refund Policy for Medon Company appliance repair services. Learn about our fair refund process, eligibility criteria, and how to request a refund in Mahipalpur & nearby areas.",
   alternates: { canonical: "/refund-policy" },
   openGraph: {
     title: "Refund Policy | Medon Company",
     description:
-      "Refund Policy for Medon Company appliance repair services in Delhi NCR.",
+      "Refund Policy for Medon Company appliance repair services in Mahipalpur & nearby areas.",
     url: "/refund-policy",
   },
   twitter: {
     card: "summary",
     title: "Refund Policy | Medon Company",
     description:
-      "Refund Policy for Medon Company appliance repair services in Delhi NCR.",
+      "Refund Policy for Medon Company appliance repair services in Mahipalpur & nearby areas.",
   },
   robots: {
     index: false,
@@ -28,7 +28,7 @@ const SECTIONS = [
   {
     heading: "1. Our Commitment",
     content:
-      "At Medon Company, customer satisfaction is our top priority. We stand behind the quality of our appliance repair services in Delhi NCR. If you are not satisfied with a service, we are committed to making it right through our fair and transparent refund policy.",
+      "At Medon Company, customer satisfaction is our top priority. We stand behind the quality of our appliance repair services in Mahipalpur and nearby areas. If you are not satisfied with a service, we are committed to making it right through our fair and transparent refund policy.",
   },
   {
     heading: "2. Refund Eligibility",

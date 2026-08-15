@@ -10,7 +10,7 @@ export default function EmergencyCTA() {
   return (
     <section
       className="relative overflow-hidden bg-gradient-to-br from-primary via-primary-dark to-primary"
-      aria-label="Emergency appliance repair service in Delhi NCR"
+      aria-label="Emergency appliance repair service in Mahipalpur and nearby areas"
     >
       {/* Decorative elements */}
       <div className="absolute -top-20 -right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl" />
@@ -34,13 +34,13 @@ export default function EmergencyCTA() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
             Need Urgent Appliance Repair
             <br className="hidden sm:block" />
-            <span className="text-white/80"> in Delhi NCR?</span>
+            <span className="text-white/80">in Mahipalpur & Nearby Areas?</span>
           </h2>
 
           {/* Description */}
           <p className="mt-4 text-white/60 max-w-xl mx-auto leading-relaxed text-sm sm:text-base">
-            Same-day service available in Mahipalpur, Vasant Kunj, Aerocity,
-            Dwarka, South Delhi, Saket &amp; Hauz Khas. Our verified technicians can be at your
+            Same-day service available in Mahipalpur, Aerocity, Vasant Kunj,
+            Rangpuri, IGI Airport, Vasant Vihar &amp; Kishangarh. Our verified technicians can be at your
             doorstep within 1–2 hours.
           </p>
 

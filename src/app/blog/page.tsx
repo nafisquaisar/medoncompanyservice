@@ -10,7 +10,7 @@ import BlogListClient from "@/components/blog/BlogListClient";
 export const metadata: Metadata = {
   title: "Blog – AC Repair Tips & Appliance Maintenance Guides",
   description:
-    "Expert AC repair tips, refrigerator troubleshooting, electrical safety guides, and appliance maintenance advice for homeowners in Delhi NCR. By Medon Company.",
+    "Expert AC repair tips, refrigerator troubleshooting, electrical safety guides, and appliance maintenance advice for homeowners in Mahipalpur and nearby areas. By Medon Company.",
   keywords: [
     "AC repair tips",
     "AC maintenance guide",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Blog – AC Repair Tips & Maintenance Guides | Medon Company",
     description:
-      "Expert AC repair tips, refrigerator troubleshooting, and appliance maintenance guides for Delhi NCR homeowners.",
+      "Expert AC repair tips, refrigerator troubleshooting, and appliance maintenance guides for Mahipalpur and nearby area homeowners.",
     url: "/blog",
     type: "website",
   },

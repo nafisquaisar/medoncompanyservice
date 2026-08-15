@@ -12,22 +12,76 @@ const LOCATIONS = [
     highlight: "HQ Location",
   },
   {
+    name: "Aerocity",
+    slug: "aerocity",
+    response: "Under 1 hour",
+    highlight: "24/7 Hotels",
+  },
+  {
     name: "Vasant Kunj",
     slug: "vasant-kunj",
     response: "Within 2 hours",
     highlight: "All Sectors",
   },
   {
-    name: "South Delhi",
-    slug: "south-delhi",
-    response: "2–4 hours",
-    highlight: "15+ Areas",
+    name: "Rangpuri",
+    slug: "rangpuri",
+    response: "Within 1 hour",
+    highlight: "Nearby HQ",
   },
   {
-    name: "Delhi Airport Area",
-    slug: "delhi-airport-area",
+    name: "IGI Airport",
+    slug: "igi-airport",
     response: "Under 1 hour",
-    highlight: "24/7 Hotels",
+    highlight: "Emergency",
+  },
+  {
+    name: "Mahipalpur Extension",
+    slug: "mahipalpur-extension",
+    response: "~30 minutes",
+    highlight: "Priority",
+  },
+  {
+    name: "Vasant Vihar",
+    slug: "vasant-vihar",
+    response: "Within 2 hours",
+    highlight: "Premium",
+  },
+  {
+    name: "Shanti Niketan",
+    slug: "shanti-niketan",
+    response: "2–3 hours",
+    highlight: "Expert",
+  },
+  {
+    name: "Nangal Dewat",
+    slug: "nangal-dewat",
+    response: "2–3 hours",
+    highlight: "Reliable",
+  },
+  {
+    name: "Kishangarh",
+    slug: "kishangarh",
+    response: "~1.5 hours",
+    highlight: "Trusted",
+  },
+  {
+    name: "JNU",
+    slug: "jnu",
+    response: "2–3 hours",
+    highlight: "Campus",
+  },
+  {
+    name: "Munirka",
+    slug: "munirka",
+    response: "Within 2 hours",
+    highlight: "Reliable",
+  },
+  {
+    name: "R.K. Puram",
+    slug: "rk-puram",
+    response: "2–3 hours",
+    highlight: "All Sectors",
   },
 ];
 
@@ -54,17 +108,17 @@ export default function ServiceLocationLinks({ serviceName }: ServiceLocationLin
             Areas We Serve
           </h2>
           <p className="mt-3 text-gray-500 max-w-xl mx-auto leading-relaxed">
-            Get fast and reliable {serviceName.toLowerCase()} service across Delhi NCR.
+            Get fast and reliable {serviceName.toLowerCase()} service across our 13 approved service areas.
           </p>
         </motion.div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
           {LOCATIONS.map((loc, i) => (
             <motion.div
               key={loc.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: i * 0.06 }}
+              transition={{ duration: 0.3, delay: i * 0.04 }}
               viewport={{ once: true }}
             >
               <Link

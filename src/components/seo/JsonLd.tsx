@@ -69,14 +69,19 @@ const LOCAL_BUSINESS = {
    */
   areaServed: [
     { "@type": "Place", name: "Mahipalpur" },
-    { "@type": "Place", name: "Vasant Kunj" },
     { "@type": "Place", name: "Aerocity" },
-    { "@type": "Place", name: "Dwarka" },
-    { "@type": "Place", name: "South Delhi" },
+    { "@type": "Place", name: "Vasant Kunj" },
+    { "@type": "Place", name: "Rangpuri" },
+    { "@type": "Place", name: "IGI Airport" },
+    { "@type": "Place", name: "Mahipalpur Extension" },
+    { "@type": "Place", name: "Vasant Vihar" },
+    { "@type": "Place", name: "Shanti Niketan" },
+    { "@type": "Place", name: "Nangal Dewat" },
+    { "@type": "Place", name: "Kishangarh" },
+    { "@type": "Place", name: "JNU" },
+    { "@type": "Place", name: "Munirka" },
+    { "@type": "Place", name: "R.K. Puram" },
     { "@type": "City", name: "New Delhi" },
-    { "@type": "Place", name: "Delhi NCR" },
-    { "@type": "Place", name: "Saket" },
-    { "@type": "Place", name: "Hauz Khas" },
   ],
   serviceType: [
     "AC Repair",
@@ -98,7 +103,7 @@ const LOCAL_BUSINESS = {
         itemOffered: {
           "@type": "Service",
           name: "AC Repair Service",
-          description: "Expert split & window AC repair in Delhi NCR",
+          description: "Expert split & window AC repair in Mahipalpur and nearby areas",
         },
       },
       {
@@ -160,7 +165,7 @@ const ELECTRICIAN_SCHEMA = {
   "@id": `${SITE_URL}/#electrician`,
   name: `${SITE_NAME} – Electrical Services`,
   description:
-    "Professional electrical services in Delhi NCR – wiring, switchboard repair, MCB installation, short circuit fix. Licensed electricians with safety-first approach.",
+    "Professional electrical services in Mahipalpur & nearby areas – wiring, switchboard repair, MCB installation, short circuit fix. Licensed electricians with safety-first approach.",
   url: `${SITE_URL}/electrical-services-delhi`,
   telephone: SITE_PHONE_SCHEMA,
   address: {
@@ -168,8 +173,14 @@ const ELECTRICIAN_SCHEMA = {
     ...SITE_ADDRESS,
   },
   areaServed: [
+    { "@type": "Place", name: "Mahipalpur" },
+    { "@type": "Place", name: "Aerocity" },
+    { "@type": "Place", name: "Vasant Kunj" },
+    { "@type": "Place", name: "Rangpuri" },
+    { "@type": "Place", name: "Vasant Vihar" },
+    { "@type": "Place", name: "Kishangarh" },
+    { "@type": "Place", name: "Munirka" },
     { "@type": "City", name: "New Delhi" },
-    { "@type": "Place", name: "Delhi NCR" },
   ],
   parentOrganization: {
     /* Cross-reference to the primary entity — @id must match LOCAL_BUSINESS @id */

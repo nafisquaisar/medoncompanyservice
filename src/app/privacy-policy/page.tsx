@@ -4,19 +4,19 @@ import LegalPageTemplate from "@/components/common/LegalPageTemplate/LegalPageTe
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Medon Company. Learn how we collect, use, and protect your personal information when you use our appliance repair services in Delhi NCR.",
+    "Privacy Policy for Medon Company. Learn how we collect, use, and protect your personal information when you use our appliance repair services in Mahipalpur & nearby areas.",
   alternates: { canonical: "/privacy-policy" },
   openGraph: {
     title: "Privacy Policy | Medon Company",
     description:
-      "Privacy Policy for Medon Company — appliance repair services in Delhi NCR.",
+      "Privacy Policy for Medon Company — appliance repair services in Mahipalpur & nearby areas.",
     url: "/privacy-policy",
   },
   twitter: {
     card: "summary",
     title: "Privacy Policy | Medon Company",
     description:
-      "Privacy Policy for Medon Company — appliance repair services in Delhi NCR.",
+      "Privacy Policy for Medon Company — appliance repair services in Mahipalpur & nearby areas.",
   },
   robots: {
     index: false,

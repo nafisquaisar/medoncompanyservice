@@ -36,7 +36,7 @@ export default function BlogHero() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           Practical AC repair tips, refrigerator troubleshooting guides, and
-          expert maintenance advice for homeowners in Delhi NCR. Stay informed,
+          expert maintenance advice for homeowners in Mahipalpur and nearby areas. Stay informed,
           save money, and keep your appliances running smoothly.
         </motion.p>
       </div>

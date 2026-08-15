@@ -1,4 +1,4 @@
-﻿/* ─────────────────────────────────────────────────────
+/* ─────────────────────────────────────────────────────
    CENTRALIZED REVIEW DATA — Medon Company
    Used by: JSON-LD schema, Reviews section, AggregateRating
    ───────────────────────────────────────────────────── */
@@ -65,7 +65,7 @@ export const ALL_REVIEWS: MedonReview[] = [
     name: "Sunita Verma",
     role: "AC Installation",
     review:
-      "Professional AC installation by Medon Company's team near Saket. Copper pipe fitting was neat, electrical wiring was properly done with a dedicated MCB. Same-day service and very reasonable charges.",
+      "Professional AC installation by Medon Company's team in Vasant Kunj. Copper pipe fitting was neat, electrical wiring was properly done with a dedicated MCB. Same-day service and very reasonable charges.",
     rating: 4,
     datePublished: "2025-01-18",
   },

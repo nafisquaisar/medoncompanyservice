@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
@@ -18,7 +18,7 @@ const REVIEWS = [
   },
   {
     name: "Vikas Kumar",
-    role: "Electrical Service – Delhi NCR",
+    role: "Electrical Service – Mahipalpur",
     review: "Transparent pricing and skilled technician. Got my switchboard upgraded to modular in just 2 hours. Highly recommended!",
     rating: 5,
   },

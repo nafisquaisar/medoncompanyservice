@@ -7,20 +7,30 @@ import GoogleMap from "@/components/common/GoogleMap/GoogleMap";
 
 /* ── Footer link data ────────────────────────────── */
 const SERVICE_LINKS = [
-  { label: "AC Repair Service in Delhi", path: "/ac-repair-service-delhi" },
-  { label: "AC Installation in Delhi", path: "/ac-installation-delhi" },
-  { label: "AC Gas Refilling in Delhi", path: "/ac-gas-refilling-delhi" },
-  { label: "Refrigerator Repair in Delhi", path: "/refrigerator-repair-delhi" },
-  { label: "Electrical Services in Delhi", path: "/electrical-services-delhi" },
-  { label: "Geyser Repair in Delhi", path: "/geyser-repair-delhi" },
-  { label: "Microwave Repair in Delhi", path: "/microwave-repair-delhi" },
+  { label: "AC Repair Service in Mahipalpur", path: "/ac-repair-service-mahipalpur" },
+  { label: "AC Installation in Mahipalpur", path: "/ac-installation-mahipalpur" },
+  { label: "AC Gas Refilling in Mahipalpur", path: "/ac-gas-refilling-mahipalpur" },
+  { label: "Refrigerator Repair in Mahipalpur", path: "/refrigerator-repair-mahipalpur" },
+  { label: "Washing Machine Repair in Mahipalpur", path: "/washing-machine-repair-mahipalpur" },
+  { label: "Electrical Services in Mahipalpur", path: "/electrical-services-mahipalpur" },
+  { label: "Geyser Repair in Mahipalpur", path: "/geyser-repair-mahipalpur" },
+  { label: "Microwave Repair in Mahipalpur", path: "/microwave-repair-mahipalpur" },
 ];
 
 const LOCATION_LINKS = [
   { label: "Appliance Repair in Mahipalpur", path: "/mahipalpur" },
+  { label: "Appliance Repair in Aerocity", path: "/aerocity" },
   { label: "AC Service in Vasant Kunj", path: "/vasant-kunj" },
-  { label: "Appliance Repair in South Delhi", path: "/south-delhi" },
-  { label: "Repair Services Near Delhi Airport", path: "/delhi-airport-area" },
+  { label: "Repair Services in Rangpuri", path: "/rangpuri" },
+  { label: "Repair Near IGI Airport", path: "/igi-airport" },
+  { label: "Repair in Mahipalpur Extension", path: "/mahipalpur-extension" },
+  { label: "Repair in Vasant Vihar", path: "/vasant-vihar" },
+  { label: "Repair in Shanti Niketan", path: "/shanti-niketan" },
+  { label: "Repair in Nangal Dewat", path: "/nangal-dewat" },
+  { label: "Repair in Kishangarh", path: "/kishangarh" },
+  { label: "Repair near JNU", path: "/jnu" },
+  { label: "Repair in Munirka", path: "/munirka" },
+  { label: "Repair in R.K. Puram", path: "/rk-puram" },
 ];
 
 const BLOG_LINKS = [
@@ -108,9 +118,9 @@ const Footer = () => {
         >
           <h3 className="text-2xl font-bold tracking-tight">Medon Company</h3>
           <p className="mt-4 text-sm text-white/60 leading-relaxed">
-            Delhi NCR&apos;s trusted appliance repair service provider. Expert AC repair,
+            Mahipalpur's trusted appliance repair service. Expert AC repair,
             refrigerator service, electrical work &amp; geyser repair in Mahipalpur,
-            Vasant Kunj, Aerocity, Dwarka, Saket, Hauz Khas &amp; South Delhi.
+            Aerocity, Vasant Kunj, Rangpuri, IGI Airport, Vasant Vihar, Kishangarh &amp; nearby areas.
             Verified technicians with 90-day warranty on all repairs.
           </p>
 
@@ -119,7 +129,7 @@ const Footer = () => {
             <div className="flex items-start gap-3 text-white/70 text-sm" itemScope itemType="https://schema.org/PostalAddress">
               <MapPin size={14} className="mt-0.5 flex-shrink-0" />
               <span itemProp="streetAddress">
-                Medon Company, Shop No L-3, Street No 1, L Block, Mahipalpur Village, New Delhi 110037
+                Medon Company, Shop No, L-3, Street Number 1, L Block, Mahipalpur Village, Mahipalpur, New Delhi, Delhi 110037
               </span>
             </div>
             <a href="tel:+917303637086" className="flex items-center gap-3 text-white/70 text-sm hover:text-white transition-colors">

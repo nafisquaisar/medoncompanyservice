@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "AC Repair in Mahipalpur, Delhi | Medon Company – Same-Hour Service",
   },
   description:
-    "Medon Company is headquartered in Mahipalpur — get AC repair, fridge service & electrical work in under 1 hour. Serving all Delhi NCR. Verified techs. ₹199 onwards. Call +91 7303637086.",
+    "Medon Company is headquartered in Mahipalpur — get AC repair, fridge service & electrical work in under 1 hour. Serving Mahipalpur, Aerocity, Vasant Kunj, Rangpuri & 13 areas. Verified techs. ₹199 onwards. Call +91 7303637086.",
   keywords: [
     // ── Primary: Mahipalpur (HQ location — highest local relevance) ──
     "AC repair Mahipalpur",
@@ -48,37 +48,37 @@ export const metadata: Metadata = {
     "AC repair near Mahipalpur",
     "AC technician Mahipalpur",
     "AC installation Mahipalpur",
-    // ── Secondary: Delhi / Delhi NCR (high-volume broad terms) ──
+    // ── Secondary: Delhi (high-volume broad terms) ──
     "AC repair Delhi",
     "AC repair near me",
-    "appliance repair Delhi NCR",
+    "appliance repair Mahipalpur",
     "refrigerator repair Delhi",
     "washing machine repair Delhi",
     "washing machine repair near me",
     "electrical services Delhi",
     "geyser repair Delhi",
     "AC installation Delhi",
-    "home repair services Delhi NCR",
+    "home repair services Mahipalpur",
     // ── Nearby locations ──
     "AC repair Vasant Kunj",
-    "AC repair South Delhi",
     "AC repair Aerocity",
+    "AC repair Vasant Vihar",
   ],
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "AC Repair in Mahipalpur & Delhi NCR | Medon Company",
+    title: "AC Repair in Mahipalpur | Medon Company",
     description:
-      "Based in Mahipalpur — AC repair, refrigerator service & electrical work in under 1 hour. Covering all Delhi NCR. Verified technicians, transparent pricing.",
+      "Based in Mahipalpur — AC repair, refrigerator service & electrical work in under 1 hour. Serving Mahipalpur, Aerocity, Vasant Kunj, Rangpuri & 13 areas. Verified technicians, transparent pricing.",
     url: "/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AC Repair in Mahipalpur & Delhi NCR | Medon Company",
+    title: "AC Repair in Mahipalpur | Medon Company",
     description:
-      "Based in Mahipalpur — AC repair, refrigerator service & electrical work in under 1 hour. Covering all Delhi NCR. Verified technicians, transparent pricing.",
+      "Based in Mahipalpur — AC repair, refrigerator service & electrical work in under 1 hour. Serving Mahipalpur, Aerocity, Vasant Kunj, Rangpuri & 13 areas. Verified technicians, transparent pricing.",
   },
 };
 
