@@ -271,7 +271,7 @@ const Hero = () => {
                 transition={{ delay: 0.05, duration: 0.5 }}
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#F59E0B] inline-block" />
-                Based in Mahipalpur — Trusted by 5,000+ Customers
+                Based in Mahipalpur — Trusted by 20,000+ Customers
               </motion.span>
 
               {/* H1 */}
@@ -284,7 +284,7 @@ const Hero = () => {
               >
                 Expert AC &amp; Appliance Repair{" "}
                 <span className="text-[#01395C]/55 font-bold">
-                  in Mahipalpur &amp; South Delhi
+                  in Mahipalpur
                 </span>
               </motion.h1>
 
