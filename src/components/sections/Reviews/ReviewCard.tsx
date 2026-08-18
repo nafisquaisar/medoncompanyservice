@@ -46,7 +46,7 @@ const ReviewCard = ({ name, role, review, rating }: ReviewCardProps) => {
           </span>
         </div>
         <div>
-          <h4 className="font-bold text-sm text-primary">{name}</h4>
+          <p className="font-bold text-sm text-primary">{name}</p>
           <p className="text-xs text-gray-400">{role}</p>
         </div>
       </div>

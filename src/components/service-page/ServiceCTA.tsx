@@ -76,7 +76,7 @@ export default function ServiceCTA() {
           transition={{ delay: 0.4, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Available Mon–Sun, 8 AM – 9 PM • Mahipalpur, New Delhi
+          Available 24/7 • Mahipalpur, New Delhi
         </motion.p>
       </div>
     </section>

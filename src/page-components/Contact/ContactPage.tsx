@@ -1,6 +1,6 @@
-﻿"use client";
+"use client";
 
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import ContactForm from "@/components/sections/Contact/ContactForm";
 
@@ -45,6 +45,7 @@ const Contact = () => {
                 label:
                   "Shop No, L-3, Street Number 1, L block, Mahipalpur Village, Mahipalpur, New Delhi, Delhi 110037",
               },
+              { icon: Clock, label: "Open 24/7 — Available Every Day" },
             ].map((item, i) => (
               <motion.div
                 key={i}

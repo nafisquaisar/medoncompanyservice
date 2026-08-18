@@ -32,7 +32,7 @@ export default function EmergencyCTA() {
 
           {/* Headline */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-tight">
-            Need Urgent Appliance Repair
+            Need Urgent Appliance Repair{" "}
             <br className="hidden sm:block" />
             <span className="text-white/80">in Mahipalpur & Nearby Areas?</span>
           </h2>

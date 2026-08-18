@@ -69,7 +69,7 @@ export default function LocationTestimonials({ testimonials }: LocationTestimoni
                   <span className="text-primary font-bold text-sm">{t.name.charAt(0)}</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm text-primary">{t.name}</h4>
+                  <p className="font-bold text-sm text-primary">{t.name}</p>
                   <div className="flex items-center gap-1 mt-0.5">
                     <MapPin size={10} className="text-gray-400" />
                     <p className="text-[11px] text-gray-400">{t.area}</p>

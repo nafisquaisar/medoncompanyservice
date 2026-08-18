@@ -182,7 +182,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
       { name: "Rohit Malhotra", area: "Aerocity Residences", service: "AC Repair", rating: 5, review: "Booked for split AC repair on a Sunday morning. Technician arrived within 45 minutes and fixed the cooling issue on the spot. Very professional and reasonably priced." },
     ],
     faqs: [
-      { question: "Do you provide 24/7 service in Aerocity?", answer: "Yes, we offer 24/7 emergency AC repair for hotels and hospitality businesses in Aerocity. Residential customers can book emergency service during extended hours (8 AM – 10 PM)." },
+      { question: "Do you provide 24/7 service in Aerocity?", answer: "Yes, we offer 24/7 emergency AC repair for all customers in Aerocity — hotels, hospitality businesses, and residential. Call us anytime for rapid response." },
       { question: "Do you service hotels in Aerocity?", answer: "Yes, we serve multiple hotels in Aerocity with AMC contracts and on-demand repair. Our proximity ensures sub-1-hour response for hospitality clients." },
       { question: "How quickly can you reach Aerocity?", answer: "Our headquarters is in Mahipalpur, just 2 km from Aerocity. We typically reach within 30–60 minutes of your call." },
       { question: "Do you offer AMC for businesses in Aerocity?", answer: "Yes, we offer customized AMC contracts for hotels, restaurants, and businesses in Aerocity. Plans include scheduled maintenance, priority emergency service, and discounted repair rates." },
@@ -372,7 +372,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
       { name: "Airport Hotel Group", area: "IGI Airport Zone", service: "Annual Maintenance", rating: 5, review: "Medon Company manages AC maintenance for our 3 hotel properties. Their structured approach, regular reporting, and emergency support has reduced our downtime by 80%." },
     ],
     faqs: [
-      { question: "Do you provide 24/7 service near IGI Airport?", answer: "Yes, we offer 24/7 emergency AC repair for hotels and hospitality businesses in the airport zone. Residential customers can book emergency service during extended hours (8 AM – 10 PM)." },
+      { question: "Do you provide 24/7 service near IGI Airport?", answer: "Yes, we offer 24/7 emergency AC repair for all customers in the airport zone — hotels, hospitality businesses, and residential. Call us anytime for rapid response." },
       { question: "How quickly can you reach the IGI Airport area?", answer: "Our Mahipalpur headquarters is just 3 km from IGI Airport. We typically reach within 30–60 minutes of your call." },
       { question: "Do you service hotels near the airport?", answer: "Yes, we serve multiple hotels in the airport zone with AMC contracts and on-demand repair. Our proximity ensures sub-1-hour response for hospitality clients." },
       { question: "Can you handle bulk AC installation for hotels?", answer: "Absolutely. We've completed bulk AC installation and maintenance projects for hotels with 20–100+ rooms. We handle procurement, installation, and ongoing maintenance." },
@@ -436,7 +436,7 @@ export const ALL_LOCATIONS: LocationPageData[] = [
     faqs: [
       { question: "How fast is the service in Mahipalpur Extension?", answer: "Our headquarters is just 0.5 km away. Technicians are typically on-site within 20–30 minutes of your call." },
       { question: "Do Mahipalpur Extension residents get special pricing?", answer: "Yes! As a local customer, you get a reduced inspection fee of ₹149 (vs. ₹199 standard) and priority scheduling." },
-      { question: "Do you handle AC emergencies in Mahipalpur Extension?", answer: "Absolutely. Call us anytime during service hours (8 AM – 10 PM) and we'll dispatch the nearest available technician to you within minutes." },
+      { question: "Do you handle AC emergencies in Mahipalpur Extension?", answer: "Absolutely. Call us anytime — we're available 24/7 and we'll dispatch the nearest available technician to you within minutes." },
       { question: "What appliances do you repair in Mahipalpur Extension?", answer: "We repair ACs, refrigerators, washing machines, geysers, microwaves, and handle all electrical work including wiring and switchboard upgrades." },
     ],
   },

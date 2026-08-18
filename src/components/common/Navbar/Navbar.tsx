@@ -7,6 +7,7 @@ import { navItems } from "./NavItems";
 import ServicesDropdown from "./ServicesDropdown";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const MOBILE_SERVICES = [
   { label: "AC Repair Service in Delhi", slug: "ac-repair-service-delhi" },
@@ -91,7 +92,7 @@ const Navbar = () => {
     <>
       {/* NAVBAR */}
       <motion.header
-        initial={{ y: -60, opacity: 0 }}
+        initial={{ y: 0, opacity: 1 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className={`sticky top-0 z-50 transition-all duration-500
@@ -109,10 +110,13 @@ const Navbar = () => {
             onClick={() => handleNavClick("#home")}
             className="flex items-center"
           >
-            <img
+            <Image
               src="/medoncompanyhomelogo.png"
               alt="Medon Company"
+              width={112}
+              height={28}
               className="h-7 w-auto object-contain"
+              priority
             />
           </motion.button>
 

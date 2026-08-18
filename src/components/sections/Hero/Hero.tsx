@@ -266,7 +266,7 @@ const Hero = () => {
                 className="inline-flex self-start items-center gap-1.5 mb-5 px-4 py-1.5
                            bg-[#01395C]/8 text-[#01395C] text-[11px] font-semibold
                            tracking-widest uppercase rounded-full border border-[#01395C]/12"
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 1, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.05, duration: 0.5 }}
               >
@@ -278,13 +278,13 @@ const Hero = () => {
               <motion.h1
                 className="text-[2.1rem] sm:text-[2.6rem] lg:text-[2.85rem] font-extrabold
                            text-[#01395C] leading-[1.13] tracking-tight mb-4"
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 1, y: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.12, duration: 0.6 }}
               >
                 Expert AC &amp; Appliance Repair{" "}
                 <span className="text-[#01395C]/55 font-bold">
-                  in Mahipalpur
+                  {" "}in Mahipalpur
                 </span>
               </motion.h1>
 
@@ -361,16 +361,16 @@ const Hero = () => {
             {/* ── RIGHT COLUMN — Hero composite image ─────────── */}
             <motion.div
               className="flex justify-center lg:justify-end mt-8 lg:mt-0"
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 1, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.75, ease: "easeOut", delay: 0.15 }}
             >
               <div className="relative w-full max-w-[380px] sm:max-w-[480px] lg:max-w-[520px]">
                 <Image
-                  src="/img/hero/rightbanner.png"
+                  src="/img/hero/rightbanner.webp"
                   alt="Medon Company technician with folded arms surrounded by AC, refrigerator, washing machine, microwave, geyser and electrical panel"
-                  width={1200}
-                  height={900}
+                  width={520}
+                  height={433}
                   sizes="(max-width: 640px) 380px, (max-width: 1024px) 480px, 520px"
                   className="w-full h-auto object-contain"
                   priority

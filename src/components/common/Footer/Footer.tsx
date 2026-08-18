@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 import GoogleMap from "@/components/common/GoogleMap/GoogleMap";
 
@@ -140,6 +140,10 @@ const Footer = () => {
               <Mail size={14} className="flex-shrink-0" />
               <span>Medoncompany@gmail.com</span>
             </a>
+            <div className="flex items-center gap-3 text-white/70 text-sm">
+              <Clock size={14} className="flex-shrink-0" />
+              <span>24/7 Service — Available Every Day</span>
+            </div>
           </div>
         </motion.div>
 

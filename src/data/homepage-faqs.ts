@@ -39,6 +39,6 @@ export const HOMEPAGE_FAQS = [
   {
     question: "Do you provide emergency AC repair near IGI Airport?",
     answer:
-      "Yes, we provide 24/7 emergency AC repair for hotels and businesses near IGI Airport and in Aerocity. For residential customers, emergency service is available from 8 AM to 10 PM with under 1-hour response time.",
+      "Yes, we provide 24/7 emergency AC repair for hotels, businesses, and residential customers near IGI Airport, Aerocity, and across all our service areas. Call anytime for under 1-hour response.",
   },
 ];

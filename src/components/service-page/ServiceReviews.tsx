@@ -81,7 +81,7 @@ export default function ServiceReviews() {
                   </span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm text-primary">{review.name}</h4>
+                  <p className="font-bold text-sm text-primary">{review.name}</p>
                   <p className="text-xs text-gray-400">{review.role}</p>
                 </div>
               </div>

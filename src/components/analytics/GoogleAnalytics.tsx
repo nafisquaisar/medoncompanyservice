@@ -34,7 +34,7 @@ export default function GoogleAnalytics() {
         id="ga4-loader"
       />
 
-      {/* 2. Initialise the data layer and config */}
+      {/* 2. Initialise the data layer, GA4 config, and Google Ads config */}
       <Script
         id="ga4-init"
         strategy="afterInteractive"
@@ -47,6 +47,7 @@ export default function GoogleAnalytics() {
               page_path: window.location.pathname,
               send_page_view: false
             });
+            gtag('config', 'AW-11430002689');
           `,
         }}
       />
