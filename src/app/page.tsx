@@ -11,6 +11,7 @@ import GalleryPreview from "@/components/sections/Gallery/GalleryPreview";
 import Reviews from "@/components/sections/Reviews/Reviews";
 import HomepageFAQ from "@/components/sections/HomepageFAQ/HomepageFAQ";
 import EmergencyCTA from "@/components/sections/EmergencyCTA/EmergencyCTA";
+import BrandMarquee from "@/components/sections/BrandMarquee/BrandMarquee";
 import Contact from "@/page-components/Contact/ContactPage";
 import StickyContactCTA from "@/components/common/StickyContactCTA/StickyContactCTA";
 import Footer from "@/components/common/Footer/Footer";
@@ -99,6 +100,8 @@ export default function HomePage() {
         <section id="services" className="scroll-mt-20" aria-label="Our Services">
           <Services />
         </section>
+
+        <BrandMarquee />
 
         <section id="how-it-works" className="scroll-mt-20" aria-label="How It Works">
           <HowItWorks />

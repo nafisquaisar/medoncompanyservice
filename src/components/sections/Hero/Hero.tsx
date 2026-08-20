@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Phone, Mail, ArrowRight, CalendarCheck } from "lucide-react";
+import Link from "next/link";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import Image from "next/image";
 
@@ -14,6 +15,7 @@ const SERVICE_CARDS = [
   {
     label: "AC Repair",
     id: "hero-card-ac",
+    href: "/ac-repair-service-delhi",
     svg: (
       <svg viewBox="0 0 160 110" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         {/* AC unit body */}
@@ -44,6 +46,7 @@ const SERVICE_CARDS = [
   {
     label: "Refrigerator Repair",
     id: "hero-card-fridge",
+    href: "/refrigerator-repair-delhi",
     svg: (
       <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         {/* fridge body */}
@@ -75,6 +78,7 @@ const SERVICE_CARDS = [
   {
     label: "Washing Machine Repair",
     id: "hero-card-washer",
+    href: "/washing-machine-repair-delhi",
     svg: (
       <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         {/* body */}
@@ -110,6 +114,7 @@ const SERVICE_CARDS = [
   {
     label: "Geyser Repair",
     id: "hero-card-geyser",
+    href: "/geyser-repair-delhi",
     svg: (
       <svg viewBox="0 0 100 160" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         {/* tank body */}
@@ -141,6 +146,7 @@ const SERVICE_CARDS = [
   {
     label: "Microwave Repair",
     id: "hero-card-microwave",
+    href: "/microwave-repair-delhi",
     svg: (
       <svg viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         {/* body */}
@@ -175,6 +181,7 @@ const SERVICE_CARDS = [
   {
     label: "Electrical Repair",
     id: "hero-card-electrical",
+    href: "/electrical-services-delhi",
     svg: (
       <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
         {/* cabinet */}
@@ -296,25 +303,26 @@ const Hero = () => {
                 animate="show"
               >
                 {SERVICE_CARDS.map((card) => (
-                  <motion.div
-                    key={card.id}
-                    id={card.id}
-                    variants={cardVariants}
-                    whileHover={{ y: -2, boxShadow: "0 4px 14px rgba(1,57,92,0.11)" }}
-                    className="bg-white rounded-xl border border-gray-100 shadow-sm
-                               flex flex-col items-center justify-between
-                               p-2 cursor-default select-none"
-                  >
-                    {/* Appliance illustration */}
-                    <div className="w-full aspect-[3/2] flex items-center justify-center">
-                      {card.svg}
-                    </div>
-                    {/* Label */}
-                    <p className="mt-0.5 text-center text-[9px] font-semibold
-                                  text-[#01395C] leading-tight">
-                      {card.label}
-                    </p>
-                  </motion.div>
+                  <Link key={card.id} href={card.href}>
+                    <motion.div
+                      id={card.id}
+                      variants={cardVariants}
+                      whileHover={{ y: -2, boxShadow: "0 4px 14px rgba(1,57,92,0.11)" }}
+                      className="bg-white rounded-xl border border-gray-100 shadow-sm
+                                 flex flex-col items-center justify-center
+                                 p-2 cursor-pointer select-none h-[100px]"
+                    >
+                      {/* Appliance illustration */}
+                      <div className="w-[60px] h-[55px] flex items-center justify-center overflow-hidden">
+                        {card.svg}
+                      </div>
+                      {/* Label */}
+                      <p className="mt-1 text-center text-[9px] font-semibold
+                                    text-[#01395C] leading-tight">
+                        {card.label}
+                      </p>
+                    </motion.div>
+                  </Link>
                 ))}
               </motion.div>
 

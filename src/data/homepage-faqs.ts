@@ -4,7 +4,7 @@ export const HOMEPAGE_FAQS = [
   {
     question: "What is the cost of AC repair in Mahipalpur?",
     answer:
-      "AC repair in Mahipalpur starts from ₹149 for a local inspection. Gas refilling costs ₹999–₹2,999 depending on the refrigerant type, and compressor repairs start from ₹2,500. We provide transparent, upfront pricing with no hidden charges.",
+      "AC repair in Mahipalpur starts from ₹299 for a general inspection. Gas refilling costs ₹1,499–₹2,999 depending on the refrigerant type, and compressor replacement costs ₹5,000–₹10,000. We provide transparent, upfront pricing with no hidden charges.",
   },
   {
     question: "Do you provide same-day AC service in Mahipalpur?",

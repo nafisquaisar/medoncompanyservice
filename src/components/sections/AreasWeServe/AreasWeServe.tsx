@@ -117,7 +117,7 @@ export default function AreasWeServe() {
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
             Based in Mahipalpur, we provide fast and reliable appliance repair
-            services across 13 approved service areas in South Delhi.
+            services across 13 approved service areas in Mahipalpur and nearby.
           </p>
         </motion.div>
 

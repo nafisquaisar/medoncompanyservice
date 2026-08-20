@@ -10,6 +10,6 @@ export const navItems: NavItem[] = [
   { label: "How It Works", hash: "#how-it-works" },
   { label: "Gallery", hash: "#gallery" },
   { label: "Blog", href: "/blog" },
-  { label: "About", hash: "#about" },
+  { label: "About", href: "/about" },
   { label: "Contact", hash: "#contact" },
 ];

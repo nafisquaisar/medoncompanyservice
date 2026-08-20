@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -289,7 +289,7 @@ const AboutPage = () => {
 
 {/* ================= LEADERSHIP ================= */}
 <section className="py-10 bg-gray-50">
-  <div className="max-w-4xl mx-auto px-6 text-center">
+  <div className="max-w-5xl mx-auto px-6 text-center">
 
     <motion.h2
       className="text-3xl font-bold text-primary"
@@ -301,53 +301,121 @@ const AboutPage = () => {
       Leadership
     </motion.h2>
 
-    <motion.div
-      className="mt-12 rounded-2xl bg-white border p-10 shadow-sm"
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true }}
-    >
+    <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* Founder Card */}
       <motion.div
-        className="mx-auto h-28 w-28 rounded-full bg-gray-200"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-      />
-
-      <motion.h3
-        className="mt-6 text-xl font-semibold text-primary"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        className="rounded-2xl bg-white border p-10 shadow-sm"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        Founder & CEO
-      </motion.h3>
+        <motion.div
+          className="mx-auto h-28 w-28 rounded-full overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            src="/employee/founder.jpg"
+            alt="Founder & CEO of Medon Company"
+            width={112}
+            height={112}
+            className="h-full w-full object-cover"
+          />
+        </motion.div>
 
-      <motion.p
-        className="mt-2 text-gray-500"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        <motion.h3
+          className="mt-6 text-xl font-semibold text-primary"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          Founder &amp; CEO
+        </motion.h3>
+
+        <motion.p
+          className="mt-2 text-gray-500"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          Medon Company
+        </motion.p>
+
+        <motion.p
+          className="mt-6 text-gray-600"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Our leadership is committed to building scalable systems,
+          enforcing operational discipline, and maintaining the highest
+          standards of service reliability and customer trust.
+        </motion.p>
+      </motion.div>
+
+      {/* Co-Founder Card */}
+      <motion.div
+        className="rounded-2xl bg-white border p-10 shadow-sm"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.15 }}
         viewport={{ once: true }}
       >
-        Medon Company
-      </motion.p>
+        <motion.div
+          className="mx-auto h-28 w-28 rounded-full overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          viewport={{ once: true }}
+        >
+          <Image
+            src="/employee/co-founder.jpg"
+            alt="Nafis Quaisar - Co-Founder of Medon Company"
+            width={112}
+            height={112}
+            className="h-full w-full object-cover"
+          />
+        </motion.div>
 
-      <motion.p
-        className="mt-6 text-gray-600 max-w-2xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.5 }}
-        viewport={{ once: true }}
-      >
-        Our leadership is committed to building scalable systems,
-        enforcing operational discipline, and maintaining the highest
-        standards of service reliability and customer trust.
-      </motion.p>
-    </motion.div>
+        <motion.h3
+          className="mt-6 text-xl font-semibold text-primary"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          viewport={{ once: true }}
+        >
+          Nafis Quaisar
+        </motion.h3>
+
+        <motion.p
+          className="mt-2 text-gray-500"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
+          viewport={{ once: true }}
+        >
+          Co-Founder
+        </motion.p>
+
+        <motion.p
+          className="mt-6 text-gray-600"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.65 }}
+          viewport={{ once: true }}
+        >
+          Driving technology, digital strategy, and customer experience
+          innovation to ensure Medon Company stays ahead in delivering
+          fast, reliable, and transparent appliance repair services.
+        </motion.p>
+      </motion.div>
+    </div>
 
   </div>
 </section>

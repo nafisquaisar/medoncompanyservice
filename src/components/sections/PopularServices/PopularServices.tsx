@@ -6,31 +6,31 @@ import { ArrowRight, Snowflake, Wrench, Refrigerator, Zap, Thermometer } from "l
 
 const POPULAR_SERVICES = [
   {
-    title: "AC Repair Service in Delhi",
+    title: "AC Repair Service in Mahipalpur",
     slug: "ac-repair-service-delhi",
     description: "Expert split & window AC repair, gas refilling, compressor fix for all brands.",
     Icon: Snowflake,
   },
   {
-    title: "AC Installation in Delhi",
+    title: "AC Installation in Mahipalpur",
     slug: "ac-installation-delhi",
     description: "Professional wall mounting, copper pipe fitting, and electrical setup.",
     Icon: Wrench,
   },
   {
-    title: "Refrigerator Repair in Delhi",
+    title: "Refrigerator Repair in Mahipalpur",
     slug: "refrigerator-repair-delhi",
     description: "Fix cooling issues, compressor problems, gas leaks for all fridge models.",
     Icon: Refrigerator,
   },
   {
-    title: "Electrical Services in Delhi",
+    title: "Electrical Services in Mahipalpur",
     slug: "electrical-services-delhi",
     description: "Wiring, switchboard repair, MCB installation, and short circuit fix.",
     Icon: Zap,
   },
   {
-    title: "Geyser Repair in Delhi",
+    title: "Geyser Repair in Mahipalpur",
     slug: "geyser-repair-delhi",
     description: "Heating issues, leakage repair, thermostat replacement, and installation.",
     Icon: Thermometer,

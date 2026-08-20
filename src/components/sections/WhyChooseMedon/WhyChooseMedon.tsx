@@ -37,13 +37,13 @@ const TRUST_SIGNALS = [
   },
   {
     Icon: MapPin,
-    title: "Headquartered in Mahipalpur, Delhi",
+    title: "Office in Mahipalpur, Delhi",
     description:
       "Our operations center is in Mahipalpur, giving us the fastest response times across Aerocity, Vasant Kunj, Vasant Vihar, Rangpuri, and all 13 of our service areas.",
   },
   {
     Icon: Star,
-    title: "4.8★ Rating from 5,000+ Customers",
+    title: "4.9★ Rating from 5,000+ Customers",
     description:
       "Trusted by thousands of homeowners and hotels across Mahipalpur and our 13 service areas for AC repair, refrigerator service, electrical work, and geyser repair.",
   },
@@ -68,7 +68,7 @@ export default function WhyChooseMedon() {
             Why Customers Trust Us
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary tracking-tight">
-            Why Choose Medon Company for Appliance Repair in Delhi
+            Why Choose Medon Company for Appliance Repair in Mahipalpur
           </h2>
           <p className="mt-4 text-gray-500 max-w-2xl mx-auto leading-relaxed">
             From AC repair in Mahipalpur to electrical services across all 13 service areas —

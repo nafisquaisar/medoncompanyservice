@@ -34,7 +34,7 @@ export default function EmergencyBanner() {
                 Call +91 7303637086
               </a>
               <span className="hidden sm:inline">
-                {" "}— Average response: under 1 hour in Mahipalpur &amp; Delhi Airport area
+                {" "}— Average response: under 1 hour in Mahipalpur &amp; nearby area
               </span>
             </span>
 

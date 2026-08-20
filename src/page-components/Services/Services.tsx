@@ -23,14 +23,14 @@ const services = [
     title: "Refrigerator Repair & Service",
     description:
       "• Refrigerator & freezer repair\n• All models support (single to side-by-side)\n• Cooling & gas leakage diagnosis\n• Compressor & sensor inspection",
-    price: "Inspection ₹199 | Minor ₹199+ | Major after diagnosis",
+    price: "Starting from ₹299",
     icon: Refrigerator,
   },
   {
     title: "Electrical Services",
     description:
       "• Electrical wiring & fittings\n• Switchboard repair\n• MCB & fuse replacement\n• Short circuit troubleshooting\n• Fan, light & socket installation\n• Earthing & power fluctuation checks",
-    price: "Starting from ₹199",
+    price: "Starting from ₹299",
     icon: Zap,
   },
   {

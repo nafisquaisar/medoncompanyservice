@@ -99,7 +99,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       { service: "AC General Inspection", price: "₹299", note: "All brands" },
       { service: "AC Gas Refilling (Split)", price: "₹1,499–₹2,999", note: "Depends on gas type" },
       { service: "AC Gas Refilling (Window)", price: "₹1499–₹2,999" },
-      { service: "Compressor Repair", price: "₹2,500+", note: "After diagnosis" },
+      { service: "Compressor Replacement", price: "₹5,000–₹10,000", note: "After diagnosis" },
       { service: "PCB Repair / Replacement", price: "₹2000+", note: "Brand dependent" },
       { service: "Fan Motor Replacement", price: "₹3000–₹4000" },
     ],
@@ -268,8 +268,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       { service: "Split AC Installation (2 Ton)", price: "₹1,999" },
       { service: "Window AC Installation", price: "₹799" },
       { service: "AC Uninstallation", price: "₹499–₹799" },
-      { service: "AC Shifting (Same Building)", price: "₹999" },
-      { service: "Extra Copper Pipe (per ft)", price: "₹80–₹120" },
+      { service: "Extra Copper Pipe (per ft)", price: "₹300–₹450" },
     ],
     benefits: [
       "Same-day installation available",
@@ -600,7 +599,7 @@ export const ALL_SERVICES: ServicePageData[] = [
       { title: "Control Panel / PCB Repair", description: "Electronic board diagnostics and repair for error codes, unresponsive controls, and display malfunctions." },
     ],
     pricing: [
-      { service: "Inspection Visit", price: "\u20b9199" },
+      { service: "Inspection Visit", price: "\u20b9300" },
       { service: "Door Seal (Gasket) Replacement", price: "\u20b9699\u2013\u20b91,299", note: "Brand dependent" },
       { service: "Drain Pump Replacement", price: "\u20b9799\u2013\u20b91,499" },
       { service: "Drum Bearing Replacement", price: "\u20b91,499\u2013\u20b92,499" },

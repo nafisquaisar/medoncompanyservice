@@ -31,7 +31,7 @@ const BADGES = [
   },
   {
     Icon: Wrench,
-    value: "5,000+",
+    value: "20,000+",
     label: "Services Completed",
     color: "from-violet-400 to-purple-600",
   },

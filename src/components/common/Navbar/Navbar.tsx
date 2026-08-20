@@ -22,7 +22,7 @@ const MOBILE_SERVICES = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeHash, setActiveHash] = useState("#home");
+  const [activeHash, setActiveHash] = useState("");
   const [showAppModal, setShowAppModal] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
@@ -38,8 +38,11 @@ const Navbar = () => {
 
   /* ---------- ACTIVE SECTION DETECTION ---------- */
   useEffect(() => {
-    if (pathname !== "/") return;
-
+    if (pathname !== "/") {
+      setActiveHash("");
+      return;
+    }
+    setActiveHash("#home");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
