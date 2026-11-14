@@ -7,9 +7,9 @@ import { MapPin, ArrowRight } from "lucide-react";
 const REGIONS = [
   {
     id: "delhi",
-    name: "Delhi NCR",
+    name: "Mahipalpur, Delhi",
     subtitle: "New Delhi",
-    description: "Mahipalpur HQ & 13 service areas across South-West Delhi",
+    description: "Mahipalpur HQ & 13 nearby service areas across South-West Delhi",
     areas: 13,
     href: "/delhi",
     emoji: "🏛️",
