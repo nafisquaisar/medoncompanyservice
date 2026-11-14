@@ -128,9 +128,21 @@ const Footer = () => {
           <div className="mt-6 space-y-3">
             <div className="flex items-start gap-3 text-white/70 text-sm" itemScope itemType="https://schema.org/PostalAddress">
               <MapPin size={14} className="mt-0.5 flex-shrink-0" />
-              <span itemProp="streetAddress">
-                Medon Company, Shop No, L-3, Street Number 1, L Block, Mahipalpur Village, Mahipalpur, New Delhi, Delhi 110037
-              </span>
+              <div>
+                <span className="inline-block text-[9px] font-bold uppercase tracking-wider text-white/40 bg-white/10 px-1.5 py-0.5 rounded mb-1">HQ</span>
+                <span itemProp="streetAddress" className="block">
+                  Medon Company, Shop No, L-3, Street Number 1, L Block, Mahipalpur Village, Mahipalpur, New Delhi, Delhi 110037
+                </span>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 text-white/70 text-sm" itemScope itemType="https://schema.org/PostalAddress">
+              <MapPin size={14} className="mt-0.5 flex-shrink-0" />
+              <div>
+                <span className="inline-block text-[9px] font-bold uppercase tracking-wider text-white/40 bg-white/10 px-1.5 py-0.5 rounded mb-1">Branch</span>
+                <span itemProp="streetAddress" className="block">
+                  M.Hussain Market, Musrigharari, Samastipur, Bihar 848101
+                </span>
+              </div>
             </div>
             <a href="tel:+917303637086" className="flex items-center gap-3 text-white/70 text-sm hover:text-white transition-colors">
               <Phone size={14} className="flex-shrink-0" />

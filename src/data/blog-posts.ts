@@ -388,8 +388,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     relatedLocationSlugs: [
       "mahipalpur",
       "vasant-kunj",
-      "south-delhi",
-      "delhi-airport-area",
+      "igi-airport",
+      "rangpuri",
     ],
     relatedBlogSlugs: [
       "how-often-should-you-service-your-ac",
@@ -452,7 +452,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       {
         heading: "Why Your Refrigerator May Stop Cooling",
         content:
-          "A refrigerator that stops cooling is a household emergency — food spoils within hours in Delhi's heat. The good news is that many cooling problems have simple fixes. Before you panic, let's diagnose the issue. At <a href='/refrigerator-repair-delhi'>Medon Company</a>, our technicians handle fridge repairs across <a href='/south-delhi'>South Delhi</a>, <a href='/vasant-kunj'>Vasant Kunj</a>, and <a href='/mahipalpur'>Mahipalpur</a> daily.",
+          "A refrigerator that stops cooling is a household emergency — food spoils within hours in the summer heat. The good news is that many cooling problems have simple fixes. Before you panic, let's diagnose the issue. At <a href='/refrigerator-repair-delhi'>Medon Company</a>, our technicians handle fridge repairs across <a href='/mahipalpur'>Mahipalpur</a>, <a href='/vasant-kunj'>Vasant Kunj</a>, and <a href='/aerocity'>Aerocity</a> daily.",
       },
       {
         heading: "8 Common Reasons Your Fridge Is Not Cooling",
@@ -517,7 +517,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       "refrigerator-repair-delhi",
       "electrical-services-delhi",
     ],
-    relatedLocationSlugs: ["mahipalpur", "vasant-kunj", "south-delhi"],
+    relatedLocationSlugs: ["mahipalpur", "vasant-kunj", "aerocity"],
     relatedBlogSlugs: [
       "why-ac-is-not-cooling-properly",
       "how-often-should-you-service-your-ac",
@@ -594,7 +594,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
           {
             heading: "Heavy Use (16–24 Hours/Day)",
             content:
-              "Common for server rooms, hotels near <a href='/delhi-airport-area'>Delhi Airport</a>, and households with elderly or infant members. These ACs need quarterly servicing (every 3 months) and weekly filter checks during summer. An annual maintenance contract (AMC) is highly recommended for heavy-use scenarios.",
+              "Common for server rooms, hotels near <a href='/igi-airport'>IGI Airport</a>, and households with elderly or infant members. These ACs need quarterly servicing (every 3 months) and weekly filter checks during summer. An annual maintenance contract (AMC) is highly recommended for heavy-use scenarios.",
           },
         ],
       },
@@ -623,7 +623,7 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
       {
         heading: "Signs Your AC Needs Immediate Servicing",
         content:
-          "Regardless of your regular schedule, service your AC immediately if you notice: (1) Reduced cooling performance. (2) Unusual noises (grinding, rattling, squealing). (3) Water leaking from the indoor unit. (4) Musty or foul smell. (5) AC frequently cycling on and off. (6) Ice formation on the unit. (7) Electricity bill spike. These symptoms indicate a developing problem that will worsen without professional attention. Don't wait for your scheduled service — call our technicians in <a href='/vasant-kunj'>Vasant Kunj</a> or <a href='/south-delhi'>South Delhi</a> for same-day diagnosis.",
+          "Regardless of your regular schedule, service your AC immediately if you notice: (1) Reduced cooling performance. (2) Unusual noises (grinding, rattling, squealing). (3) Water leaking from the indoor unit. (4) Musty or foul smell. (5) AC frequently cycling on and off. (6) Ice formation on the unit. (7) Electricity bill spike. These symptoms indicate a developing problem that will worsen without professional attention. Don't wait for your scheduled service — call our technicians in <a href='/vasant-kunj'>Vasant Kunj</a> or <a href='/aerocity'>Aerocity</a> for same-day diagnosis.",
       },
       {
         heading: "The Cost of Skipping AC Service",
@@ -640,8 +640,8 @@ export const ALL_BLOG_POSTS: BlogPost[] = [
     relatedLocationSlugs: [
       "mahipalpur",
       "vasant-kunj",
-      "south-delhi",
-      "delhi-airport-area",
+      "igi-airport",
+      "aerocity",
     ],
     relatedBlogSlugs: [
       "best-time-for-ac-servicing-in-delhi",

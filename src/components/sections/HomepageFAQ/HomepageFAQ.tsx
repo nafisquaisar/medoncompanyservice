@@ -102,7 +102,7 @@ export default function HomepageFAQ() {
 
   return (
     <section
-      className="py-20 sm:py-28 bg-white"
+      className="py-10 sm:py-14 bg-white"
       aria-label="Frequently asked questions about appliance repair in Delhi"
     >
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

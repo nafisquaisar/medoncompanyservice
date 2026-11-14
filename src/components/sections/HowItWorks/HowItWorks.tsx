@@ -50,7 +50,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section className="bg-secondary py-20 sm:py-28">
+    <section className="bg-secondary py-10 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}

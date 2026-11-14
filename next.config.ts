@@ -26,6 +26,21 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      /*
+       * ── Old location pages → approved replacements (301) ──
+       *
+       * /south-delhi: Removed entirely. No equivalent replacement.
+       *   Returns 404. Google will drop it from index naturally.
+       *
+       * /delhi-airport-area: Genuine equivalent is /igi-airport.
+       *   301 permanent redirect.
+       */
+      {
+        source: "/delhi-airport-area",
+        destination: "/igi-airport",
+        permanent: true,
+      },
+
       /* ── Service pages: Delhi → Mahipalpur (301) ───────── */
       {
         source: "/ac-repair-service-delhi",

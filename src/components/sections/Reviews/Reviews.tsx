@@ -7,7 +7,7 @@ import { ALL_REVIEWS, AGGREGATE_RATING } from "@/data/reviews";
 
 const Reviews = () => {
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-white py-10 sm:py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}

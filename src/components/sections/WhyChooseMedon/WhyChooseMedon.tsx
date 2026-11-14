@@ -52,7 +52,7 @@ const TRUST_SIGNALS = [
 export default function WhyChooseMedon() {
   return (
     <section
-      className="py-20 sm:py-28 bg-secondary"
+      className="py-10 sm:py-14 bg-secondary"
       aria-label="Why choose Medon Company for appliance repair in Delhi"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -16,7 +16,7 @@ const images = [
 
 const GallerySection = () => {
   return (
-    <section className="py-20 sm:py-28 bg-secondary" aria-label="Service work gallery">
+    <section className="py-10 sm:py-14 bg-secondary" aria-label="Service work gallery">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}

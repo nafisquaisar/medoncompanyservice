@@ -7,8 +7,10 @@ import HowItWorks from "@/components/sections/HowItWorks/HowItWorks";
 import WhyChooseMedon from "@/components/sections/WhyChooseMedon/WhyChooseMedon";
 import PopularServices from "@/components/sections/PopularServices/PopularServices";
 import AreasWeServe from "@/components/sections/AreasWeServe/AreasWeServe";
+import ServiceLocations from "@/components/sections/ServiceLocations/ServiceLocations";
 import GalleryPreview from "@/components/sections/Gallery/GalleryPreview";
 import Reviews from "@/components/sections/Reviews/Reviews";
+import GoogleReviewsWidget from "@/components/sections/GoogleReviewsWidget/GoogleReviewsWidget";
 import HomepageFAQ from "@/components/sections/HomepageFAQ/HomepageFAQ";
 import EmergencyCTA from "@/components/sections/EmergencyCTA/EmergencyCTA";
 import BrandMarquee from "@/components/sections/BrandMarquee/BrandMarquee";
@@ -21,7 +23,7 @@ import JsonLd from "@/components/seo/JsonLd";
 /*
  * LOCAL SEO STRATEGY:
  *   Primary location  → Mahipalpur (HQ, fastest response, highest relevance)
- *   Secondary location → Delhi / Delhi NCR (broad reach, high search volume)
+ *   Service areas     → 13 approved locations only (no generic Delhi targeting)
  *
  * Title format: [Primary Service] in [Primary Location] | [Brand]
  *   - Leads with the money keyword "AC Repair in Mahipalpur"
@@ -49,21 +51,20 @@ export const metadata: Metadata = {
     "AC repair near Mahipalpur",
     "AC technician Mahipalpur",
     "AC installation Mahipalpur",
-    // ── Secondary: Delhi (high-volume broad terms) ──
-    "AC repair Delhi",
+    // ── Approved service area terms ──
     "AC repair near me",
-    "appliance repair Mahipalpur",
-    "refrigerator repair Delhi",
-    "washing machine repair Delhi",
-    "washing machine repair near me",
-    "electrical services Delhi",
-    "geyser repair Delhi",
-    "AC installation Delhi",
+    "appliance repair near me",
+    "refrigerator repair Mahipalpur",
+    "washing machine repair Mahipalpur",
     "home repair services Mahipalpur",
-    // ── Nearby locations ──
+    // ── Tier 1 approved locations ──
     "AC repair Vasant Kunj",
     "AC repair Aerocity",
+    "AC repair Rangpuri",
+    "AC repair near IGI Airport",
+    // ── Tier 2 approved locations ──
     "AC repair Vasant Vihar",
+    "AC repair Kishangarh",
   ],
   alternates: {
     canonical: "/",
@@ -97,6 +98,10 @@ export default function HomePage() {
 
         <TrustBadges />
 
+        <section id="service-locations" className="scroll-mt-20" aria-label="Service Locations">
+          <ServiceLocations />
+        </section>
+
         <section id="services" className="scroll-mt-20" aria-label="Our Services">
           <Services />
         </section>
@@ -116,6 +121,8 @@ export default function HomePage() {
         </section>
 
         <AreasWeServe />
+
+        <GoogleReviewsWidget />
 
         <section id="reviews" className="scroll-mt-20" aria-label="Customer Reviews">
           <Reviews />

@@ -42,46 +42,54 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
 
   keywords: [
+  /* ── Primary: Near-me and branded ── */
   "AC Repair Near Me",
   "AC Service Near Me",
   "AC Installation Near Me",
   "AC Technician Near Me",
-  "Best AC Repair Service Delhi",
-  "AC Repair Mahipalpur",
-  "AC Repair Delhi",
   "AC Gas Filling Service",
   "AC Deep Cleaning Service",
   "Home Appliance Repair Service",
+  "Medon Company",
+
+  /* ── Tier 1: Mahipalpur (HQ) ── */
   "AC Repair Mahipalpur",
   "AC Service Mahipalpur",
   "AC Installation Mahipalpur",
   "AC Gas Filling Mahipalpur",
   "AC Technician Mahipalpur",
+
+  /* ── Tier 1: Aerocity ── */
   "AC Repair Aerocity",
   "AC Service Aerocity",
   "AC Installation Aerocity",
   "AC Gas Filling Aerocity",
   "AC Technician Aerocity",
-  "Refrigerator Repair Delhi",
-  "Geyser Repair Service",
-  "Electrical Services Delhi",
+
+  /* ── Tier 1: Vasant Kunj ── */
+  "AC Repair Vasant Kunj",
+  "AC Service Vasant Kunj",
+
+  /* ── Tier 1: Rangpuri ── */
+  "AC Repair Rangpuri",
+
+  /* ── General appliance keywords ── */
   "Verified AC Technicians",
   "Emergency AC Repair Mahipalpur",
   "24 Hour AC Repair Near Me",
   "Same Day AC Service",
   "Split AC Repair",
   "Window AC Repair",
-  "Medon Company",
 
+  /* ── Refrigerator ── */
   "Single Door Fridge Repair",
   "Single Door Refrigerator Service",
   "Single Door Fridge Repair Near Me",
   "Single Door Refrigerator Technician",
-  "Single Door Fridge Service Delhi",
 
+  /* ── Washing Machine ── */
   "Washing Machine Repair",
   "Washing Machine Service Near Me",
-  "Washing Machine Repair Delhi",
   "Automatic Washing Machine Repair",
   "Washing Machine Technician Near Me"
 ],

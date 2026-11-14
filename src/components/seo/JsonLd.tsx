@@ -10,6 +10,7 @@ import {
   SITE_PHONE_SCHEMA,
   SITE_EMAIL,
   SITE_ADDRESS,
+  SITE_ADDRESS_SAMASTIPUR,
   OG_IMAGE,
   SITE_LOGO,
 } from "@/config/site";
@@ -45,6 +46,23 @@ const LOCAL_BUSINESS = {
     longitude: 77.1171,
   },
   hasMap: "https://maps.google.com/?q=Medon+Company+Mahipalpur+Delhi",
+  /* Samastipur Branch listed as additional location */
+  location: [
+    {
+      "@type": "Place",
+      name: "Medon Company – Samastipur Branch",
+      address: {
+        "@type": "PostalAddress",
+        ...SITE_ADDRESS_SAMASTIPUR,
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 25.8625,
+        longitude: 85.7812,
+      },
+      hasMap: "https://maps.google.com/?q=M.Hussain+Market,+Musrigharari,+Samastipur,+Bihar",
+    },
+  ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: [
@@ -81,7 +99,8 @@ const LOCAL_BUSINESS = {
     { "@type": "Place", name: "JNU" },
     { "@type": "Place", name: "Munirka" },
     { "@type": "Place", name: "R.K. Puram" },
-    { "@type": "City", name: "New Delhi" },
+    { "@type": "Place", name: "Samastipur" },
+    { "@type": "Place", name: "Musrigharari" },
   ],
   serviceType: [
     "AC Repair",
@@ -180,7 +199,6 @@ const ELECTRICIAN_SCHEMA = {
     { "@type": "Place", name: "Vasant Vihar" },
     { "@type": "Place", name: "Kishangarh" },
     { "@type": "Place", name: "Munirka" },
-    { "@type": "City", name: "New Delhi" },
   ],
   parentOrganization: {
     /* Cross-reference to the primary entity — @id must match LOCAL_BUSINESS @id */

@@ -1,39 +1,81 @@
 "use client";
 
+import { useState } from "react";
+
 /* ── Google Maps Embed Component ─────────────────── */
 
 /*
- * Medon Company – Exact geocoded coordinates (verified via Google Maps):
- * Shop No. L-3, Street Number 1, L Block, Mahipalpur Village,
- * Mahipalpur, New Delhi, Delhi 110037
- * Lat: 28.5456529  |  Lng: 77.1255398
+ * Medon Company – Two Locations
+ *
+ * 1) Delhi HQ:
+ *    Shop No. L-3, Street Number 1, L Block, Mahipalpur Village,
+ *    Mahipalpur, New Delhi, Delhi 110037
+ *    Lat: 28.5456529  |  Lng: 77.1255398
+ *
+ * 2) Samastipur Branch:
+ *    M.Hussain Market, Musrigharari, Samastipur, Bihar 848101
+ *    Lat: 25.8625    |  Lng: 85.7812
  */
 
-const LAT = 28.5456529;
-const LNG = 77.1255398;
-const ZOOM = 16;
+/* ── Location Data ─────────────────────────────────── */
+const LOCATIONS = [
+  {
+    id: "delhi",
+    label: "New Delhi (HQ)",
+    shortLabel: "New Delhi",
+    lat: 28.5456529,
+    lng: 77.1255398,
+    zoom: 16,
+    query:
+      "Medon+Company,+L-3,+Street+Number+1,+L+Block,+Mahipalpur+Village,+New+Delhi,+Delhi+110037",
+    address:
+      "Shop No, L-3, Street Number 1, L Block, Mahipalpur Village, Mahipalpur, New Delhi, Delhi 110037",
+    title:
+      "Medon Company Location – Shop No. L-3, L Block, Mahipalpur Village, New Delhi",
+    ariaLabel:
+      "Google Maps showing Medon Company at L-3, L Block, Mahipalpur Village, New Delhi 110037",
+  },
+  {
+    id: "samastipur",
+    label: "Samastipur, Bihar",
+    shortLabel: "Samastipur",
+    lat: 25.8625,
+    lng: 85.7812,
+    zoom: 16,
+    query:
+      "M.Hussain+Market,+Musrigharari,+Samastipur,+Bihar+848101",
+    address:
+      "M.Hussain Market, Musrigharari, Samastipur, Bihar 848101",
+    title:
+      "Medon Company Location – M.Hussain Market, Musrigharari, Samastipur",
+    ariaLabel:
+      "Google Maps showing Medon Company at M.Hussain Market, Musrigharari, Samastipur, Bihar",
+  },
+] as const;
 
-/*
- * Google Maps Embed – "place" mode shows the business name pin + InfoWindow
- * when the user clicks the marker, with no API key required.
- * q=  → the search/place query that creates the visible red pin
- * center= → exact coordinates
- * zoom=   → street-level zoom so the exact shop is visible
- */
-const MAP_EMBED_URL =
-  `https://maps.google.com/maps` +
-  `?q=Medon+Company,+L-3,+Street+Number+1,+L+Block,+Mahipalpur+Village,+New+Delhi,+Delhi+110037` +
-  `&ll=${LAT},${LNG}` +
-  `&z=${ZOOM}` +
-  `&t=m` +
-  `&ie=UTF8` +
-  `&iwloc=near` +
-  `&output=embed`;
+function buildEmbedUrl(loc: (typeof LOCATIONS)[number]) {
+  return (
+    `https://maps.google.com/maps` +
+    `?q=${loc.query}` +
+    `&ll=${loc.lat},${loc.lng}` +
+    `&z=${loc.zoom}` +
+    `&t=m` +
+    `&ie=UTF8` +
+    `&iwloc=near` +
+    `&output=embed`
+  );
+}
 
-/* Direct Google Maps link for "Open in Maps" button */
-const MAPS_DIRECTIONS_URL =
-  `https://www.google.com/maps/place/Medon+Company/@${LAT},${LNG},${ZOOM}z` +
-  `?q=Medon+Company,+Shop+No+L-3,+Street+Number+1,+L+Block,+Mahipalpur+Village,+New+Delhi,+Delhi+110037`;
+function buildDirectionsUrl(loc: (typeof LOCATIONS)[number]) {
+  return (
+    `https://www.google.com/maps/place/@${loc.lat},${loc.lng},${loc.zoom}z` +
+    `?q=${loc.query}`
+  );
+}
+
+/* Direct Google Maps links */
+const MAPS_DIRECTIONS_URL = buildDirectionsUrl(LOCATIONS[0]);
+const MAPS_DIRECTIONS_URL_SAMASTIPUR = buildDirectionsUrl(LOCATIONS[1]);
 
 interface GoogleMapProps {
   /** Additional CSS classes */
@@ -52,25 +94,53 @@ export default function GoogleMap({
   compact = false,
   showOpenButton = false,
 }: GoogleMapProps) {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const loc = LOCATIONS[activeIdx];
+
   return (
-    <div className={`flex flex-col gap-2 ${className}`}>
-      <div className={`overflow-hidden ${compact ? "rounded-xl" : "rounded-2xl"}`}>
+    <div className={`flex flex-col gap-3 ${className}`}>
+      {/* ── Location Tabs ─────────────────────────────── */}
+      <div className="flex items-center gap-2">
+        {LOCATIONS.map((l, i) => (
+          <button
+            key={l.id}
+            onClick={() => setActiveIdx(i)}
+            className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-full transition-all duration-200
+              ${
+                activeIdx === i
+                  ? compact
+                    ? "bg-white text-primary shadow-sm"
+                    : "bg-primary text-white shadow-md"
+                  : compact
+                    ? "bg-white/10 text-white/60 hover:bg-white/20 hover:text-white/80"
+                    : "bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700"
+              }`}
+          >
+            📍 {l.shortLabel}
+          </button>
+        ))}
+      </div>
+
+      {/* ── Map Embed ──────────────────────────────────── */}
+      <div
+        className={`overflow-hidden ${compact ? "rounded-xl" : "rounded-2xl"}`}
+      >
         <iframe
-          src={MAP_EMBED_URL}
+          src={buildEmbedUrl(loc)}
           width="100%"
           height={compact ? 200 : height}
           style={{ border: 0 }}
           allowFullScreen={false}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Medon Company Location – Shop No. L-3, L Block, Mahipalpur Village, New Delhi"
-          aria-label="Google Maps showing Medon Company at L-3, L Block, Mahipalpur Village, New Delhi 110037"
+          title={loc.title}
+          aria-label={loc.ariaLabel}
         />
       </div>
 
       {showOpenButton && (
         <a
-          href={MAPS_DIRECTIONS_URL}
+          href={buildDirectionsUrl(loc)}
           target="_blank"
           rel="noopener noreferrer"
           className="self-start text-xs font-medium text-primary hover:underline"
@@ -82,5 +152,5 @@ export default function GoogleMap({
   );
 }
 
-/* Export the directions URL for use elsewhere (e.g. Contact page) */
-export { MAPS_DIRECTIONS_URL };
+/* Export the directions URLs for use elsewhere (e.g. Contact page) */
+export { MAPS_DIRECTIONS_URL, MAPS_DIRECTIONS_URL_SAMASTIPUR, LOCATIONS };

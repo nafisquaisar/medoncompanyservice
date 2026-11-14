@@ -1,7 +1,7 @@
 "use client";
 
 import type { LucideIcon } from "lucide-react";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -10,6 +10,14 @@ interface ServicesCardProps {
   description: string;
   price: string;
   Icon: LucideIcon;
+}
+
+const PHONE = "+917303637086";
+const EMAIL = "Medoncompany@gmail.com";
+
+function buildWhatsAppUrl(serviceTitle: string) {
+  const msg = `Hi Medon Company, I need *${serviceTitle}*. Please share details and availability.`;
+  return `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
 }
 
 const ServicesCard = ({ title, description, price, Icon }: ServicesCardProps) => {
@@ -91,31 +99,62 @@ const ServicesCard = ({ title, description, price, Icon }: ServicesCardProps) =>
               className="w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <h4 className="text-xl font-bold text-primary">
-                Book {title}
-              </h4>
+              {/* Header */}
+              <div className="text-center mb-6">
+                <div className="mx-auto mb-3 h-14 w-14 rounded-2xl bg-primary-light flex items-center justify-center">
+                  <Icon size={24} className="text-primary" />
+                </div>
+                <h4 className="text-xl font-bold text-primary">
+                  Book {title}
+                </h4>
+                <p className="mt-2 text-sm text-gray-500">
+                  Choose how you&apos;d like to book this service.
+                </p>
+              </div>
 
-              <p className="mt-2 text-gray-500">
-                Contact us directly to book this service.
-              </p>
-
-              <div className="mt-6 flex gap-3">
+              {/* CTA Buttons */}
+              <div className="space-y-3">
+                {/* Call */}
                 <a
-                  href="tel:+91 7303637086"
-                  className="flex-1 flex items-center justify-center gap-2 rounded-full bg-primary
-                             px-4 py-3 text-white font-medium shadow-md shadow-primary/20
-                             hover:bg-primary-dark transition-all duration-300"
+                  href={`tel:${PHONE}`}
+                  className="flex items-center justify-center gap-2.5
+                             w-full py-3.5 rounded-full
+                             bg-primary text-white font-semibold text-sm
+                             shadow-md shadow-primary/20
+                             hover:bg-primary-dark hover:shadow-lg
+                             transition-all duration-300"
                 >
-                  <Phone size={16} /> Call
+                  <Phone size={18} />
+                  Call Now
                 </a>
 
+                {/* WhatsApp */}
                 <a
-                  href="mailto:Medoncompany@gmail.com"
-                  className="flex-1 flex items-center justify-center gap-2 rounded-full border-2
-                             border-primary/20 text-primary px-4 py-3 font-medium
-                             hover:bg-primary-light/50 transition-all duration-300"
+                  href={buildWhatsAppUrl(title)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2.5
+                             w-full py-3.5 rounded-full
+                             bg-[#25D366] text-white font-semibold text-sm
+                             shadow-md shadow-[#25D366]/20
+                             hover:bg-[#22c55e] hover:shadow-lg
+                             transition-all duration-300"
                 >
-                  <Mail size={16} /> Email
+                  <MessageCircle size={18} />
+                  WhatsApp
+                </a>
+
+                {/* Email */}
+                <a
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(`Booking: ${title}`)}&body=${encodeURIComponent(`Hi Medon Company,\n\nI need ${title}. Please share details and availability.\n\nThank you.`)}`}
+                  className="flex items-center justify-center gap-2.5
+                             w-full py-3.5 rounded-full
+                             border-2 border-gray-200 text-gray-700 font-semibold text-sm
+                             hover:border-primary/30 hover:text-primary hover:bg-primary-light/30
+                             transition-all duration-300"
+                >
+                  <Mail size={18} />
+                  Email
                 </a>
               </div>
 

@@ -6,7 +6,7 @@ import ContactForm from "@/components/sections/Contact/ContactForm";
 
 const Contact = () => {
   return (
-    <section className="py-20 sm:py-28 bg-secondary">
+    <section className="py-10 sm:py-14 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}
@@ -44,6 +44,13 @@ const Contact = () => {
                 icon: MapPin,
                 label:
                   "Shop No, L-3, Street Number 1, L block, Mahipalpur Village, Mahipalpur, New Delhi, Delhi 110037",
+                tag: "Delhi HQ",
+              },
+              {
+                icon: MapPin,
+                label:
+                  "M.Hussain Market, Musrigharari, Samastipur, Bihar 848101",
+                tag: "Samastipur Branch",
               },
               { icon: Clock, label: "Open 24/7 — Available Every Day" },
             ].map((item, i) => (
@@ -60,7 +67,14 @@ const Contact = () => {
                                bg-primary-light text-primary">
                   <item.icon size={20} />
                 </div>
-                <p className="text-gray-600 font-medium text-sm leading-relaxed pt-0.5">{item.label}</p>
+                <div className="pt-0.5">
+                  {"tag" in item && item.tag && (
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-primary bg-primary-light px-2 py-0.5 rounded-md mb-1">
+                      {item.tag}
+                    </span>
+                  )}
+                  <p className="text-gray-600 font-medium text-sm leading-relaxed">{item.label}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>

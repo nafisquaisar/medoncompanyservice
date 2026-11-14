@@ -70,6 +70,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${SITE_URL}/delhi`,
+      lastModified: DATE_CORE_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/samastipur`,
+      lastModified: DATE_CORE_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
   /* ── Service Pages ────────────────────────────────────────────── */

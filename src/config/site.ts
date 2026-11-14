@@ -24,12 +24,21 @@ export const SITE_PHONE_DISPLAY = "+91 7303637086";
 /** Primary contact email */
 export const SITE_EMAIL = "Medoncompany@gmail.com";
 
-/** Physical address details */
+/** Physical address details – Delhi HQ */
 export const SITE_ADDRESS = {
   streetAddress: "Shop No, L-3, Street Number 1, L Block, Mahipalpur Village",
   addressLocality: "Mahipalpur",
   addressRegion: "Delhi",
   postalCode: "110037",
+  addressCountry: "IN",
+} as const;
+
+/** Physical address details – Samastipur Branch */
+export const SITE_ADDRESS_SAMASTIPUR = {
+  streetAddress: "M.Hussain Market, Musrigharari",
+  addressLocality: "Samastipur",
+  addressRegion: "Bihar",
+  postalCode: "848101",
   addressCountry: "IN",
 } as const;
 

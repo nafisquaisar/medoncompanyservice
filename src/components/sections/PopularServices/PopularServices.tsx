@@ -39,7 +39,7 @@ const POPULAR_SERVICES = [
 
 export default function PopularServices() {
   return (
-    <section className="py-20 sm:py-28 bg-white" aria-label="Popular appliance repair services in Mahipalpur">
+    <section className="py-10 sm:py-14 bg-white" aria-label="Popular appliance repair services in Mahipalpur">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-14"

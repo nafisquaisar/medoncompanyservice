@@ -41,7 +41,7 @@ const AboutPreview = () => {
   const router = useRouter();
 
   return (
-    <section id="about" className="scroll-mt-20 py-20 sm:py-28 bg-secondary">
+    <section id="about" className="scroll-mt-20 py-10 sm:py-14 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}

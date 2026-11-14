@@ -52,7 +52,7 @@ const BADGES = [
 export default function TrustBadges() {
   return (
     <section
-      className="py-12 sm:py-16 bg-white"
+      className="py-8 sm:py-10 bg-white"
       aria-label="Medon Company trust badges and credentials"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
