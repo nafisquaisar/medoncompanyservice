@@ -116,10 +116,12 @@ const Navbar = () => {
             <Image
               src="/medoncompanyhomelogo.png"
               alt="Medon Company"
-              width={112}
-              height={28}
-              className="h-7 w-auto object-contain"
+              width={280}
+              height={32}
+              quality={100}
+              className="h-8 sm:h-9 w-auto object-contain"
               priority
+              unoptimized
             />
           </motion.button>
 
@@ -204,18 +206,6 @@ const Navbar = () => {
               );
             })}
           </ul>
-
-          {/* DESKTOP CTA */}
-          <motion.button
-            whileHover={{ scale: 1.03, y: -1 }}
-            whileTap={{ scale: 0.97 }}
-            onClick={() => setShowAppModal(true)}
-            className="hidden lg:inline-flex bg-primary text-white px-6 py-2.5 text-sm
-                       rounded-full shadow-md shadow-primary/20 hover:bg-primary-dark
-                       hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 font-medium"
-          >
-            Download App
-          </motion.button>
 
           {/* MOBILE TOGGLE */}
           <motion.button
@@ -323,20 +313,6 @@ const Navbar = () => {
                     </button>
                   );
                 })}
-
-                <div className="pt-3">
-                  <button
-                    onClick={() => {
-                      setShowAppModal(true);
-                      setOpen(false);
-                    }}
-                    className="block w-full bg-primary text-white text-center
-                               px-4 py-3 rounded-full shadow-md shadow-primary/20 font-medium
-                               hover:bg-primary-dark transition-all duration-300"
-                  >
-                    Download App
-                  </button>
-                </div>
               </div>
             </motion.div>
           )}

@@ -144,10 +144,15 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <a href="tel:+917303637086" className="flex items-center gap-3 text-white/70 text-sm hover:text-white transition-colors">
-              <Phone size={14} className="flex-shrink-0" />
-              <span>+91 7303637086</span>
-            </a>
+            <div className="flex flex-col gap-1.5">
+              <a href="tel:+917303637086" className="flex items-center gap-3 text-white/70 text-sm hover:text-white transition-colors">
+                <Phone size={14} className="flex-shrink-0" />
+                <span>+91 7303637086 <span className="text-[10px] text-white/40 uppercase font-semibold">(Delhi HQ)</span></span>
+              </a>
+              <a href="tel:+917678328875" className="flex items-center gap-3 text-white/70 text-sm hover:text-white transition-colors pl-[26px]">
+                <span>+91 7678328875 <span className="text-[10px] text-white/40 uppercase font-semibold">(Samastipur)</span></span>
+              </a>
+            </div>
             <a href="mailto:Medoncompany@gmail.com" className="flex items-center gap-3 text-white/70 text-sm hover:text-white transition-colors">
               <Mail size={14} className="flex-shrink-0" />
               <span>Medoncompany@gmail.com</span>

@@ -38,7 +38,16 @@ const Contact = () => {
             className="space-y-5"
           >
             {[
-              { icon: Phone, label: "+91 7303637086" },
+              {
+                icon: Phone,
+                label: "+91 7303637086",
+                tag: "Delhi HQ Call / WhatsApp",
+              },
+              {
+                icon: Phone,
+                label: "+91 7678328875",
+                tag: "Samastipur Branch Call / WhatsApp",
+              },
               { icon: Mail, label: "Medoncompany@gmail.com" },
               {
                 icon: MapPin,

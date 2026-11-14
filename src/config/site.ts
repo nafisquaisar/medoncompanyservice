@@ -17,9 +17,13 @@ export const SITE_NAME = "Medon Company";
 export const SITE_DESCRIPTION =
   "Medon Company is headquartered in Mahipalpur, New Delhi — providing expert AC repair, refrigerator service, electrical & geyser repair in Mahipalpur, Aerocity, Vasant Kunj, Rangpuri, IGI Airport, Vasant Vihar, Kishangarh, Munirka and nearby areas. Verified technicians, transparent pricing, same-hour service.";
 
-/** Primary contact phone (E.164 format for schema, display format for UI) */
+/** Primary contact phone (Delhi HQ) */
 export const SITE_PHONE_SCHEMA = "+917303637086";
 export const SITE_PHONE_DISPLAY = "+91 7303637086";
+
+/** Branch contact phone (Samastipur, Bihar) */
+export const SITE_PHONE_SAMASTIPUR_SCHEMA = "+917678328875";
+export const SITE_PHONE_SAMASTIPUR_DISPLAY = "+91 7678328875";
 
 /** Primary contact email */
 export const SITE_EMAIL = "Medoncompany@gmail.com";

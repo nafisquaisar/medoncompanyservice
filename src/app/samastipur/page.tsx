@@ -56,6 +56,7 @@ export default function SamastipurPage() {
           description="Operating from Mushrigharari in Samastipur — we provide professional appliance repair, AC service, electrical work & geyser repair across 25 service areas in Samastipur district. Trained technicians, affordable pricing."
           locations={SAMASTIPUR_LOCATIONS}
           accent="emerald"
+          phone="+91 7678328875"
         />
       </main>
       <Footer />
