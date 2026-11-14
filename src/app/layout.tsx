@@ -15,6 +15,7 @@ import GoogleTagManager, {
   GTMNoScript,
 } from "@/components/analytics/GoogleTagManager";
 import WebVitals from "@/components/analytics/WebVitals";
+import { LocationProvider } from "@/context/LocationContext";
 /* MetaPixel: uncomment once NEXT_PUBLIC_META_PIXEL_ID is set */
 // import MetaPixel from "@/components/analytics/MetaPixel";
 
@@ -179,11 +180,13 @@ export default function RootLayout({
         {/* Web Vitals reporter */}
         <WebVitals />
 
-        <EmergencyBanner />
+        <LocationProvider>
+          <EmergencyBanner />
 
-        {children}
+          {children}
 
-        <QuickBookingPopup />
+          <QuickBookingPopup />
+        </LocationProvider>
 
         {/* Analytics scripts */}
         <GoogleAnalytics />

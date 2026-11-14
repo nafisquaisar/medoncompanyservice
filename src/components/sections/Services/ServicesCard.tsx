@@ -1,9 +1,10 @@
 "use client";
 
 import type { LucideIcon } from "lucide-react";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "@/context/LocationContext";
 
 interface ServicesCardProps {
   title: string;
@@ -12,16 +13,16 @@ interface ServicesCardProps {
   Icon: LucideIcon;
 }
 
-const PHONE = "+917303637086";
 const EMAIL = "Medoncompany@gmail.com";
 
-function buildWhatsAppUrl(serviceTitle: string) {
-  const msg = `Hi Medon Company, I need *${serviceTitle}*. Please share details and availability.`;
-  return `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+function buildWhatsAppUrl(serviceTitle: string, cleanPhone: string, locationLabel: string) {
+  const msg = `Hi Medon Company (${locationLabel}), I need *${serviceTitle}*. Please share details and availability.`;
+  return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(msg)}`;
 }
 
 const ServicesCard = ({ title, description, price, Icon }: ServicesCardProps) => {
   const [open, setOpen] = useState(false);
+  const { selectedLocation } = useLocation();
 
   return (
     <>
@@ -114,9 +115,15 @@ const ServicesCard = ({ title, description, price, Icon }: ServicesCardProps) =>
 
               {/* CTA Buttons */}
               <div className="space-y-3">
+                {/* Location indicator */}
+                <div className="flex items-center justify-center gap-1.5 py-1 px-3 rounded-full bg-gray-50 border border-gray-100 text-xs text-gray-500">
+                  <MapPin size={12} className="text-primary" />
+                  <span>Selected City: <strong className="text-primary font-semibold">{selectedLocation.label}</strong></span>
+                </div>
+
                 {/* Call */}
                 <a
-                  href={`tel:${PHONE}`}
+                  href={`tel:${selectedLocation.phone.replace(/\s+/g, "")}`}
                   className="flex items-center justify-center gap-2.5
                              w-full py-3.5 rounded-full
                              bg-primary text-white font-semibold text-sm
@@ -125,12 +132,12 @@ const ServicesCard = ({ title, description, price, Icon }: ServicesCardProps) =>
                              transition-all duration-300"
                 >
                   <Phone size={18} />
-                  Call Now
+                  Call Now: {selectedLocation.phone}
                 </a>
 
                 {/* WhatsApp */}
                 <a
-                  href={buildWhatsAppUrl(title)}
+                  href={buildWhatsAppUrl(title, selectedLocation.cleanPhone, selectedLocation.label)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5
@@ -141,7 +148,7 @@ const ServicesCard = ({ title, description, price, Icon }: ServicesCardProps) =>
                              transition-all duration-300"
                 >
                   <MessageCircle size={18} />
-                  WhatsApp
+                  WhatsApp ({selectedLocation.shortLabel})
                 </a>
 
                 {/* Email */}

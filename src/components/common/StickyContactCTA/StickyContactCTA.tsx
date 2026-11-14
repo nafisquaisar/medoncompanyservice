@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { Phone, MessageCircle, X, ChevronRight } from "lucide-react";
+import { Phone, MessageCircle, X, ChevronRight, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAnalytics } from "@/hooks/useAnalytics";
-
-const PHONE = "917303637086";
+import { useLocation } from "@/context/LocationContext";
 
 /* ── Services list for WhatsApp quick-select ───────── */
 const SERVICES = [
@@ -20,16 +19,17 @@ const SERVICES = [
   { label: "Other Service", emoji: "🛠️" },
 ];
 
-function buildWhatsAppUrl(service?: string) {
+function buildWhatsAppUrl(cleanPhone: string, locationLabel: string, service?: string) {
   const msg = service
-    ? `Hi Medon Company, I need *${service}*. Please share details and availability.`
-    : "Hi Medon Company, I need appliance repair service.";
-  return `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
+    ? `Hi Medon Company (${locationLabel}), I need *${service}*. Please share details and availability.`
+    : `Hi Medon Company (${locationLabel}), I need appliance repair service.`;
+  return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(msg)}`;
 }
 
 export default function StickyContactCTA() {
   const [visible, setVisible] = useState(false);
   const [showPicker, setShowPicker] = useState(false);
+  const { selectedLocation } = useLocation();
   const { onCallClick, onWhatsAppClick } = useAnalytics({
     location: "sticky_bar",
   });
@@ -46,10 +46,14 @@ export default function StickyContactCTA() {
   const handleWhatsAppService = useCallback(
     (service: string) => {
       onWhatsAppClick();
-      window.open(buildWhatsAppUrl(service), "_blank", "noopener,noreferrer");
+      window.open(
+        buildWhatsAppUrl(selectedLocation.cleanPhone, selectedLocation.label, service),
+        "_blank",
+        "noopener,noreferrer"
+      );
       setShowPicker(false);
     },
-    [onWhatsAppClick]
+    [onWhatsAppClick, selectedLocation]
   );
 
   const togglePicker = useCallback(() => {
@@ -78,8 +82,8 @@ export default function StickyContactCTA() {
           >
             <div className="flex gap-2.5 max-w-md mx-auto">
               <a
-                href={`tel:+${PHONE}`}
-                aria-label="Call Medon Company for appliance repair"
+                href={`tel:${selectedLocation.phone.replace(/\s+/g, "")}`}
+                aria-label={`Call Medon Company ${selectedLocation.shortLabel}`}
                 onClick={onCallClick}
                 className="flex-1 inline-flex items-center justify-center gap-2
                            bg-primary text-white py-3 rounded-full font-semibold text-sm
@@ -99,7 +103,7 @@ export default function StickyContactCTA() {
                            transition-all duration-200"
               >
                 <MessageCircle size={16} />
-                WhatsApp
+                WhatsApp ({selectedLocation.shortLabel})
               </button>
             </div>
           </motion.div>
@@ -148,7 +152,7 @@ export default function StickyContactCTA() {
                              bg-white rounded-t-3xl shadow-2xl max-h-[80vh] overflow-auto"
                 >
                   <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center justify-between mb-2">
                       <h3 className="text-lg font-bold text-primary">
                         Select a Service
                       </h3>
@@ -159,8 +163,13 @@ export default function StickyContactCTA() {
                         <X size={18} />
                       </button>
                     </div>
-                    <p className="text-sm text-gray-500 mb-5">
-                      Choose your service — we&apos;ll send a pre-filled message on WhatsApp.
+                    {/* Location Badge */}
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-xs text-gray-600 mb-4 font-medium">
+                      <MapPin size={12} className="text-primary" />
+                      <span>City: <strong className="text-primary">{selectedLocation.label}</strong> ({selectedLocation.phone})</span>
+                    </div>
+                    <p className="text-xs text-gray-500 mb-4">
+                      Choose your service — we&apos;ll send a pre-filled WhatsApp message to our {selectedLocation.shortLabel} team.
                     </p>
                     <div className="space-y-2">
                       {SERVICES.map((svc) => (
@@ -193,10 +202,13 @@ export default function StickyContactCTA() {
                              overflow-hidden"
                 >
                   {/* Header */}
-                  <div className="bg-[#25D366] px-5 py-4 flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
+                  <div className="bg-[#25D366] px-5 py-3.5 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
                       <MessageCircle size={18} className="text-white" />
-                      <span className="text-white font-bold text-sm">Chat on WhatsApp</span>
+                      <div>
+                        <span className="text-white font-bold text-sm block leading-none">Chat on WhatsApp</span>
+                        <span className="text-white/80 text-[10px] mt-0.5 block">{selectedLocation.label} ({selectedLocation.phone})</span>
+                      </div>
                     </div>
                     <button
                       onClick={closePicker}

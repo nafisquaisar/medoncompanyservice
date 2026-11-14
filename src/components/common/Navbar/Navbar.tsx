@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { navItems } from "./NavItems";
 import ServicesDropdown from "./ServicesDropdown";
+import LocationSelector from "./LocationSelector";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -128,15 +129,54 @@ const Navbar = () => {
 
 
 
-          {/* DESKTOP MENU */}
-          <ul className="hidden lg:flex items-center gap-1">
-            {navItems.map((item, i) => {
-              const isActive = item.href
-                ? pathname.startsWith(item.href)
-                : activeHash === item.hash;
+          {/* DESKTOP MENU & LOCATION SELECTOR */}
+          <div className="hidden lg:flex items-center gap-3">
+            <ul className="flex items-center gap-1">
+              {navItems.map((item, i) => {
+                const isActive = item.href
+                  ? pathname.startsWith(item.href)
+                  : activeHash === item.hash;
 
-              /* Render ServicesDropdown for the "Services" item */
-              if (item.label === "Services") {
+                /* Render ServicesDropdown for the "Services" item */
+                if (item.label === "Services") {
+                  return (
+                    <motion.li
+                      key={item.label}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: i * 0.05 }}
+                    >
+                      <ServicesDropdown />
+                    </motion.li>
+                  );
+                }
+
+                /* Direct link items (e.g. Blog) */
+                if (item.href) {
+                  return (
+                    <motion.li
+                      key={item.label}
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: i * 0.05 }}
+                    >
+                      <Link
+                        href={item.href}
+                        className={`relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase transition-colors duration-300
+                          ${isActive
+                            ? "text-primary"
+                            : "text-gray-500 hover:text-primary"
+                          }`}
+                      >
+                        {item.label}
+                        {isActive && (
+                          <span className="absolute left-1/2 -translate-x-1/2 -bottom-0.5 h-[2px] w-5 rounded-full bg-primary" />
+                        )}
+                      </Link>
+                    </motion.li>
+                  );
+                }
+
                 return (
                   <motion.li
                     key={item.label}
@@ -144,22 +184,9 @@ const Navbar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.05 }}
                   >
-                    <ServicesDropdown />
-                  </motion.li>
-                );
-              }
-
-              /* Direct link items (e.g. Blog) */
-              if (item.href) {
-                return (
-                  <motion.li
-                    key={item.label}
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: i * 0.05 }}
-                  >
-                    <Link
-                      href={item.href}
+                    <motion.button
+                      whileHover={{ y: -1 }}
+                      onClick={() => handleNavClick(item.hash)}
                       className={`relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase transition-colors duration-300
                         ${isActive
                           ? "text-primary"
@@ -167,56 +194,38 @@ const Navbar = () => {
                         }`}
                     >
                       {item.label}
-                      {isActive && (
-                        <span className="absolute left-1/2 -translate-x-1/2 -bottom-0.5 h-[2px] w-5 rounded-full bg-primary" />
-                      )}
-                    </Link>
+
+                      <motion.span
+                        layout
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: isActive ? 1 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        style={{ originX: 0.5 }}
+                        className="absolute left-1/2 -translate-x-1/2 -bottom-0.5 h-[2px] w-5 rounded-full bg-primary"
+                      />
+                    </motion.button>
                   </motion.li>
                 );
-              }
+              })}
+            </ul>
 
-              return (
-                <motion.li
-                  key={item.label}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: i * 0.05 }}
-                >
-                  <motion.button
-                    whileHover={{ y: -1 }}
-                    onClick={() => handleNavClick(item.hash)}
-                    className={`relative px-4 py-2 text-[13px] font-medium tracking-wide uppercase transition-colors duration-300
-                      ${isActive
-                        ? "text-primary"
-                        : "text-gray-500 hover:text-primary"
-                      }`}
-                  >
-                    {item.label}
+            <div className="h-5 w-[1px] bg-gray-200" />
+            <LocationSelector />
+          </div>
 
-                    <motion.span
-                      layout
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: isActive ? 1 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      style={{ originX: 0.5 }}
-                      className="absolute left-1/2 -translate-x-1/2 -bottom-0.5 h-[2px] w-5 rounded-full bg-primary"
-                    />
-                  </motion.button>
-                </motion.li>
-              );
-            })}
-          </ul>
-
-          {/* MOBILE TOGGLE */}
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            onClick={() => setOpen(!open)}
-            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={open}
-            className="lg:hidden text-gray-600 p-2 rounded-xl hover:bg-gray-50 transition-colors"
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </motion.button>
+          {/* MOBILE TOGGLE & LOCATION */}
+          <div className="flex lg:hidden items-center gap-2">
+            <LocationSelector />
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setOpen(!open)}
+              aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={open}
+              className="text-gray-600 p-2 rounded-xl hover:bg-gray-50 transition-colors"
+            >
+              {open ? <X size={22} /> : <Menu size={22} />}
+            </motion.button>
+          </div>
         </nav>
 
         {/* MOBILE MENU */}
